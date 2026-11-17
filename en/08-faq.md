@@ -25,7 +25,7 @@ If the folder you picked is gone (for example the external drive is unplugged), 
 
 ## Local AI is slow?
 
-Local generation is slower by nature, and how slow depends on your computer (the Local AI Studio page estimates it for your Mac). And **one Mac makes one thing at a time**; the rest wait.
+With local generation, pictures use Qwen, videos use MiniMax H3, and the speed depends on your computer. And **one Mac makes one thing at a time**; the rest wait.
 
 Things that help:
 
