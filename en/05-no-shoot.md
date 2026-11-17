@@ -62,6 +62,7 @@ The button at the left of each line changes what the shot is made with:
 | **Local AI video / picture** | Made on this Mac with MiniMax H3 / Qwen Image |
 | **Higgsfield cloud clip / picture** | Made with your Higgsfield account (uses credits) |
 | **Theater cloud clip / picture** | Made with your Theater account (quoted first) |
+| **Cursor picture / ChatGPT picture** | A picture made on your Cursor or ChatGPT plan (no price per picture, asks first; add them to the cloud list first, see chapter 6) |
 | **3D animation** | A 3D animation |
 | **Animated card** | An information card that moves |
 | **Motion graphic** | A motion graphic made with EffectCraft |
@@ -96,6 +97,7 @@ The bottom of the window says: "Before anything is made, you'll be asked how lon
 
 - **Higgsfield**: a quote in credits first ("…credits in all, spend them?"). Say no and those shots become flying text instead.
 - **Theater**: an estimate first ("about US$…, go ahead?").
+- **Cursor / ChatGPT**: no price; it uses your plan's usage, and still asks whether to make them first.
 
 ## 5-8 Starting, and after it's done
 

@@ -67,7 +67,7 @@ Onset 的影片檔很大，本機生成的模型更大（幾十到上百 GB）�
 
 ## 雲端生成會不會偷偷花錢？
 
-不會。每一次都會先報價（Higgsfield 報 credits，Theater 報金額），你按同意才做。「自動」選工具時不會選付費工具。
+不會。每一次都會先問你：Higgsfield 報 credits，Theater 報金額，Cursor 和 ChatGPT 說會用你方案的用量；你按同意才做。「自動」選工具時不會選付費工具。
 
 ## 手機看不到 Mac 的東西？
 

@@ -67,7 +67,7 @@ Click **"↶ Undo this AI change"** in the AI Onset chat. You can also switch ba
 
 ## Can cloud generation spend money behind my back?
 
-No. Every time, it shows a quote first (credits for Higgsfield, an amount for Theater), and only goes ahead when you agree. When the tool is chosen automatically, it never picks a paid one.
+No. Every time, it asks first: Higgsfield quotes credits, Theater quotes an amount, and Cursor and ChatGPT say they'll use your plan's usage. It only goes ahead when you agree. When the tool is chosen automatically, it never picks a paid one.
 
 ## The phone can't see things from the Mac?
 

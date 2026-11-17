@@ -113,7 +113,7 @@ Want a graphic card or an animation without making it yourself? Leave the AI a n
 1. Click **"AI notes"** on the left → **"AI note card"**. A card appears on the AI row at the top of the timeline.
 2. Drag it into place and stretch it over the seconds it should cover.
 3. On the right, write what this part needs, for example "Big text card: water at 92 °C, with a thermometer drawn next to it".
-4. Pick a **"Tool"**: "Automatic (decided from the text)", Onset card, EffectCraft, Three.js, "Remove background (text behind the person)"…; the paid **"Higgsfield (paid)"** and **"Theater (paid)"** need a cloud service set up first (chapter 6).
+4. Pick a **"Tool"**: "Automatic (decided from the text)", Onset card, EffectCraft, Three.js, "Remove background (text behind the person)"…; the paid **"Higgsfield (paid)"** and **"Theater (paid)"**, and **"Cursor (pictures, your plan)"** and **"ChatGPT (pictures, your plan)"**, need a cloud service set up first (chapter 6).
 5. Click **"Generate"**, or **"Generate all"** to make every note card at once.
 
 What it makes goes on the rows under the note card. The note card itself never appears in the video.
@@ -129,7 +129,7 @@ Want the AI to follow the feel of a picture? Give the note reference pictures, *
 - Or drop a picture straight onto the AI note on the timeline (it becomes the note's reference, not a new layer).
 - The ✕ on each picture removes it.
 
-**Theater** makes from the reference pictures. **Higgsfield doesn't take reference pictures**: only the AI writing the prompt sees them. To make from a picture, choose Theater.
+**Theater**, **Cursor** and **ChatGPT** make from the reference pictures. **Higgsfield doesn't take reference pictures**: only the AI writing the prompt sees them. To make from a picture, choose one of the others.
 
 ![Reference pictures on an AI note card](images/65-ainote-refs.jpg)
 

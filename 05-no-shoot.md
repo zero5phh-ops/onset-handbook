@@ -62,6 +62,7 @@
 | **本機生成影片 / 圖片** | 這台 Mac 用 MiniMax H3 / Qwen Image 生成 |
 | **Higgsfield 雲端影片 / 圖片** | 用你的 Higgsfield 帳號生成（花 credits） |
 | **Theater 雲端影片 / 圖片** | 用你的 Theater 帳號生成（先報價） |
+| **Cursor 圖片 / ChatGPT 圖片** | 用你的 Cursor 或 ChatGPT 方案做圖片（不另外標價，先問你；要先加進雲端清單，見第 6 章） |
 | **立體動畫** | 3D 動畫 |
 | **動畫圖卡** | 會動的資訊圖卡 |
 | **動態圖形** | EffectCraft 做的動態圖形 |
@@ -96,6 +97,7 @@
 
 - **Higgsfield**：先報 credits，例如「雲端生成 N 段，報價共 X credits，要花這些 credits 嗎？」按「不要」，這幾段會改成飛字。
 - **Theater**：先估價，例如「估價共 US$…，要做嗎？」
+- **Cursor / ChatGPT**：不報價，用你方案的用量，也是先問你「要做嗎？」。
 
 ## 5-8 開始做、做完之後
 

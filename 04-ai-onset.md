@@ -86,7 +86,7 @@ AI Onset 可以用這四個 AI 當大腦：**Claude Code、ChatGPT · Codex、Cu
 - 只有已經裝好、可以用的 AI 才能選。
 - 選的 AI 做不到的事（例如 Cursor 不能查網路、看圖片），會交給 Claude Code 代答，畫面會說「這次由 Claude Code 代答」；Claude Code 也沒有的話，會直接告訴你做不了。
 
-> **即將推出：** 用 Cursor 或 ChatGPT 生成圖片。還在測試中，這一版還不能用。
+> 想用 Cursor 或 ChatGPT 的方案**生成圖片**？那是另外一件事：在「設定 → 生成工具」把它們加進雲端清單，見 [第 6 章 6-5](06-cloud.md)。
 
 ## 4-8 讓外部 AI 操作 Onset（進階）
 

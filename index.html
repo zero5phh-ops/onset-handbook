@@ -256,13 +256,13 @@ tr:last-child td{border-bottom:0}
 <p>有人說話時，音樂可以自動變小（閃避）。</p>
 <h3>3-8 AI 留言條</h3>
 <p>想要一張圖卡、一段動畫，又不想自己做？寫一張「留言條」給 AI：</p>
-<ol><li>左邊點「<strong>AI 留言</strong>」→「<strong>AI 留言條</strong>」。時間軸最上面的 AI 列會多一條。</li><li>拖它的位置和長短，對準要出現的那幾秒。</li><li>右邊寫這段要什麼，例如「大字卡：水溫 92 度，旁邊畫一個溫度計」。</li><li>選「<strong>工具</strong>」：「自動（看文字判斷）」、Onset 圖卡、EffectCraft、Three.js、去背（字在人後面）…；付費的「<strong>Higgsfield（付費生成）</strong>」「<strong>Theater（付費生成）</strong>」要先在設定加入雲端（第 6 章）。</li><li>按「<strong>生成</strong>」，或「<strong>全部生成</strong>」一次做完所有留言條。</li></ol>
+<ol><li>左邊點「<strong>AI 留言</strong>」→「<strong>AI 留言條</strong>」。時間軸最上面的 AI 列會多一條。</li><li>拖它的位置和長短，對準要出現的那幾秒。</li><li>右邊寫這段要什麼，例如「大字卡：水溫 92 度，旁邊畫一個溫度計」。</li><li>選「<strong>工具</strong>」：「自動（看文字判斷）」、Onset 圖卡、EffectCraft、Three.js、去背（字在人後面）…；付費的「<strong>Higgsfield（付費生成）</strong>」「<strong>Theater（付費生成）</strong>」，和用你方案的「<strong>Cursor（圖片，用你的方案）</strong>」「<strong>ChatGPT（圖片，用你的方案）</strong>」，要先在設定加入雲端（第 6 章）。</li><li>按「<strong>生成</strong>」，或「<strong>全部生成</strong>」一次做完所有留言條。</li></ol>
 <p>做出來的圖層會放在留言條下面。留言條本身不會出現在影片裡。 「自動」永遠不會自己選付費工具；選了付費工具，也會先報價、問你才做。</p>
 <figure><img src="images/59-ainote.jpg" alt="AI 留言條"><figcaption>AI 留言條</figcaption></figure>
 <h4>給 AI 留言條參考圖</h4>
 <p>想要 AI 照著某張圖的感覺做？給它參考圖，<strong>最多 4 張</strong>：</p>
 <ul><li>把圖拖到留言條文字下面的「<strong>把參考圖拖進來（或點這裡選）</strong>」，或點那裡選檔案，也可以貼上。</li><li>或直接把圖拖到 timeline 上的那條 AI 留言條上（會變成它的參考圖，不會變成新的圖層）。</li><li>每張圖右上角的 ✕ 可以拿掉。</li></ul>
-<p>用 <strong>Theater</strong> 生成時，會照著參考圖做。<strong>Higgsfield 不收參考圖</strong>，只有寫 prompt 的 AI 看得到；要照著圖做請選 Theater。</p>
+<p>用 <strong>Theater</strong>、<strong>Cursor</strong> 或 <strong>ChatGPT</strong> 生成時，會照著參考圖做。<strong>Higgsfield 不收參考圖</strong>，只有寫 prompt 的 AI 看得到；要照著圖做請選其他的。</p>
 <figure><img src="images/65-ainote-refs.jpg" alt="AI 留言條的參考圖"><figcaption>AI 留言條的參考圖</figcaption></figure>
 <h3>3-9 轉場</h3>
 <ol><li>左邊點「<strong>Transitions</strong>」。</li><li>把喜歡的轉場<strong>拖到時間軸兩段之間</strong>。剪接點上會出現一個小方塊。</li><li>拖小方塊的邊緣可以改長度；選取後按刪除可以拿掉。</li><li>懶得一個個放：按最下面「<strong>每個剪接點都加「交叉淡化」</strong>」；「<strong>全部移除</strong>」可以一次拿掉。</li></ol>
@@ -312,7 +312,7 @@ tr:last-child td{border-bottom:0}
 <h3>4-7 換 AI Onset 的大腦</h3>
 <p>AI Onset 可以用這四個 AI 當大腦：<strong>Claude Code、ChatGPT · Codex、Cursor、Hermes</strong>。在「設定 → AI 與工具」最上面（也就是安裝助手）選。哪些要帳號、怎麼登入，請看 <a href="#ch01">第 1 章 1-4</a>。</p>
 <ul><li>只有已經裝好、可以用的 AI 才能選。</li><li>選的 AI 做不到的事（例如 Cursor 不能查網路、看圖片），會交給 Claude Code 代答，畫面會說「這次由 Claude Code 代答」；Claude Code 也沒有的話，會直接告訴你做不了。</li></ul>
-<aside class="note"><p><strong>即將推出：</strong> 用 Cursor 或 ChatGPT 生成圖片。還在測試中，這一版還不能用。</p></aside>
+<aside class="note"><p>想用 Cursor 或 ChatGPT 的方案<strong>生成圖片</strong>？那是另外一件事：在「設定 → 生成工具」把它們加進雲端清單，見 <a href="#ch06">第 6 章 6-5</a>。</p></aside>
 <h3>4-8 讓外部 AI 操作 Onset（進階）</h3>
 <p>「設定 → MCP」可以「允許外部 AI 在 Onset 裡工作」，例如讓 Claude Desktop 或 Claude Code 直接操作 Onset。外部 AI 做的每一步也會出現在 AI Onset 裡，標「🔌 外部 AI」，一樣能停止。外部 AI 不能拍攝、刪除或發佈。</p></section>
 <section class="chapter" id="ch05"><header class="chhead"><span class="chnum">第 5 章</span><h2>不拍，直接做</h2></header><p>沒時間拍、或這個題目根本拍不到（例如火星探測車）？只要有腳本，Onset 可以幫你做出整支影片：<strong>旁白、飛字、字卡、網路素材、生成的圖片和影片，再加字幕</strong>，一次放好在時間軸上。</p>
@@ -335,7 +335,7 @@ tr:last-child td{border-bottom:0}
 <h3>5-4 每個鏡頭的來源</h3>
 <p>每一行最左邊的按鈕可以換這個鏡頭用什麼做：</p>
 <figure><img src="images/73-noshoot-source.jpg" alt="鏡頭來源選單"><figcaption>鏡頭來源選單</figcaption></figure>
-<div class="tbl"><table><thead><tr><th>來源</th><th>是什麼</th></tr></thead><tbody><tr><td><strong>素材影片</strong></td><td>網路上免費的素材影片</td></tr><tr><td><strong>網路圖</strong></td><td>網路上找到、授權可以用的圖片</td></tr><tr><td><strong>新聞片 / 報導截圖</strong></td><td>新聞影片、新聞網頁截圖（要先勾「研究新聞和資料」）</td></tr><tr><td><strong>本機生成影片 / 圖片</strong></td><td>這台 Mac 用 MiniMax H3 / Qwen Image 生成</td></tr><tr><td><strong>Higgsfield 雲端影片 / 圖片</strong></td><td>用你的 Higgsfield 帳號生成（花 credits）</td></tr><tr><td><strong>Theater 雲端影片 / 圖片</strong></td><td>用你的 Theater 帳號生成（先報價）</td></tr><tr><td><strong>立體動畫</strong></td><td>3D 動畫</td></tr><tr><td><strong>動畫圖卡</strong></td><td>會動的資訊圖卡</td></tr><tr><td><strong>動態圖形</strong></td><td>EffectCraft 做的動態圖形</td></tr><tr><td><strong>動態字鏡頭</strong></td><td>一拍一個大字、背景換色、鏡頭推拉甩</td></tr><tr><td><strong>圖卡</strong></td><td>靜態圖卡</td></tr></tbody></table></div>
+<div class="tbl"><table><thead><tr><th>來源</th><th>是什麼</th></tr></thead><tbody><tr><td><strong>素材影片</strong></td><td>網路上免費的素材影片</td></tr><tr><td><strong>網路圖</strong></td><td>網路上找到、授權可以用的圖片</td></tr><tr><td><strong>新聞片 / 報導截圖</strong></td><td>新聞影片、新聞網頁截圖（要先勾「研究新聞和資料」）</td></tr><tr><td><strong>本機生成影片 / 圖片</strong></td><td>這台 Mac 用 MiniMax H3 / Qwen Image 生成</td></tr><tr><td><strong>Higgsfield 雲端影片 / 圖片</strong></td><td>用你的 Higgsfield 帳號生成（花 credits）</td></tr><tr><td><strong>Theater 雲端影片 / 圖片</strong></td><td>用你的 Theater 帳號生成（先報價）</td></tr><tr><td><strong>Cursor 圖片 / ChatGPT 圖片</strong></td><td>用你的 Cursor 或 ChatGPT 方案做圖片（不另外標價，先問你；要先加進雲端清單，見第 6 章）</td></tr><tr><td><strong>立體動畫</strong></td><td>3D 動畫</td></tr><tr><td><strong>動畫圖卡</strong></td><td>會動的資訊圖卡</td></tr><tr><td><strong>動態圖形</strong></td><td>EffectCraft 做的動態圖形</td></tr><tr><td><strong>動態字鏡頭</strong></td><td>一拍一個大字、背景換色、鏡頭推拉甩</td></tr><tr><td><strong>圖卡</strong></td><td>靜態圖卡</td></tr></tbody></table></div>
 <p>每一行還有：</p>
 <ul><li>「<strong>飛字</strong>」開關：要不要在畫面上疊文字。</li><li>「<strong>優先 / 之後再做</strong>」：重要的先做。</li><li>「<strong>找不到時：</strong>」網路找不到素材怎麼辦（AI 決定、免費素材片、立體動畫、AI 生成圖片、動畫圖卡）。</li></ul>
 <h3>5-5 主角參考圖</h3>
@@ -347,18 +347,18 @@ tr:last-child td{border-bottom:0}
 <p>本機生成很慢（一段影片可能半小時）。時間用完時，剩下還沒做的鏡頭會<strong>自動改成動畫圖卡</strong>，不會一直等。本機正在忙別的工作時，也會直接用動畫圖卡。</p>
 <h3>5-7 要花錢的，先問你</h3>
 <p>畫面最下面寫著：「本機要等多久、雲端要花多少 credits，開始做之前都會先問你。」</p>
-<ul><li><strong>Higgsfield</strong>：先報 credits，例如「雲端生成 N 段，報價共 X credits，要花這些 credits 嗎？」按「不要」，這幾段會改成飛字。</li><li><strong>Theater</strong>：先估價，例如「估價共 US$…，要做嗎？」</li></ul>
+<ul><li><strong>Higgsfield</strong>：先報 credits，例如「雲端生成 N 段，報價共 X credits，要花這些 credits 嗎？」按「不要」，這幾段會改成飛字。</li><li><strong>Theater</strong>：先估價，例如「估價共 US$…，要做嗎？」</li><li><strong>Cursor / ChatGPT</strong>：不報價，用你方案的用量，也是先問你「要做嗎？」。</li></ul>
 <h3>5-8 開始做、做完之後</h3>
 <ol><li>按「<strong>開始做</strong>」。</li><li>可以去做別的事。AI 會在背景一章一章做：一章旁白念好，那一章的動畫、飛字、字幕、配樂就開始做。</li><li>做好的東西直接出現在剪輯的時間軸上，跟自己剪的一樣，可以再改。</li><li>想重來：跟 AI Onset 說「<strong>重做</strong>」。舊的剪輯會先存成版本「重做前 日期」。</li><li>中途關掉 Onset 也沒關係，下次打開剪輯頁會問「<strong>接著做</strong>」還是「不用了」。</li></ol>
 <h4>旁白有一句念得不好？</h4>
 <p>旁白每一句是一個獨立的片段。在那一句上按「<strong>重念 #n 這句</strong>」，會用同一個聲音再念一次，後面的片段和字幕會自動對好。</p></section>
 <section class="chapter" id="ch06"><header class="chhead"><span class="chnum">第 6 章</span><h2>雲端生成：Higgsfield 和 Theater</h2></header><p>本機生成免費但很慢，有些 Mac 也跑不動影片模型。<strong>雲端生成</strong>用你自己的雲端帳號，在別人的電腦上生成，快很多，但要花錢。</p>
-<p>Onset 可以接兩家：<strong>Higgsfield</strong> 和 <strong>Theater</strong>。兩家可以都加，每個鏡頭各自選用哪一家。</p>
+<p>Onset 可以接四家：<strong>Higgsfield</strong>、<strong>Theater</strong>，以及只做圖片的 <strong>Cursor</strong> 和 <strong>ChatGPT</strong>。可以都加，每個鏡頭各自選用哪一家。</p>
 <h3>6-1 加入雲端服務</h3>
-<ol><li>右上角頭像 →「<strong>設定</strong>」→「<strong>生成工具</strong>」，往下捲到「<strong>雲端生成</strong>」。（「不拍，直接做」視窗左下的「<strong>生成工具</strong>」也會帶你到這裡。）</li><li>按「<strong>＋ 加入雲端服務</strong>」→「選一個…」→ 選 Theater 或 Higgsfield。</li><li>按「<strong>登入 Theater</strong>」或「<strong>登入 Higgsfield</strong>」：<ul><li><strong>Theater</strong>：不用裝東西，按了會打開 Theater 的登入頁，在瀏覽器登入。</li><li><strong>Higgsfield</strong>：要先裝 Higgsfield 的小工具（畫面會給一行安裝指令，請懂電腦的朋友幫忙貼到終端機），再按「登入 Higgsfield」在瀏覽器登入。</li></ul></li><li>回到 Onset 按「<strong>重新檢查</strong>」，看到「已登入」就好了。</li></ol>
+<ol><li>右上角頭像 →「<strong>設定</strong>」→「<strong>生成工具</strong>」，往下捲到「<strong>雲端生成</strong>」。（「不拍，直接做」視窗左下的「<strong>生成工具</strong>」也會帶你到這裡。）</li><li>按「<strong>＋ 加入雲端服務</strong>」→「選一個…」→ 選 Theater、Higgsfield、Cursor 或 ChatGPT。（Cursor 和 ChatGPT 要自己手動加進來。）</li><li>按「<strong>登入 Theater</strong>」或「<strong>登入 Higgsfield</strong>」：<ul><li><strong>Theater</strong>：不用裝東西，按了會打開 Theater 的登入頁，在瀏覽器登入。</li><li><strong>Higgsfield</strong>：要先裝 Higgsfield 的小工具（畫面會給一行安裝指令，請懂電腦的朋友幫忙貼到終端機），再按「登入 Higgsfield」在瀏覽器登入。</li></ul></li><li>回到 Onset 按「<strong>重新檢查</strong>」，看到「已登入」就好了。</li></ol>
 <p>Onset 不看也不存你的密碼，登入都在瀏覽器裡做。</p>
 <figure><img src="images/76-cloud.jpg" alt="雲端生成設定"><figcaption>雲端生成設定</figcaption></figure>
-<aside class="note"><p>截圖中 Higgsfield 那一行的帳號狀態已遮掉。</p></aside>
+<aside class="note"><p>截圖中 Higgsfield 和 Cursor 的帳號狀態已遮掉。</p></aside>
 <p>不想用了，按那一行的 <strong>✕</strong>「從清單拿掉」。</p>
 <h3>6-2 先用哪一個</h3>
 <p>「<strong>先用哪一個</strong>」：</p>
@@ -369,10 +369,15 @@ tr:last-child td{border-bottom:0}
 <h3>6-4 Higgsfield credits 和 Theater 報價有什麼不同？</h3>
 <div class="tbl"><table><thead><tr><th></th><th>Higgsfield</th><th>Theater</th></tr></thead><tbody><tr><td>怎麼付錢</td><td>用帳號裡的 <strong>credits</strong>（要先在 Higgsfield 買或領）</td><td>照每次的<strong>報價</strong>，從你的 Theater 帳號扣</td></tr><tr><td>Onset 看得到餘額嗎</td><td>看得到，例如「已登入（方案，N credits）」</td><td>看不到，以 Theater 帳號為準</td></tr><tr><td>開始前會問什麼</td><td>「報價共 X credits，要花這些 credits 嗎？」</td><td>影片：「估價共約 US$…，要做嗎？」；圖片寫「Theater 先報價」</td></tr><tr><td>不答應會怎樣</td><td>那幾段改成飛字</td><td>不做</td></tr></tbody></table></div>
 <p><strong>兩家都是你答應才會花錢。</strong></p>
-<h3>6-5 哪裡會用到雲端生成</h3>
+<h3>6-5 Cursor 和 ChatGPT：用你的方案做圖片</h3>
+<p>如果你已經有 Cursor 或 ChatGPT 的訂閱，也可以用它們來做圖片：</p>
+<ul><li><strong>只做圖片，不做影片。</strong> 影片請用 Theater、Higgsfield 或本機生成。</li><li><strong>可以給參考圖</strong>（第 3、4 章）。</li><li><strong>用你方案的用量，沒有每張的價錢。</strong> 開始前會問「用你 Cursor（或 ChatGPT）方案的用量，要做嗎？」，按「用 Cursor 做」或「用 ChatGPT 做」才會做。不做的話，那幾段改成飛字。</li><li><strong>Cursor</strong>：用登入好的 Cursor 帳號（在「設定 → AI 與工具」安裝並登入 Cursor）。</li><li><strong>ChatGPT</strong>：經 Codex，用你的 ChatGPT 帳號，<strong>要 ChatGPT Plus 或以上</strong>（免費方案不能做圖片）。用量用完時，Onset 會告訴你什麼時候可以再做。</li></ul>
+<p>加進清單後，在這些地方都能選它們：</p>
+<ul><li><strong>不拍，直接做</strong>：每個鏡頭的來源選「<strong>Cursor 圖片</strong>」或「<strong>ChatGPT 圖片</strong>」（第 5 章）。</li><li><strong>AI 留言條</strong>：「工具」選「Cursor（圖片，用你的方案）」或「ChatGPT（圖片，用你的方案）」（第 3 章）。</li><li><strong>AI Onset</strong>：直接說「用 ChatGPT 畫這張」也可以。</li></ul>
+<h3>6-6 哪裡會用到雲端生成</h3>
 <ul><li><strong>不拍，直接做</strong>：選「雲端生成」或「混合」，或在分鏡清單把某個鏡頭換成「Higgsfield 雲端影片」「Theater 雲端圖片」等（第 5 章）。</li><li><strong>AI 留言條</strong>：「工具」選「Higgsfield（付費生成）」或「Theater（付費生成）」。按生成會先顯示「報價中…」，再問「要做嗎？」（第 3 章）。</li><li>「自動」選工具時，<strong>永遠不會自己選付費的</strong>。</li></ul>
 <h4>參考圖</h4>
-<p>給 AI 留言條或 AI Onset 的參考圖（第 3、4 章）：<strong>Theater 會照著參考圖做</strong>；<strong>Higgsfield 不收參考圖</strong>，只有寫 prompt 的 AI 看得到。要照著圖做，請選 Theater。</p>
+<p>給 AI 留言條或 AI Onset 的參考圖（第 3、4 章）：<strong>Theater、Cursor、ChatGPT 會照著參考圖做</strong>；<strong>Higgsfield 不收參考圖</strong>，只有寫 prompt 的 AI 看得到。要照著圖做，請選 Higgsfield 以外的。</p>
 <aside class="note"><p>測試時不花真的錢，所以這一章沒有實際報價視窗的截圖。</p></aside></section>
 <section class="chapter" id="ch07"><header class="chhead"><span class="chnum">第 7 章</span><h2>iPhone app 和同步</h2></header><p>Onset 也有 iPhone / iPad 版。手機和 Mac 配對後，影片、腳本、時間軸和貼文會互相同步。</p>
 <aside class="note"><p>這一章的手機截圖是之前在 iPhone 模擬器測試時拍的。</p></aside>
@@ -428,7 +433,7 @@ tr:last-child td{border-bottom:0}
 <h3>AI 改壞了怎麼辦？</h3>
 <p>按 AI Onset 對話框裡的「<strong>↶ 復原這次 AI 的改動</strong>」。剪輯也可以切回之前的「<strong>版本</strong>」。</p>
 <h3>雲端生成會不會偷偷花錢？</h3>
-<p>不會。每一次都會先報價（Higgsfield 報 credits，Theater 報金額），你按同意才做。「自動」選工具時不會選付費工具。</p>
+<p>不會。每一次都會先問你：Higgsfield 報 credits，Theater 報金額，Cursor 和 ChatGPT 說會用你方案的用量；你按同意才做。「自動」選工具時不會選付費工具。</p>
 <h3>手機看不到 Mac 的東西？</h3>
 <ul><li>Mac 的 Onset 要開著，「設定 → 同步」要開啟。</li><li>不在家時，「在外面也能連」要開著，Mac 不能睡著。</li><li>在外面時大的影片檔不會傳，回家連同一個 Wi‑Fi 才傳。</li></ul></section>
     <p class="foot">Onset 新手使用手冊 · 2026 年 11 月版。畫面截圖在測試環境拍攝，文字可能和你的 Mac 上略有不同。</p>

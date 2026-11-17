@@ -86,7 +86,7 @@ AI Onset can use any of these four as its brain: **Claude Code, ChatGPT · Codex
 - Only AIs that are installed and ready can be chosen.
 - If the chosen AI can't do something (Cursor can't search the web or look at pictures, for example), Claude Code answers instead and the screen says so; if Claude Code isn't available either, it tells you it can't be done.
 
-> **Coming soon:** making pictures with Cursor or ChatGPT. It's still being tested and isn't in this version yet.
+> Want to **make pictures** with your Cursor or ChatGPT plan? That's a separate setting: add them to the cloud list in Settings → Generation tools. See [chapter 6, 6-5](06-cloud.md).
 
 ## 4-8 Let an outside AI use Onset (advanced)
 
