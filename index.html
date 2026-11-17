@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Onset 新手手冊</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: sticky chapter rail on the left (desktop), one reading column of ~38em; on phones the rail becomes the contents list at the top. */
+:root{
+  --bg:#f5f5f7; --surface:#ffffff; --ink:#17171c; --muted:#5d5d68; --line:#dedee4;
+  --accent:#e2412f; --accent-ink:#ffffff; --note:#fff3f1; --shot:#0d0d10;
+  --font-body:"Noto Sans TC","PingFang TC","Heiti TC",system-ui,sans-serif;
+  --font-display:"Space Grotesk","Noto Sans TC","PingFang TC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f0f12; --surface:#18181d; --ink:#ececf1; --muted:#a3a3b0; --line:#2c2c34;
+  --accent:#ff5a48; --accent-ink:#ffffff; --note:#2a1714; --shot:#000000; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f0f12; --surface:#18181d; --ink:#ececf1; --muted:#a3a3b0; --line:#2c2c34;
+  --accent:#ff5a48; --accent-ink:#ffffff; --note:#2a1714; --shot:#000000; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:56px}
+nav.rail{position:sticky;top:env(safe-area-inset-top,0px);align-self:start;padding-block:40px;max-height:100vh;overflow:auto}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:20px;margin-bottom:24px}
+.logo{width:26px;height:26px;border-radius:50%;border:4px solid var(--ink);position:relative;flex:none}
+.logo::after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--accent);top:-7px;right:-7px}
+nav.rail ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+nav.rail a{display:flex;gap:12px;align-items:baseline;padding:7px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:15px;line-height:1.4}
+nav.rail a span{font-family:var(--font-display);font-variant-numeric:tabular-nums;color:var(--accent);min-width:1em}
+nav.rail a:hover,nav.rail a:focus-visible{background:var(--surface);color:var(--ink);outline:none}
+main{min-width:0;padding-block:40px 120px}
+.hero{padding-block:24px 8px}
+.hero .eyebrow{font-family:var(--font-display);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-size:13px;font-weight:700}
+.hero h1{font-size:clamp(34px,5vw,52px);line-height:1.15;margin:8px 0 16px;font-weight:900;text-wrap:balance}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 8px;padding:0;list-style:none}
+.flow li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:15px}
+.flow li.arrow{border:0;background:none;padding:0 2px;color:var(--muted)}
+.mobiletoc{display:none}
+.chapter{padding-top:48px;margin-top:48px;border-top:1px solid var(--line);scroll-margin-top:16px}
+.chhead{margin-bottom:12px}
+.chnum{font-family:var(--font-display);font-weight:700;color:var(--accent);font-size:14px;letter-spacing:.06em}
+.chapter h2,.hero h2{font-size:clamp(26px,3.4vw,34px);line-height:1.25;margin:4px 0 0;font-weight:900;text-wrap:balance}
+h3{font-size:22px;margin:40px 0 8px;line-height:1.35;text-wrap:balance}
+h4{font-size:18px;margin:28px 0 6px}
+p,ul,ol,.tbl,aside,figure{max-width:40em}
+p{margin:10px 0}
+main ul,main ol{padding-left:1.4em;margin:10px 0}
+li{margin:4px 0}
+li ul{margin:4px 0}
+strong{font-weight:700}
+code{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.85em;background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:1px 6px;word-break:break-all}
+a{color:var(--accent)}
+hr{display:none}
+figure{margin:20px 0 24px;max-width:100%}
+figure img{display:block;width:100%;border-radius:12px;background:var(--shot);border:1px solid var(--line)}
+figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.figrow{display:flex;flex-wrap:wrap;gap:16px;margin:20px 0}
+img.phone{width:240px;max-width:100%;height:auto;border-radius:22px;border:1px solid var(--line);background:var(--shot)}
+aside.note{background:var(--note);border-radius:12px;padding:12px 18px;margin:18px 0;font-size:15.5px}
+aside.note p{margin:6px 0}
+aside.note figure{margin:10px 0}
+.tbl{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:700;background:color-mix(in srgb,var(--surface) 70%,var(--bg))}
+tr:last-child td{border-bottom:0}
+.foot{margin-top:72px;color:var(--muted);font-size:14px}
+@media (max-width:900px){
+  .wrap{grid-template-columns:minmax(0,1fr);gap:0}
+  nav.rail{display:none}
+  .mobiletoc{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px;margin:24px 0}
+  .mobiletoc ol{margin:6px 0;padding-left:1.4em}
+  body{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <nav class="rail" aria-label="章節">
+    <div class="brand"><span class="logo" aria-hidden="true"></span>Onset 新手手冊</div>
+    <ol><li><a href="#ch01"><span>1</span>安裝和第一次打開</a></li><li><a href="#ch02"><span>2</span>首頁六個入口</a></li><li><a href="#ch03"><span>3</span>Editing 剪輯</a></li><li><a href="#ch04"><span>4</span>AI Onset：叫 AI 幫你做事</a></li><li><a href="#ch05"><span>5</span>不拍，直接做</a></li><li><a href="#ch06"><span>6</span>雲端生成：Higgsfield 和 Theater</a></li><li><a href="#ch07"><span>7</span>iPhone app 和同步</a></li><li><a href="#ch08"><span>8</span>常見問題</a></li></ol>
+  </nav>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Onset V3 · 使用手冊</div>
+      <h1>第一次用 Onset，從這裡開始</h1>
+      <p>給第一次用 Onset 的創作者。不用懂程式，照著做就好。</p>
+<p>Onset 是一個從「寫腳本」到「拍」「剪」「做封面和貼文」都在同一個地方完成的 app。 它有一個 AI 助手叫 <strong>AI Onset</strong>，你用說的或打字叫它做事，它做的每一步你都看得到，也能隨時暫停。</p>
+<figure><img src="images/10-home.jpg" alt="首頁六個入口"><figcaption>首頁六個入口</figcaption></figure>
+      <ul class="flow" aria-label="一支影片的流程"><li>寫腳本</li><li class="arrow">→</li><li>拍攝</li><li class="arrow">→</li><li>剪輯</li><li class="arrow">→</li><li>封面和貼文</li><li class="arrow">→</li><li>輸出</li></ul>
+      <div class="mobiletoc"><strong>目錄</strong><ol><li><a href="#ch01"><span>1</span>安裝和第一次打開</a></li><li><a href="#ch02"><span>2</span>首頁六個入口</a></li><li><a href="#ch03"><span>3</span>Editing 剪輯</a></li><li><a href="#ch04"><span>4</span>AI Onset：叫 AI 幫你做事</a></li><li><a href="#ch05"><span>5</span>不拍，直接做</a></li><li><a href="#ch06"><span>6</span>雲端生成：Higgsfield 和 Theater</a></li><li><a href="#ch07"><span>7</span>iPhone app 和同步</a></li><li><a href="#ch08"><span>8</span>常見問題</a></li></ol></div>
+      <h3>先知道三件事</h3>
+<ul><li><strong>每個畫面右下角的圓形按鈕就是 AI Onset。</strong> 不知道怎麼做的時候，直接問它。鍵盤按 ⌘J 也能叫它。</li><li><strong>AI 改過的東西都能復原。</strong> 每次 AI 做完，都有一顆「↶ 復原這次 AI 的改動」。</li><li><strong>要花錢的事一定先問你。</strong> 雲端生成會先報價，你按同意才做。</li></ul>
+<h3>關於這本手冊的截圖</h3>
+<p>截圖是在測試環境拍的（測試帳號「小明」、用 Mac 語音念的假影片、不連真的 AI）。 所以有些畫面的文字會跟你看到的不一樣，例如儲存位置顯示的是測試資料夾、AI 的回答比較短。按鈕和位置都是一樣的。</p>
+    </section>
+    <section class="chapter" id="ch01"><header class="chhead"><span class="chnum">第 1 章</span><h2>安裝和第一次打開</h2></header><h3>1-1 把 Onset 裝到 Mac</h3>
+<ol><li>打開 Onset 的 <code>.dmg</code> 檔。</li><li>把 <strong>Onset</strong> 拖進「應用程式」資料夾。</li><li>到「應用程式」，<strong>按右鍵點 Onset → 打開</strong>（不要直接點兩下）。</li></ol>
+<h4>看到「無法驗證開發者」怎麼辦？</h4>
+<p>第一次打開時，macOS 可能說「無法打開 Onset，因為無法驗證開發者」。這是因為 Onset 還沒有經過 Apple 公證，不是壞掉。</p>
+<ul><li><strong>方法一：</strong> 在 Onset 上按右鍵 → 「打開」→ 再按一次「打開」。</li><li><strong>方法二：</strong> 打開「系統設定」→「隱私權與安全性」→ 往下捲，看到 Onset 那一行 → 按「<strong>仍要打開</strong>」→ 輸入 Mac 的密碼。</li></ul>
+<p>只要做一次，之後就可以正常點兩下打開。</p>
+<aside class="note"><p>如果 macOS 說 Onset「已損毀」：請懂電腦的朋友在「終端機」執行 <code>xattr -dr com.apple.quarantine /Applications/Onset.app</code>，再打開一次。</p></aside>
+<h3>1-2 選語言、建立帳號（Profile）</h3>
+<p>第一次打開會看到這個畫面。</p>
+<figure><img src="images/01-first-open.jpg" alt="第一次打開"><figcaption>第一次打開</figcaption></figure>
+<ol><li>右上角可以選介面語言：繁體中文、简体中文、English、Bahasa Melayu、日本語、한국어。</li><li>按中間的 <strong>＋「Create account」</strong>。</li><li>填三樣東西：<strong>Email、Username（顯示的名字）、密碼</strong>（至少 6 個字）。</li><li>想要點頭像就進去、不用每次打密碼，可以勾「<strong>進入時不需要輸入密碼</strong>」。之後在設定也能改。</li><li>按「<strong>繼續</strong>」。</li></ol>
+<figure><img src="images/02-create-account.jpg" alt="建立帳號"><figcaption>建立帳號</figcaption></figure>
+<aside class="note"><p>帳號存在這台電腦裡。一台 Mac 可以有好幾個 Profile（例如你和助理各一個），之後打開會先讓你選頭像。</p>
+<figure><img src="images/06-profile-picker.jpg" alt="選擇 Profile"><figcaption>選擇 Profile</figcaption></figure></aside>
+<h3>1-3 頻道風格問答（約 1 分鐘）</h3>
+<p>接著 AI Onset 會問你 7 個問題，幫你設定頻道的風格。每題點一個最接近的就好，也可以在下面的輸入框用自己的話回答。</p>
+<div class="tbl"><table><thead><tr><th>步驟</th><th>問什麼</th><th>例子</th></tr></thead><tbody><tr><td>1 風格</td><td>整個頻道給人的感覺</td><td>溫暖手作、俐落專業、活潑有趣、安靜質感</td></tr><tr><td>2 拍攝內容</td><td>你主要拍什麼</td><td>Vlog、教學、產品介紹、訪談</td></tr><tr><td>3 參考畫面／連結</td><td>有沒有喜歡的影片或帳號</td><td>放截圖、貼連結，或「沒有參考」</td></tr><tr><td>4 剪輯風格</td><td>剪起來的節奏</td><td>快節奏、乾淨簡約、電影感、紀錄片</td></tr><tr><td>5 調色風格</td><td>畫面顏色</td><td>自然、暖色、冷色、底片感</td></tr><tr><td>6 Mascot</td><td>有沒有吉祥物</td><td>放圖片，或「沒有」「之後再說」</td></tr><tr><td>7 Logo</td><td>有沒有 Logo</td><td>放圖片，或「沒有」「之後再說」</td></tr></tbody></table></div>
+<figure><img src="images/03-after-create.jpg" alt="風格問答"><figcaption>風格問答</figcaption></figure>
+<p>不想現在回答？按左下角「<strong>跳過，之後再設定</strong>」。</p>
+<p>答完之後，AI Onset 會做出<strong>四個風格</strong>：腳本風格、採訪風格、設計風格、剪輯風格。之後寫腳本、剪輯、做封面時都會照著做。想改，到右上角頭像 →「設定」→「風格」。</p>
+<figure><img src="images/07-style-done.jpg" alt="風格設好了"><figcaption>風格設好了</figcaption></figure>
+<h3>1-4 要不要下載 AI 模型？</h3>
+<p>最後一步，Onset 會問要不要下載在這台 Mac 上跑的 AI 模型：</p>
+<ul><li><strong>語音辨識</strong>（Whisper，1.6 GB）：自動字幕、自動剪掉停頓和講錯的地方。<strong>建議下載。</strong></li><li><strong>AI 配音</strong>（IndexTTS，2 GB）：照你錄的一段聲音念稿。</li><li><strong>人聲分離</strong>（Demucs，800 MB）：把背景音樂、吵雜聲拿掉。</li></ul>
+<p>用右邊的開關選要哪幾個，按「<strong>同意並下載</strong>」。不確定就按「<strong>稍後再說</strong>」，之後在「設定 → AI 與工具」也能裝或移除。</p>
+<figure><img src="images/08-model-download.jpg" alt="下載 AI 模型"><figcaption>下載 AI 模型</figcaption></figure>
+<aside class="note"><p>本機生成圖片和影片的模型（Qwen Image、MiniMax H3）很大（30～185 GB），不在這裡下載，之後到首頁的「本機生成」再決定。</p></aside>
+<h3>1-5 連接 AI（Claude Code）</h3>
+<p>AI Onset 用的是你自己 Mac 上的 <strong>Claude Code</strong>。第一次要登入一次：</p>
+<ol><li>右上角頭像 →「<strong>設定</strong>」→「<strong>AI 與工具</strong>」。</li><li>看「Claude Code」那一行：<ul><li>寫「已登入」就好了。</li><li>寫「還沒登入」：按「<strong>打開終端機登入</strong>」。終端機會打開，接著會開瀏覽器，用你的 Claude 帳號登入就好。</li></ul></li><li>回到 Onset，按「<strong>重新檢查</strong>」。</li></ol>
+<p>同一頁也看得到：</p>
+<ul><li><strong>AI-helper</strong>：Onset 在背景幫忙的小程式。要顯示「執行中」。</li><li><strong>FFmpeg</strong>：輸出影片和轉文字要用。</li><li><strong>語音模型</strong>：轉文字（自動字幕）要用。</li></ul>
+<figure><img src="images/15-settings-ai.jpg" alt="設定 → AI 與工具"><figcaption>設定 → AI 與工具</figcaption></figure>
+<aside class="note"><p>截圖是測試環境，所以 Claude Code 那行寫的是 test engine。你的 Mac 上會寫「已登入」或「還沒登入」。</p></aside>
+<aside class="note"><p><strong>之後會有安裝助手。</strong> 新的 Mac 第一次打開時，會有一步一步的安裝助手幫你裝好 AI 和工具（FFmpeg 也會內建），不用自己開終端機。現在這一版還沒有，FFmpeg 和語音模型要先裝好；不會裝的話，請懂電腦的朋友幫忙，或問 AI Onset。</p></aside>
+<h3>1-6 帳號選單</h3>
+<p>右上角的頭像可以打開：帳號、設定、語言、登出。</p>
+<figure><img src="images/11-account-menu.jpg" alt="帳號選單"><figcaption>帳號選單</figcaption></figure></section>
+<section class="chapter" id="ch02"><header class="chhead"><span class="chnum">第 2 章</span><h2>首頁六個入口</h2></header><p>登入後的首頁有六個大按鈕。一支影片通常是這樣走的：</p>
+<p><strong>寫腳本 → 拍攝 → 剪輯 → 做封面和貼文 → 輸出</strong></p>
+<p>沒空拍？用「<strong>不拍，直接做</strong>」（第 5 章），從腳本直接做成影片。</p>
+<figure><img src="images/10-home.jpg" alt="首頁"><figcaption>首頁</figcaption></figure>
+<div class="tbl"><table><thead><tr><th>按鈕</th><th>做什麼</th></tr></thead><tbody><tr><td><strong>Create Script</strong> 寫腳本</td><td>寫新腳本，或叫 AI 幫你寫</td></tr><tr><td><strong>Content</strong> 影片與封面</td><td>你所有的影片、它們做到哪一步、封面和貼文文字</td></tr><tr><td><strong>Recording</strong> 拍攝</td><td>用 Mac 或 iPhone 拍，有提詞機</td></tr><tr><td><strong>Editing</strong> 剪輯</td><td>剪片、字幕、音樂、調色、輸出</td></tr><tr><td><strong>Post Design</strong> 圖片貼文</td><td>做 IG、FB、小紅書等平台的圖片貼文</td></tr><tr><td><strong>本機生成</strong></td><td>用這台 Mac 生成 AI 圖片和影片（免費，但比較慢）</td></tr></tbody></table></div>
+<p>左上角的 Onset 圖示可以隨時回到首頁。</p>
+<hr>
+<h3>2-1 Create Script（寫腳本）</h3>
+<figure><img src="images/20-script.jpg" alt="寫腳本頁"><figcaption>寫腳本頁</figcaption></figure>
+<ol><li>中間先選格式：<strong>短影音、長片、採訪問題單、Podcast rundown、旁白稿、廣告、教學解說、系列企劃、自由格式</strong>。</li><li>選「腳本風格」（預設是你在問答做出來的「我的腳本風格」）和「長度」。</li><li>右邊可以自己打，也可以叫 AI 寫：</li></ol>
+<p><strong>叫 AI 寫腳本：</strong></p>
+<ol><li>點左上角的 AI Onset 圓形按鈕，打開對話框。</li><li>一句話說這一集要講什麼，例如：「幫我寫一支 60 秒的短影音：三個在家煮出好喝手沖咖啡的小技巧」。</li><li>按送出（或按 🎙 用說的）。</li></ol>
+<figure><img src="images/23-script-written.jpg" alt="叫 AI 寫腳本"><figcaption>叫 AI 寫腳本</figcaption></figure>
+<p>寫好後：</p>
+<ul><li>中間的按鈕可以再改：「短一點」「Hook 更強」「更口語」「更具體」「換語氣…」「照風格重寫」「三個開場」「檢查口誤和風險」。</li><li>會顯示「念完約幾秒」「目標」「幾個字」「幾段」。</li><li>右邊上方三個分頁：「<strong>稿子（可改字）</strong>」「<strong>結構</strong>」「<strong>提詞機</strong>」。</li></ul>
+<figure><img src="images/24-script-structure.jpg" alt="結構分頁"><figcaption>結構分頁</figcaption></figure>
+<p>右上角：</p>
+<ul><li>「<strong>匯入腳本</strong>」：用已經寫好的檔案。</li><li>「<strong>匯出</strong>」：PDF、Word、Markdown、純文字。</li><li>「<strong>不拍，直接做</strong>」：不用拍，直接做成影片（第 5 章）。</li><li>「<strong>送去拍攝</strong>」：帶著這份腳本去 Recording。</li></ul>
+<hr>
+<h3>2-2 Content（影片與封面）</h3>
+<p>所有影片都在這裡。上方可以按狀態篩選：<strong>腳本、拍攝、剪輯、完成</strong>，或按類型：<strong>長片、短片、貼文</strong>。</p>
+<figure><img src="images/30-content.jpg" alt="Content"><figcaption>Content</figcaption></figure>
+<p>點一支影片，右邊會看到它的狀態、素材、輸出，和「<strong>下一步</strong>」要做什麼（例如「送去拍攝」或「不拍，直接做」）。</p>
+<p>下面的按鈕：</p>
+<ul><li><strong>腳本</strong>：看或改腳本。</li><li><strong>封面與貼文文字</strong>：做封面、寫發文用的文字。</li><li><strong>打包分享</strong>：把整支影片的專案打包給別人。</li><li><strong>刪除</strong>。</li></ul>
+<h4>做封面</h4>
+<p>在「封面與貼文文字」裡：</p>
+<ul><li>「<strong>AI 設計</strong>」：照你的設計風格自動做。</li><li>「<strong>用一張圖當封面</strong>」「<strong>AI 生成圖片</strong>」「<strong>生成庫</strong>」「<strong>從版型開始</strong>」。</li><li>「<strong>AI 寫貼文文字</strong>」：幫你寫發文的文案。</li><li>下面有「AI 製作紀錄」，看得到 AI 做了什麼、用了多少 tokens。</li></ul>
+<figure><img src="images/31-cover.jpg" alt="封面與貼文文字"><figcaption>封面與貼文文字</figcaption></figure>
+<p>上方的「<strong>匯入影片</strong>」可以把已經拍好的影片直接加進來。</p>
+<hr>
+<h3>2-3 Recording（拍攝、提詞機）</h3>
+<p>從腳本按「送去拍攝」，或從首頁點 Recording。</p>
+<figure><img src="images/40-recording.jpg" alt="拍攝頁和提詞機"><figcaption>拍攝頁和提詞機</figcaption></figure>
+<aside class="note"><p>截圖用的是測試用的假相機，所以畫面是綠色圖案。</p></aside>
+<ol><li>右邊「<strong>腳本</strong>」選要拍哪一份（也可以選「不用腳本」）。</li><li>提詞機的字會疊在畫面上方。右邊可以調：<ul><li><strong>速度、字體大小、位置（離鏡頭）、高度、背景深淺、閱讀線</strong></li><li>「<strong>自動捲動</strong>」或「<strong>跟著聲音</strong>」：跟著聲音會聽你講到哪裡，自動往下捲。</li><li>「<strong>鏡像</strong>」：用玻璃提詞器時勾。</li><li>「<strong>從這段開始</strong>」：選從 Hook、重點一…哪一段開始拍；「只拍這一段」會在下一段開頭自動停。</li></ul></li><li>按中間的紅色圓鈕開始錄。</li></ol>
+<p>其他好用的設定：</p>
+<ul><li><strong>倒數</strong>：開始前倒數 3 秒，可以每秒嗶一聲。</li><li><strong>語音指令</strong>：用說的控制「開始 / 停止 / 暫停 / 繼續 / 重來 / 下一段 / 上一段」。</li><li><strong>遙控器</strong>：藍牙翻頁器、簡報器可以控制。</li><li><strong>主聲音</strong>：選 Mac 的麥克風；錄音介面有多個輸入時，可以每人一軌。</li></ul>
+<h4>已經用相機或手機拍好了？</h4>
+<p>按「<strong>匯入拍好的影片</strong>」，選檔案就好。拍完（或匯入完）按右上角「<strong>去剪輯</strong>」。</p>
+<figure><img src="images/41-recording-takes.jpg" alt="匯入後去剪輯"><figcaption>匯入後去剪輯</figcaption></figure>
+<h4>用 iPhone 當相機</h4>
+<p>畫面來源的「<strong>iPhone 攝影機</strong>」：在 iPhone 的 Onset 打開錄影 → 設定 →「<strong>當 Mac 的攝影機</strong>」。要先配對、在同一個 Wi‑Fi（見第 7 章）。勾選的 iPhone 會和 Mac 一起開始、一起停止，錄完自動傳回 Mac，可以組成多機位的 Podcast 影片。</p>
+<hr>
+<h3>2-4 Editing（剪輯）</h3>
+<p>點 Editing 會先看到「<strong>正在製作</strong>」的影片，點一支就能開始剪；也可以按「<strong>新建</strong>」開一個空白的 16:9、9:16、1:1 或 Podcast 專案。</p>
+<figure><img src="images/49-edithome.jpg" alt="剪輯首頁"><figcaption>剪輯首頁</figcaption></figure>
+<p>詳細請看 <a href="#ch03">第 3 章</a>。</p>
+<hr>
+<h3>2-5 Post Design（圖片貼文）</h3>
+<figure><img src="images/80-postdesign-list.jpg" alt="貼文列表"><figcaption>貼文列表</figcaption></figure>
+<ol><li>按「<strong>新貼文</strong>」，或跟左邊的 AI Onset 說要發在哪裡（Instagram 直式、方形、小紅書、Facebook、Threads、X）。</li><li>進到編輯畫面：<ul><li>左邊：平台與尺寸、目的、內容來源、張數、設計風格，按「<strong>照這些重新設計</strong>」。</li><li>中間：直接在圖上改。點一下選取、拖曳移動、拉角落改大小，<strong>文字點兩下直接改</strong>。上方可以加「文字」「一張圖」「AI 生成圖片」「生成庫」「形狀」。</li><li>右邊：「<strong>版型</strong>」「<strong>圖層</strong>」「<strong>背景</strong>」「<strong>風格</strong>」「<strong>檢查</strong>」。版型可以「做成輪播」（封面頁＋每頁一個重點＋結尾頁）。</li></ul></li><li>「<strong>複製到其他平台…</strong>」可以一次做出其他尺寸。</li><li>做好按右上角「<strong>下載</strong>」。會自動儲存。</li></ol>
+<figure><img src="images/81-postdesign-editor.jpg" alt="貼文編輯"><figcaption>貼文編輯</figcaption></figure>
+<hr>
+<h3>2-6 本機生成（AI 圖片和影片）</h3>
+<p>在這台 Mac 上生成 AI 圖片和影片：<strong>不上雲、不花錢，但比較慢，模型也很大。</strong></p>
+<figure><img src="images/85-studio.jpg" alt="本機生成"><figcaption>本機生成</figcaption></figure>
+<ul><li>頁面上方會先檢查這台電腦：晶片、記憶體、硬碟剩多少，並告訴你<strong>能做什麼、大約要多久</strong>。</li><li>模型：</li></ul>
+<p>- <strong>Qwen Image 2.1 Turbo</strong>：生成圖片。下載約 33 GB，一張圖約幾分鐘。 - <strong>MiniMax H3</strong>（8-bit 或 4-bit）：生成有聲音的影片。下載 115 GB，安裝時最多要 185 GB 空間，5 秒影片約 35 分鐘。</p>
+<ul><li>每個模型都要先<strong>勾同意授權</strong>、按「安裝」才會下載。請看清楚授權（例如 Qwen 是研究授權，商業用途要先看條款）。</li><li>首頁按鈕下面如果寫「<strong>只能生成圖片</strong>」，表示這台 Mac 的記憶體或硬碟放不下影片模型，只能用圖片模型。</li><li>一台 Mac 一次只做一段，其他的會排隊。可以停止，做好的圖可以「加到參考圖庫」「用這張做影片」「放進影片…」。</li><li>只支援 Apple Silicon（M 系列晶片）的 Mac。</li></ul></section>
+<section class="chapter" id="ch03"><header class="chhead"><span class="chnum">第 3 章</span><h2>Editing 剪輯</h2></header><h3>3-1 剪輯畫面長什麼樣</h3>
+<figure><img src="images/50-editor.jpg" alt="剪輯畫面"><figcaption>剪輯畫面</figcaption></figure>
+<ul><li><strong>左邊：素材和工具。</strong> 一排分頁：Media（素材）、Audio（聲音）、Text（文字）、Effects（效果）、Transitions（轉場）、字幕、圖形、AI 留言。</li><li><strong>中間：預覽畫面。</strong> 按 ▶ 播放。</li><li><strong>右邊：屬性。</strong> 點了一個片段，這裡就出現它的設定。</li><li><strong>下面：時間軸（timeline）。</strong> 影片從左到右排好。</li><li><strong>最上面一排：</strong> 影片名稱、「版本」、畫面比例（橫、直、方）、版面配置、「<strong>套用風格</strong>」、「<strong>輸出</strong>」。</li></ul>
+<h3>3-2 時間軸的每一列</h3>
+<p>由上往下：</p>
+<div class="tbl"><table><thead><tr><th>列</th><th>放什麼</th></tr></thead><tbody><tr><td><strong>字幕</strong></td><td>自動字幕，一句一段</td></tr><tr><td><strong>AI</strong></td><td>AI 留言條（寫給 AI 的備註，見 3-8）</td></tr><tr><td><strong>疊加</strong></td><td>疊在畫面上的東西：文字、圖片、子母畫面</td></tr><tr><td><strong>封面</strong></td><td>這支影片的封面</td></tr><tr><td><strong>主軌</strong></td><td>主要的影片片段，從頭接到尾</td></tr><tr><td><strong>旁白</strong></td><td>你錄的或 AI 念的旁白</td></tr><tr><td><strong>音樂</strong></td><td>背景音樂</td></tr><tr><td><strong>音效</strong></td><td>叮、咻這類短的聲音</td></tr></tbody></table></div>
+<p>每一列左邊有 🔒（鎖住，不會被改到）和 👁 / 🔊（隱藏或靜音）。</p>
+<h3>3-3 基本剪接</h3>
+<figure><img src="images/51-clip-selected.jpg" alt="選了一個片段"><figcaption>選了一個片段</figcaption></figure>
+<ul><li><strong>放素材：</strong> 左邊 Media 的「拍好的素材」，<strong>直接拖到時間軸</strong>。拖到主軌兩段之間會插進去。也可以從 Finder 直接拖進來。</li><li><strong>先挑一段再放：</strong> 點素材卡片打開預覽，按 <strong>I</strong> 標開頭、<strong>O</strong> 標結尾。</li><li><strong>選取：</strong> 點一下片段。右邊會出現 <strong>Video / Audio / Speed / Animation / Adjust</strong> 這幾個分頁。</li><li><strong>剪開：</strong> 把紅色播放頭移到要剪的地方，按工具列的「<strong>分割</strong>」（剪刀圖示）。</li><li><strong>剪短：</strong> 拖片段的左右邊緣。</li><li><strong>換順序：</strong> 把片段拖到別的位置。</li><li><strong>刪除：</strong> 選取後按垃圾桶。</li><li><strong>復原：</strong> 工具列的 ↶ ↷。</li><li>工具列右邊的磁鐵是「<strong>主軌磁吸</strong>」：開著時，片段之間不會留空隙。</li><li>右下的滑桿可以放大縮小時間軸（Mac 觸控板也可以兩指縮放）。</li></ul>
+<h4>讓 AI 幫你剪</h4>
+<ul><li><strong>Auto-cut</strong>：自動剪掉停頓。剪之前的樣子會存成版本「Auto-cut 前」。</li><li><strong>AI Edit</strong>：照你說的剪，例如「把講錯和重講的地方剪掉」。長片會一章一章做。</li></ul>
+<h4>版本</h4>
+<p>最上面的「<strong>版本</strong>」可以另存一個版本再大改，改壞了切回舊版本就好。</p>
+<h3>3-4 片段的設定（右邊屬性）</h3>
+<ul><li><strong>Video › Basic</strong>：位置和大小、縮放、旋轉、不透明度、混合模式、<strong>穩定畫面</strong>（去掉手震）。</li><li><strong>Video › Remove BG / Mask / Retouch</strong>：去背、遮罩、美顏。</li><li><strong>Audio</strong>：音量、淡入淡出、人聲增強、降噪。</li><li><strong>Speed</strong>：變速，或用速度曲線（蒙太奇、英雄時刻、子彈時間…）。</li><li><strong>Animation</strong>：進場、出場動畫。</li><li><strong>關鍵幀</strong>：每一列右邊的 ◇ 會在播放頭打一個關鍵幀，‹ › 跳到上一個、下一個。</li></ul>
+<h3>3-5 文字和文字排版</h3>
+<ol><li>左邊點「<strong>Text</strong>」。</li><li>點一下樣式（「文字」或一種「飛」字動畫），就會加到播放頭的位置。</li><li>在預覽畫面上<strong>拖曳移動、拉角落改大小、上方的圓點旋轉</strong>。</li><li>右邊「Video › Basic」改內容和排版。</li></ol>
+<figure><img src="images/52-text.jpg" alt="文字排版面板"><figcaption>文字排版面板</figcaption></figure>
+<p>排版面板可以調：</p>
+<ul><li><strong>文字</strong>內容</li><li><strong>字型</strong>（思源黑體、粉圓體、芫荽手寫、明體、楷體、圓體…）和<strong>樣式</strong>（極細到特粗，可加斜體）</li><li><strong>字級</strong></li><li><strong>對齊</strong>（靠左、置中、靠右、齊行）和<strong>垂直對齊</strong></li><li><strong>行距、字距、字偶距、基線</strong></li><li><strong>全大寫</strong>和全大寫字級</li><li><strong>字</strong>的顏色、<strong>描邊</strong>、<strong>色塊</strong>、<strong>陰影</strong></li><li><strong>飛字動畫</strong>：40 多種，例如「轉著飛進來」「亂碼變字」「打字機」「彈跳落地」；可以整段一起動，或一個字、一個詞輪流動。</li></ul>
+<h3>3-6 字幕</h3>
+<ol><li>左邊點「<strong>字幕</strong>」→「<strong>轉文字（自動字幕）</strong>」。</li><li>等一下，字幕會一句一句出現在最上面的字幕列。</li><li>打錯的字：在「句子（點一下修改）」清單裡點那一句直接改。</li><li>樣式、字級、位置、字體、顏色：右邊的「<strong>字幕</strong>」面板。</li><li>「<strong>輸出時帶字幕</strong>」決定輸出的影片要不要燒上字幕。</li></ol>
+<figure><img src="images/58-captions.jpg" alt="自動字幕"><figcaption>自動字幕</figcaption></figure>
+<h3>3-7 聲音：旁白、音樂、音效</h3>
+<p>左邊點「<strong>Audio</strong>」：</p>
+<ul><li>「<strong>錄旁白</strong>」：直接用麥克風錄。</li><li>「<strong>聲音檔</strong>」：放自己的音樂或聲音。拖進來先放在「音樂」列，右邊屬性可以改成旁白或音效。</li><li>「<strong>AI 旁白</strong>」：用 AI 念稿（要先在「設定 → AI 與工具」下載聲音模型）。</li><li>「<strong>Onset 內建音樂與音效</strong>」：全部免費、不用標作者。按 ▶ 試聽，按「<strong>加入</strong>」放到播放頭。</li></ul>
+<p>有人說話時，音樂可以自動變小（閃避）。</p>
+<h3>3-8 AI 留言條</h3>
+<p>想要一張圖卡、一段動畫，又不想自己做？寫一張「留言條」給 AI：</p>
+<ol><li>左邊點「<strong>AI 留言</strong>」→「<strong>AI 留言條</strong>」。時間軸最上面的 AI 列會多一條。</li><li>拖它的位置和長短，對準要出現的那幾秒。</li><li>右邊寫這段要什麼，例如「大字卡：水溫 92 度，旁邊畫一個溫度計」。</li><li>選「<strong>工具</strong>」：「自動（看文字判斷）」、Onset 圖卡、EffectCraft、Three.js、去背（字在人後面）…；付費的「<strong>Higgsfield（付費生成）</strong>」「<strong>Theater（付費生成）</strong>」要先在設定加入雲端（第 6 章）。</li><li>按「<strong>生成</strong>」，或「<strong>全部生成</strong>」一次做完所有留言條。</li></ol>
+<p>做出來的圖層會放在留言條下面。留言條本身不會出現在影片裡。 「自動」永遠不會自己選付費工具；選了付費工具，也會先報價、問你才做。</p>
+<figure><img src="images/59-ainote.jpg" alt="AI 留言條"><figcaption>AI 留言條</figcaption></figure>
+<h3>3-9 轉場</h3>
+<ol><li>左邊點「<strong>Transitions</strong>」。</li><li>把喜歡的轉場<strong>拖到時間軸兩段之間</strong>。剪接點上會出現一個小方塊。</li><li>拖小方塊的邊緣可以改長度；選取後按刪除可以拿掉。</li><li>懶得一個個放：按最下面「<strong>每個剪接點都加「交叉淡化」</strong>」；「<strong>全部移除</strong>」可以一次拿掉。</li></ol>
+<p>共 39 種，分五組：淡化、推移、擦除、形狀、動態（例如甩鏡、故障、翻轉）。</p>
+<figure><img src="images/53-transitions.jpg" alt="轉場"><figcaption>轉場</figcaption></figure>
+<h3>3-10 調色</h3>
+<p>選一個片段 → 右邊「<strong>Adjust</strong>」：</p>
+<ul><li><strong>調整</strong>：先點一個現成風格（原色、暖、冷、鮮豔、柔和、底片、黑白），再用滑桿微調曝光、對比、飽和、色溫、色調。</li><li><strong>LUT</strong>：內建暖色、冷色、底片、青橙、黑白、復古、高對比，也可以「匯入 .cube 檔…」。</li><li><strong>曲線</strong>、<strong>色輪</strong>（暗部、中間調、亮部）：進階用。</li><li><strong>HDR / Log 轉換</strong>：iPhone HDR、Apple Log、Sony S-Log3 拍的影片，轉成一般顏色。</li><li>「<strong>套用到全部片段</strong>」：一段調好，全部一樣。「<strong>全部重設</strong>」回到原本。</li></ul>
+<figure><img src="images/54-adjust.jpg" alt="調色"><figcaption>調色</figcaption></figure>
+<h3>3-11 輸出</h3>
+<ol><li>右上角按「<strong>輸出</strong>」。</li><li>「<strong>預設</strong>」直接選平台最簡單：<ul><li>YouTube（MP4 · 1080p）</li><li>Reels / TikTok / Shorts（直的 1080×1920）</li><li>小紅書</li><li>存檔母帶（MOV · ProRes，檔案很大）</li><li>小檔（傳訊息用，720p）</li><li>只要聲音（MP3）</li></ul></li><li>想自己設，選「自訂」：格式（MP4、MOV、MP3、WAV、AAC）、編碼、解析度、幀率、碼率、畫質。</li><li>只要一小段：勾「<strong>只輸出一段</strong>」。</li><li>看「<strong>存到</strong>」：<ul><li>「<strong>更改…</strong>」選別的資料夾；「<strong>在 Finder 顯示</strong>」打開那個資料夾。</li><li>勾「<strong>每次輸出都問我存在哪裡、叫什麼名字</strong>」：每次輸出前都會跳出存檔視窗。</li></ul></li><li>按「<strong>輸出</strong>」。上方會顯示「輸出中 xx%」，做完會出現「在 Finder 顯示」。</li></ol>
+<figure><img src="images/55-export.jpg" alt="輸出設定"><figcaption>輸出設定</figcaption></figure>
+<aside class="note"><p>截圖是測試環境，所以「存到」顯示的是測試資料夾。你的 Mac 預設存在 <strong>影片（Movies）→ Onset</strong>；如果你在「設定 → 儲存空間」設了媒體資料夾，就存在媒體資料夾裡的「輸出」。</p></aside>
+<figure><img src="images/56-exporting.jpg" alt="輸出中"><figcaption>輸出中</figcaption></figure>
+<h4>給其他剪輯軟體</h4>
+<p>輸出視窗的第二個分頁「<strong>專案檔（給其他剪輯軟體）</strong>」可以存成 FilmCraft、CapCut 草稿、Premiere / DaVinci（XML）、Final Cut Pro（FCPXML）。勾「把用到的原檔複製到專案旁邊」，整個資料夾就能搬走或傳給別人。</p>
+<p>第三個分頁「<strong>壓縮檔案</strong>」可以做出比較小的檔案。</p></section>
+<section class="chapter" id="ch04"><header class="chhead"><span class="chnum">第 4 章</span><h2>AI Onset：叫 AI 幫你做事</h2></header><h3>4-1 怎麼叫它</h3>
+<ul><li>點畫面角落的 <strong>AI Onset 圓形按鈕</strong>（寫腳本、貼文頁在左上，剪輯頁在右下）。</li><li>或在任何畫面按 <strong>⌘J</strong>。</li><li>用打的，或按 <strong>🎙</strong> 用說的：按著說話放開就送出；或點一下開始說，停 2 秒沒說話會自動送出。</li></ul>
+<figure><img src="images/60-ai-onset.jpg" alt="AI Onset 對話框"><figcaption>AI Onset 對話框</figcaption></figure>
+<p>可以叫它做的事，例如：</p>
+<ul><li>「幫我寫一支講今天科技新聞的 Reel 腳本」</li><li>「顏色統一一點，重點句放大，轉場換成閃白」</li><li>「把這支長片拆成幾支短影音」</li><li>「這個是什麼？」（先按 👆 再點畫面上的東西）</li></ul>
+<h3>4-2 上方的小圖示</h3>
+<div class="tbl"><table><thead><tr><th>圖示</th><th>意思</th></tr></thead><tbody><tr><td>🌐</td><td>能不能上網查資料。點一下切換：需要時自動查 → 每次都可以查（🌐!）→ 關</td></tr><tr><td>🔇 / 🔊</td><td>回答要不要念出來</td></tr><tr><td>👆</td><td>「指一下」：再點畫面上任何東西問它（也可以按住 ⌥⇧ 點一下）</td></tr><tr><td>↘</td><td>把對話框收回角落（在剪輯頁旁邊時才有）</td></tr></tbody></table></div>
+<h3>4-3 它做的每一步都看得到</h3>
+<p>叫它做事後，對話框裡會列出它要做的<strong>每一步</strong>，做完一步打一個綠點，旁邊寫做了什麼。</p>
+<figure><img src="images/62-ai-steps.jpg" alt="AI 正在做，可以暫停或停止"><figcaption>AI 正在做，可以暫停或停止</figcaption></figure>
+<ul><li>做的時候下面有「<strong>❚❚ 暫停</strong>」和「<strong>⏹ 停止</strong>」，隨時可以按。暫停後按「▶ 繼續」。</li><li>對話框收起來時，畫面上會有一條小狀態列「Onset 正在做：…」，上面也有暫停和停止。</li><li>時間軸、畫面會跟著動，你可以看著它改。</li><li>做完會出現「<strong>↶ 復原這次 AI 的改動</strong>」。不滿意一鍵退回。</li></ul>
+<figure><img src="images/63-ai-done.jpg" alt="AI 做完"><figcaption>AI 做完</figcaption></figure>
+<h3>4-4 同時幾個 Agent</h3>
+<p>對話框下方有「<strong>同時幾個 Agent − 3 +</strong>」。</p>
+<ul><li>Agent 就是同時一起工作的 AI 幫手。數字越大，大工作（例如「不拍，直接做」整支影片）做得越快，但電腦也越忙。</li><li>可以設 1 到 10 個；Onset 會看這台電腦的狀況，太多時會告訴你「這台電腦現在最多同時幾個」。</li><li>好幾個 Agent 一起工作時：</li></ul>
+<p>- 時間軸上方有<strong>彩色帶子</strong>，標出每個 Agent 正在處理哪一段（寫著「名字 · 步驟」）。 - <strong>每個 Agent 有自己顏色的游標</strong>，會飛到它正在改的地方：某個片段、字幕列、音樂或旁白列、AI 列，調色時飛到預覽畫面上。 - 可以「全部暫停」「全部繼續」「全部停止」，也可以只停其中一個。</p>
+<aside class="note"><p>測試環境沒有真的 AI，所以這一節沒有多 Agent 彩色游標的截圖。</p></aside>
+<h3>4-5 讓外部 AI 操作 Onset（進階）</h3>
+<p>「設定 → MCP」可以「允許外部 AI 在 Onset 裡工作」，例如讓 Claude Desktop 或 Claude Code 直接操作 Onset。外部 AI 做的每一步也會出現在 AI Onset 裡，標「🔌 外部 AI」，一樣能停止。外部 AI 不能拍攝、刪除或發佈。</p></section>
+<section class="chapter" id="ch05"><header class="chhead"><span class="chnum">第 5 章</span><h2>不拍，直接做</h2></header><p>沒時間拍、或這個題目根本拍不到（例如火星探測車）？只要有腳本，Onset 可以幫你做出整支影片：<strong>旁白、飛字、字卡、網路素材、生成的圖片和影片，再加字幕</strong>，一次放好在時間軸上。</p>
+<p>過程看得到，隨時可以停，做完可以一次復原。</p>
+<h3>5-1 從哪裡開始</h3>
+<ul><li><strong>Create Script</strong> 右上角的「<strong>不拍，直接做</strong>」。</li><li><strong>Content</strong> 選一支影片，「下一步」裡的「<strong>不拍，直接做</strong>」。</li><li>或直接跟 AI Onset 說：「這支不拍，直接做成影片」。</li></ul>
+<aside class="note"><p>這支影片已經有拍好的素材時，按鈕會變灰色。</p></aside>
+<h3>5-2 選怎麼做</h3>
+<figure><img src="images/70-noshoot.jpg" alt="不拍，直接做"><figcaption>不拍，直接做</figcaption></figure>
+<p>上面四個大按鈕選一個：</p>
+<div class="tbl"><table><thead><tr><th>選項</th><th>說明</th></tr></thead><tbody><tr><td><strong>只用飛字</strong></td><td>馬上好、不花錢。畫面用文字動畫和圖卡</td></tr><tr><td><strong>本機生成</strong></td><td>用這台 Mac 生成圖片和影片。免費，但每段要幾分鐘</td></tr><tr><td><strong>雲端生成</strong></td><td>用 Higgsfield 或 Theater 生成。要花錢，<strong>每一段都先報價</strong></td></tr><tr><td><strong>混合</strong></td><td>每個鏡頭照那句話自動挑：素材、新聞片、報導截圖、AI 生成、立體動畫、動態圖形</td></tr></tbody></table></div>
+<p>不能用的選項會變灰，並寫原因（例如「這台 Mac 還沒裝」「帳號沒有 credits」）。</p>
+<p>接著設定：</p>
+<ul><li><strong>畫面比例</strong>：16:9 橫的（YouTube）、9:16 直的（Reels / Shorts）、1:1 方的。</li><li><strong>旁白</strong>：AI 語音，或不要旁白。</li><li><strong>說話節奏</strong>：緊、一般、慢。</li><li>勾選：「<strong>字幕</strong>」「<strong>研究新聞和資料</strong>」「<strong>網路圖片和素材影片</strong>」「<strong>每個鏡頭都疊飛字</strong>」。</li><li><strong>同時幾個 Agent</strong>：越多越快（見第 4 章）。</li><li><strong>每章標題卡</strong>：每章開頭放標題和背景，可以選每章的情緒（緊張、好奇、感動、平靜、反思）。</li><li>常用的設定可以「<strong>存成預設</strong>」。</li></ul>
+<figure><img src="images/71-noshoot-mixed.jpg" alt="混合模式"><figcaption>混合模式</figcaption></figure>
+<h3>5-3 看時間、看分鏡</h3>
+<p>往下捲：</p>
+<ul><li><strong>時間計算器</strong>：「大約要 X 分鐘」，還有每個階段（旁白、網路素材、動畫圖卡、本機生成、雲端生成、最後檢查）各要多久。第一次用預設速度估，做過幾次後會越估越準。</li><li><strong>分鏡清單</strong>：每個鏡頭一行，寫著那句話、幾秒、用什麼做。</li></ul>
+<figure><img src="images/72-noshoot-shots.jpg" alt="分鏡清單"><figcaption>分鏡清單</figcaption></figure>
+<h3>5-4 每個鏡頭的來源</h3>
+<p>每一行最左邊的按鈕可以換這個鏡頭用什麼做：</p>
+<figure><img src="images/73-noshoot-source.jpg" alt="鏡頭來源選單"><figcaption>鏡頭來源選單</figcaption></figure>
+<div class="tbl"><table><thead><tr><th>來源</th><th>是什麼</th></tr></thead><tbody><tr><td><strong>素材影片</strong></td><td>網路上免費的素材影片</td></tr><tr><td><strong>網路圖</strong></td><td>網路上找到、授權可以用的圖片</td></tr><tr><td><strong>新聞片 / 報導截圖</strong></td><td>新聞影片、新聞網頁截圖（要先勾「研究新聞和資料」）</td></tr><tr><td><strong>本機生成影片 / 圖片</strong></td><td>這台 Mac 用 MiniMax H3 / Qwen Image 生成</td></tr><tr><td><strong>Higgsfield 雲端影片 / 圖片</strong></td><td>用你的 Higgsfield 帳號生成（花 credits）</td></tr><tr><td><strong>Theater 雲端影片 / 圖片</strong></td><td>用你的 Theater 帳號生成（先報價）</td></tr><tr><td><strong>立體動畫</strong></td><td>3D 動畫</td></tr><tr><td><strong>動畫圖卡</strong></td><td>會動的資訊圖卡</td></tr><tr><td><strong>動態圖形</strong></td><td>EffectCraft 做的動態圖形</td></tr><tr><td><strong>動態字鏡頭</strong></td><td>一拍一個大字、背景換色、鏡頭推拉甩</td></tr><tr><td><strong>圖卡</strong></td><td>靜態圖卡</td></tr></tbody></table></div>
+<p>每一行還有：</p>
+<ul><li>「<strong>飛字</strong>」開關：要不要在畫面上疊文字。</li><li>「<strong>優先 / 之後再做</strong>」：重要的先做。</li><li>「<strong>找不到時：</strong>」網路找不到素材怎麼辦（AI 決定、免費素材片、立體動畫、AI 生成圖片、動畫圖卡）。</li></ul>
+<h3>5-5 主角參考圖</h3>
+<p>腳本裡如果有一個「長得固定」的主角（例如某台探測車、你的產品），AI 生成的每張圖應該都長得一樣。Onset 會自動處理：</p>
+<ol><li>AI 從腳本找出最多 3 個主角。</li><li>上網找授權可以用的真實照片，去背後存進「<strong>本機生成 → 參考圖庫</strong>」，名字是「參考：名字」。</li><li>之後畫 AI 圖、做本機影片、用 Theater 生成時，都會照著這張參考圖畫。</li></ol>
+<p>想換掉或刪掉：到「本機生成」的參考圖庫。下一支同主題的影片會沿用。</p>
+<h3>5-6 本機時間上限</h3>
+<p>選「本機生成」或「混合」時，會多一個「<strong>本機最多</strong>」：10、30、60 或 120 分鐘。</p>
+<p>本機生成很慢（一段影片可能半小時）。時間用完時，剩下還沒做的鏡頭會<strong>自動改成動畫圖卡</strong>，不會一直等。本機正在忙別的工作時，也會直接用動畫圖卡。</p>
+<h3>5-7 要花錢的，先問你</h3>
+<p>畫面最下面寫著：「本機要等多久、雲端要花多少 credits，開始做之前都會先問你。」</p>
+<ul><li><strong>Higgsfield</strong>：先報 credits，例如「雲端生成 N 段，報價共 X credits，要花這些 credits 嗎？」按「不要」，這幾段會改成飛字。</li><li><strong>Theater</strong>：先估價，例如「估價共 US$…，要做嗎？」</li></ul>
+<h3>5-8 開始做、做完之後</h3>
+<ol><li>按「<strong>開始做</strong>」。</li><li>可以去做別的事。AI 會在背景一章一章做：一章旁白念好，那一章的動畫、飛字、字幕、配樂就開始做。</li><li>做好的東西直接出現在剪輯的時間軸上，跟自己剪的一樣，可以再改。</li><li>想重來：跟 AI Onset 說「<strong>重做</strong>」。舊的剪輯會先存成版本「重做前 日期」。</li><li>中途關掉 Onset 也沒關係，下次打開剪輯頁會問「<strong>接著做</strong>」還是「不用了」。</li></ol>
+<h4>旁白有一句念得不好？</h4>
+<p>旁白每一句是一個獨立的片段。在那一句上按「<strong>重念 #n 這句</strong>」，會用同一個聲音再念一次，後面的片段和字幕會自動對好。</p></section>
+<section class="chapter" id="ch06"><header class="chhead"><span class="chnum">第 6 章</span><h2>雲端生成：Higgsfield 和 Theater</h2></header><p>本機生成免費但很慢，有些 Mac 也跑不動影片模型。<strong>雲端生成</strong>用你自己的雲端帳號，在別人的電腦上生成，快很多，但要花錢。</p>
+<p>Onset 可以接兩家：<strong>Higgsfield</strong> 和 <strong>Theater</strong>。兩家可以都加，每個鏡頭各自選用哪一家。</p>
+<h3>6-1 加入雲端服務</h3>
+<ol><li>右上角頭像 →「<strong>設定</strong>」→「<strong>生成工具</strong>」，往下捲到「<strong>雲端生成</strong>」。（「不拍，直接做」視窗左下的「<strong>生成工具</strong>」也會帶你到這裡。）</li><li>按「<strong>＋ 加入雲端服務</strong>」→「選一個…」→ 選 Theater 或 Higgsfield。</li><li>按「<strong>登入 Theater</strong>」或「<strong>登入 Higgsfield</strong>」：<ul><li><strong>Theater</strong>：不用裝東西，按了會打開 Theater 的登入頁，在瀏覽器登入。</li><li><strong>Higgsfield</strong>：要先裝 Higgsfield 的小工具（畫面會給一行安裝指令，請懂電腦的朋友幫忙貼到終端機），再按「登入 Higgsfield」在瀏覽器登入。</li></ul></li><li>回到 Onset 按「<strong>重新檢查</strong>」，看到「已登入」就好了。</li></ol>
+<p>Onset 不看也不存你的密碼，登入都在瀏覽器裡做。</p>
+<figure><img src="images/76-cloud.jpg" alt="雲端生成設定"><figcaption>雲端生成設定</figcaption></figure>
+<aside class="note"><p>截圖中 Higgsfield 那一行的帳號狀態已遮掉。</p></aside>
+<p>不想用了，按那一行的 <strong>✕</strong>「從清單拿掉」。</p>
+<h3>6-2 先用哪一個</h3>
+<p>「<strong>先用哪一個</strong>」：</p>
+<ul><li><strong>自動（清單順序）</strong>：先用清單上面那一個；它不能用（沒登入、沒 credits）就用下一個。</li><li>或指定一家。</li></ul>
+<h3>6-3 選模型和畫素</h3>
+<p>登入後，每一家下面會出現：</p>
+<ul><li>「<strong>圖片模型</strong>」「<strong>影片模型</strong>」：預設是「預設（雲端自己選）」，也可以指定一個。</li><li>選了模型後，可以再選「<strong>畫素</strong>」（解析度）。畫素越高通常越貴。</li></ul>
+<h3>6-4 Higgsfield credits 和 Theater 報價有什麼不同？</h3>
+<div class="tbl"><table><thead><tr><th></th><th>Higgsfield</th><th>Theater</th></tr></thead><tbody><tr><td>怎麼付錢</td><td>用帳號裡的 <strong>credits</strong>（要先在 Higgsfield 買或領）</td><td>照每次的<strong>報價</strong>，從你的 Theater 帳號扣</td></tr><tr><td>Onset 看得到餘額嗎</td><td>看得到，例如「已登入（方案，N credits）」</td><td>看不到，以 Theater 帳號為準</td></tr><tr><td>開始前會問什麼</td><td>「報價共 X credits，要花這些 credits 嗎？」</td><td>影片：「估價共約 US$…，要做嗎？」；圖片寫「Theater 先報價」</td></tr><tr><td>不答應會怎樣</td><td>那幾段改成飛字</td><td>不做</td></tr></tbody></table></div>
+<p><strong>兩家都是你答應才會花錢。</strong></p>
+<h3>6-5 哪裡會用到雲端生成</h3>
+<ul><li><strong>不拍，直接做</strong>：選「雲端生成」或「混合」，或在分鏡清單把某個鏡頭換成「Higgsfield 雲端影片」「Theater 雲端圖片」等（第 5 章）。</li><li><strong>AI 留言條</strong>：「工具」選「Higgsfield（付費生成）」或「Theater（付費生成）」。按生成會先顯示「報價中…」，再問「要做嗎？」（第 3 章）。</li><li>「自動」選工具時，<strong>永遠不會自己選付費的</strong>。</li></ul>
+<aside class="note"><p>測試時不花真的錢，所以這一章沒有實際報價視窗的截圖。</p></aside></section>
+<section class="chapter" id="ch07"><header class="chhead"><span class="chnum">第 7 章</span><h2>iPhone app 和同步</h2></header><p>Onset 也有 iPhone / iPad 版。手機和 Mac 配對後，影片、腳本、時間軸和貼文會互相同步。</p>
+<aside class="note"><p>這一章的手機截圖是之前在 iPhone 模擬器測試時拍的。</p></aside>
+<h3>7-1 手機上能做什麼</h3>
+<div class="figrow"><img class="phone" src="images/iphone-home.jpg" alt="iPhone 首頁" width="260"></div>
+<p><strong>手機自己就能做：</strong></p>
+<ul><li>匯入影片和照片（從照片圖庫、拍照或錄影、檔案）</li><li>整個剪輯：剪、分割、修剪、排順序、字幕和字幕樣式、轉場、圖層、音樂和旁白、調色</li><li>語音轉文字（用 Apple 的語音辨識）</li><li>輸出 9:16 或 16:9 的 MP4（存到「檔案 → Onset」和「照片」）</li><li>拍攝，有提詞機</li><li>圖片貼文設計</li><li>「生成」：看 Mac 生成過的圖片和影片；用 Apple 的 Image Playground 畫圖；或讓 AI 幫你寫好給 ChatGPT / Gemini / Grok 的 prompt，照步驟去那邊生成、再匯入（不會花 Onset 的錢）</li></ul>
+<div class="figrow"><img class="phone" src="images/iphone-editing.jpg" alt="iPhone 剪輯" width="260"> <img class="phone" src="images/iphone-post.jpg" alt="iPhone 貼文設計" width="260"></div>
+<p><strong>要 Mac 才能做（手機會幫你交給 Mac）：</strong></p>
+<ul><li>AI Onset 的大部分動作、AI Edit</li><li>很長的影片、Podcast 多機位</li><li>去背、遮罩、美顏、聲音工具、HDR 轉換</li><li>其他輸出格式</li><li>本機生成</li></ul>
+<p>手機做不了的事，按「<strong>交給 Mac 做</strong>」，要求會留在那支影片上，Mac 連上後就看得到。</p>
+<p>完全沒網路時，剪輯和輸出照常可以做。</p>
+<h3>7-2 和 Mac 配對</h3>
+<p>第一次配對要在<strong>同一個 Wi‑Fi</strong>，而且 Mac 的 Onset 要開著。</p>
+<p><strong>在 Mac：</strong></p>
+<ol><li>右上角頭像 →「設定」→「<strong>同步</strong>」。</li><li>「這台 Mac 同步」按「<strong>開啟</strong>」。</li><li>「讓手機連線」按「<strong>開啟</strong>」。</li><li>「配對手機」按「<strong>顯示 QR code</strong>」。</li></ol>
+<figure><img src="images/90-sync.jpg" alt="設定 → 同步"><figcaption>設定 → 同步</figcaption></figure>
+<p><strong>在 iPhone：</strong></p>
+<ol><li>第一個畫面按「<strong>和 Mac 配對</strong>」（或「設定 → 同步」）。</li><li>「<strong>掃描 Mac 上的 QR code</strong>」。</li></ol>
+<p>配好了。之後不用再掃。要移除某支手機，在 Mac 的「設定 → 同步」移除。</p>
+<h3>7-3 同步怎麼運作</h3>
+<ul><li><strong>離線也能用：</strong> 每台裝置都有完整的資料。沒網路時照常工作，連上之後才交換改動。</li><li><strong>兩邊都改了同一份？</strong> 腳本或時間軸兩邊都改過時，兩個版本都會留著（另一個時間軸會出現在「版本」裡）。</li><li><strong>影片檔：</strong> 手機先拿 720p 的預覽檔，剪起來比較順。要輸出 1080p 時，按「<strong>下載原檔</strong>」。手機自己拍的影片，會用原檔傳回 Mac。</li><li><strong>生成庫：</strong> Mac 本機生成的圖片和影片會同步到手機的「生成」，先傳小預覽，打開時才下載完整檔案。手機做的也會傳回 Mac。</li></ul>
+<div class="figrow"><img class="phone" src="images/iphone-gen-library.jpg" alt="手機上的生成庫" width="260"></div>
+<h3>7-4 在外面也能連（轉接站）</h3>
+<p>人不在家、手機用 4G / 5G 時，也能連回家裡的 Mac：</p>
+<ul><li>配對第一支手機後會<strong>自動打開</strong>「<strong>在外面也能連（轉接站）</strong>」。在 Mac 的「設定 → 同步」看得到。</li><li>手機會經過 Onset 的轉接站連回 Mac。內容在手機和 Mac 之間就已經加密，轉接站看不到也改不了。</li><li>手機上的狀態會寫「在家（直連）」或「在外面（經過轉接站）」。</li><li><strong>在外面只同步專案、腳本、封面、貼文。</strong> 大的影片檔要回家、連上同一個 Wi‑Fi 才傳。</li><li>家裡的 Mac 要<strong>開著 Onset，而且不能睡著</strong>。建議打開「<strong>不要讓 Mac 睡著</strong>」。筆電闔上蓋子還是會睡（除非接著電源和外接螢幕）。</li></ul>
+<h3>7-5 iPhone 當 Mac 的攝影機</h3>
+<p>拍 Podcast 或訪談時，iPhone 可以當 Mac 的第二台、第三台相機：</p>
+<ol><li>iPhone 的 Onset 打開錄影 → 設定 →「<strong>當 Mac 的攝影機</strong>」。</li><li>Mac 的 Recording 頁，「畫面來源」的「<strong>iPhone 攝影機</strong>」勾選這支 iPhone。</li><li>在 Mac 按錄影，兩邊一起開始、一起停止。</li><li>錄好的檔案自動傳回 Mac，每顆鏡頭一個檔案，自動對齊聲音，組成多機位影片。</li></ol>
+<p>這個功能要<strong>同一個 Wi‑Fi</strong>，不經過轉接站。</p></section>
+<section class="chapter" id="ch08"><header class="chhead"><span class="chnum">第 8 章</span><h2>常見問題</h2></header><h3>輸出的影片存在哪裡？</h3>
+<p>照這個順序：</p>
+<ol><li>你在輸出視窗按「<strong>更改…</strong>」選過的資料夾。</li><li>沒選過：「設定 → 儲存空間」裡的<strong>媒體資料夾</strong>下面的「<strong>輸出</strong>」。</li><li>都沒設：<strong>影片（Movies）→ Onset</strong>。</li></ol>
+<p>最快的找法：輸出完按「<strong>在 Finder 顯示</strong>」。或到「設定 → <strong>影片與輸出</strong>」→「打開資料夾」。</p>
+<p>想每次自己決定：在輸出視窗勾「<strong>每次輸出都問我存在哪裡、叫什麼名字</strong>」。 選的資料夾不在了（例如外接硬碟拔掉），會自動存回預設位置。</p>
+<h3>AI Onset 沒有回應？</h3>
+<ol><li><strong>先關掉 Onset 再打開一次。</strong> 大部分的問題這樣就好了。</li><li>到「設定 → <strong>AI 與工具</strong>」看：<ul><li><strong>AI-helper</strong> 要寫「執行中」。如果 AI 說「AI-helper 沒有在執行」，重新打開 Onset。</li><li><strong>Claude Code</strong> 要寫「已登入」。如果寫「還沒登入」，按「<strong>打開終端機登入</strong>」（見第 1 章）。</li></ul></li><li>按「<strong>重新檢查</strong>」。AI-helper 回來後會自動接上，不用重新整理。</li><li>正在做大工作時（例如「不拍，直接做」），AI 可能在背景忙。看看對話框或狀態列是不是寫著「正在做…」。</li></ol>
+<h3>本機生成很慢？</h3>
+<p>本機生成本來就慢：一張圖幾分鐘，5 秒有聲音的影片約半小時。而且<strong>一台 Mac 一次只做一段</strong>，其他排隊。</p>
+<p>可以這樣做：</p>
+<ul><li>先做「草稿」看看（本機生成頁有草稿選項，快很多）。</li><li>在「不拍，直接做」把一些鏡頭換成<strong>網路圖、素材影片、動畫圖卡</strong>。</li><li>設「<strong>本機最多</strong>」的時間上限，時間到就自動改成動畫圖卡。</li><li>裝「H3 Turbo 加速」「H3 快速解碼」（在「設定 → 生成工具」）。</li><li>趕時間就用<strong>雲端生成</strong>（第 6 章，要花錢）。</li></ul>
+<h3>旁白卡住、念錯、沒有出來？</h3>
+<ul><li><strong>某一句念得不好：</strong> 在那一句旁白上按「<strong>重念 #n 這句</strong>」。</li><li><strong>說「沒有加旁白」：</strong> 通常是還沒下載聲音模型，或 AI-helper 沒回應。照它的說明處理（「設定 → AI 與工具 → AI 旁白的聲音模型」），再做一次。</li><li><strong>預覽時旁白跟畫面對不上、一直重播：</strong> 這是舊版的問題，最新版已經修好。請更新 Onset。輸出的檔案不受影響。</li></ul>
+<h3>硬碟快滿了？</h3>
+<p>Onset 的影片檔很大，本機生成的模型更大（幾十到上百 GB）。</p>
+<ul><li>輸出前空間不夠會先擋下來，告訴你「這次大約要 X GB，只剩 Y GB」。</li><li>「設定 → <strong>儲存空間</strong>」：</li></ul>
+<p>- <strong>媒體資料夾</strong>：把影片素材搬到<strong>外接硬碟</strong>。 - <strong>壓縮檔案</strong>：做成小檔（WhatsApp、E-mail、一半大小），原檔不動。 - 看每支影片、每則貼文佔多少空間，刪掉不要的。</p>
+<ul><li>不用本機生成的話，不要裝影片模型（MiniMax H3 安裝時要 170～185 GB）。</li><li>硬碟太滿時（超過 95% 左右），預覽和匯入可能會出錯。請先清出空間。</li></ul>
+<h3>打開時說「無法驗證開發者」？</h3>
+<p>見第 1 章：按右鍵 →「打開」，或到「系統設定 → 隱私權與安全性」按「<strong>仍要打開</strong>」。</p>
+<h3>AI 改壞了怎麼辦？</h3>
+<p>按 AI Onset 對話框裡的「<strong>↶ 復原這次 AI 的改動</strong>」。剪輯也可以切回之前的「<strong>版本</strong>」。</p>
+<h3>雲端生成會不會偷偷花錢？</h3>
+<p>不會。每一次都會先報價（Higgsfield 報 credits，Theater 報金額），你按同意才做。「自動」選工具時不會選付費工具。</p>
+<h3>手機看不到 Mac 的東西？</h3>
+<ul><li>Mac 的 Onset 要開著，「設定 → 同步」要開啟。</li><li>不在家時，「在外面也能連」要開著，Mac 不能睡著。</li><li>在外面時大的影片檔不會傳，回家連同一個 Wi‑Fi 才傳。</li></ul></section>
+    <p class="foot">Onset 新手使用手冊 · 2026 年 11 月版。畫面截圖在測試環境拍攝，文字可能和你的 Mac 上略有不同。</p>
+  </main>
+</div>
+</body>
+</html>
