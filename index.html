@@ -132,7 +132,7 @@ tr:last-child td{border-bottom:0}
 <p>在新的 Mac 上第一次登入，會先出現「<strong>安裝助手</strong>」。它會檢查這台 Mac 有什麼，缺的東西按一下就裝，都裝在你自己的資料夾，不用管理員密碼。<strong>只有你按了按鈕才會安裝</strong>，不會在背景偷偷下載。</p>
 <figure><img src="images/05-setup.jpg" alt="安裝助手"><figcaption>安裝助手</figcaption></figure>
 <p><strong>第一步：用哪一個 AI？</strong> AI Onset 的「大腦」可以選這幾個：</p>
-<div class="tbl"><table><thead><tr><th>AI</th><th>需要什麼</th></tr></thead><tbody><tr><td><strong>Claude Code</strong></td><td>Claude 帳號（Pro、Max 訂閱或 API 帳號）</td></tr><tr><td><strong>ChatGPT · Codex</strong></td><td>ChatGPT 帳號（Plus、Pro、Business 等方案）。回答會整段出現，不會一個字一個字打出來</td></tr><tr><td><strong>Cursor</strong></td><td>Cursor 帳號（Pro 或以上方案）。要查網路或看圖片時，會交給 Claude Code 代答（有裝好並登入的話），畫面會說</td></tr><tr><td><strong>Hermes</strong></td><td>不用另外的帳號：用你在 Hermes 裡設定的模型（本機或雲端）。本機模型免費但很慢，中文大約每秒 12 個字</td></tr></tbody></table></div>
+<div class="tbl"><table><thead><tr><th>AI</th><th>需要什麼</th></tr></thead><tbody><tr><td><strong>Claude Code</strong></td><td>Claude 帳號（Pro、Max 訂閱或 API 帳號）</td></tr><tr><td><strong>ChatGPT · Codex</strong></td><td>ChatGPT 帳號（Plus、Pro、Business 等方案）。回答會整段出現，不會一個字一個字打出來</td></tr><tr><td><strong>Cursor</strong></td><td>Cursor 帳號（Pro 或以上方案）。要查網路或看圖片時，會交給 Claude Code 代答（有裝好並登入的話），畫面會說</td></tr><tr><td><strong>Hermes</strong></td><td>不用另外的帳號：用你在 Hermes 裡設定的模型（本機或雲端）。本機模型免費，但比較慢，要多久看你的電腦</td></tr></tbody></table></div>
 <p>已經裝好並登入的 AI 會寫「可以用了」，點一下就選它。還沒裝的列在「其他 AI」下面：按「<strong>安裝</strong>」，再按「<strong>登入</strong>」，終端機會打開並帶你到瀏覽器登入，登入好這裡會自己更新。</p>
 <p><strong>第二步：工具和模型。</strong> 往下有 FFmpeg（輸出影片、轉文字要用）、uv（用來裝下面的模型）、語音辨識、AI 配音、人聲分離，每一項都寫了大小、大約幾分鐘和授權。「本機生成（選用）」有自己的安裝頁。</p>
 <p>都好了，按「<strong>都好了，開始</strong>」。</p>
@@ -222,8 +222,8 @@ tr:last-child td{border-bottom:0}
 <p>在這台 Mac 上生成 AI 圖片和影片：<strong>不上雲、不花錢，但比較慢，模型也很大。</strong></p>
 <figure><img src="images/85-studio.jpg" alt="本機生成"><figcaption>本機生成</figcaption></figure>
 <ul><li>頁面上方會先檢查這台電腦：晶片、記憶體、硬碟剩多少，並告訴你<strong>能做什麼、大約要多久</strong>。</li><li>模型：</li></ul>
-<p>- <strong>Qwen Image 2.1 Turbo</strong>：生成圖片。下載約 33 GB，一張圖約幾分鐘。 - <strong>MiniMax H3</strong>（8-bit 或 4-bit）：生成有聲音的影片。下載 115 GB，安裝時最多要 185 GB 空間，5 秒影片約 35 分鐘。</p>
-<ul><li>每個模型都要先<strong>勾同意授權</strong>、按「安裝」才會下載。請看清楚授權（例如 Qwen 是研究授權，商業用途要先看條款）。</li><li>首頁按鈕下面如果寫「<strong>只能生成圖片</strong>」，表示這台 Mac 的記憶體或硬碟放不下影片模型，只能用圖片模型。</li><li>一台 Mac 一次只做一段，其他的會排隊。可以停止，做好的圖可以「加到參考圖庫」「用這張做影片」「放進影片…」。</li><li>只支援 Apple Silicon（M 系列晶片）的 Mac。</li></ul></section>
+<p>- <strong>Qwen Image 2.1 Turbo</strong>：生成圖片。下載約 33 GB。 - <strong>MiniMax H3</strong>（8-bit 或 4-bit）：生成有聲音的影片。下載 115 GB，安裝時最多要 185 GB 空間。</p>
+<ul><li>做一張圖、一段影片要多久，每台電腦都不一樣；頁面上會照你這台 Mac 先估給你看。</li><li>每個模型都要先<strong>勾同意授權</strong>、按「安裝」才會下載。請看清楚授權（例如 Qwen 是研究授權，商業用途要先看條款）。</li><li>首頁按鈕下面如果寫「<strong>只能生成圖片</strong>」，表示這台 Mac 的記憶體或硬碟放不下影片模型，只能用圖片模型。</li><li>一台 Mac 一次只做一段，其他的會排隊。可以停止，做好的圖可以「加到參考圖庫」「用這張做影片」「放進影片…」。</li><li>只支援 Apple Silicon（M 系列晶片）的 Mac。</li></ul></section>
 <section class="chapter" id="ch03"><header class="chhead"><span class="chnum">第 3 章</span><h2>Editing 剪輯</h2></header><h3>3-1 剪輯畫面長什麼樣</h3>
 <figure><img src="images/50-editor.jpg" alt="剪輯畫面"><figcaption>剪輯畫面</figcaption></figure>
 <ul><li><strong>左邊：素材和工具。</strong> 一排分頁：Media（素材）、Audio（聲音）、Text（文字）、Effects（效果）、Transitions（轉場）、字幕、圖形、AI 留言。</li><li><strong>中間：預覽畫面。</strong> 按 ▶ 播放。</li><li><strong>右邊：屬性。</strong> 點了一個片段，這裡就出現它的設定。</li><li><strong>下面：時間軸（timeline）。</strong> 影片從左到右排好。</li><li><strong>最上面一排：</strong> 影片名稱、「版本」、畫面比例（橫、直、方）、版面配置、「<strong>套用風格</strong>」、「<strong>輸出</strong>」。</li></ul>
@@ -323,7 +323,7 @@ tr:last-child td{border-bottom:0}
 <h3>5-2 選怎麼做</h3>
 <figure><img src="images/70-noshoot.jpg" alt="不拍，直接做"><figcaption>不拍，直接做</figcaption></figure>
 <p>上面四個大按鈕選一個：</p>
-<div class="tbl"><table><thead><tr><th>選項</th><th>說明</th></tr></thead><tbody><tr><td><strong>只用飛字</strong></td><td>馬上好、不花錢。畫面用文字動畫和圖卡</td></tr><tr><td><strong>本機生成</strong></td><td>用這台 Mac 生成圖片和影片。免費，但每段要幾分鐘</td></tr><tr><td><strong>雲端生成</strong></td><td>用 Higgsfield 或 Theater 生成。要花錢，<strong>每一段都先報價</strong></td></tr><tr><td><strong>混合</strong></td><td>每個鏡頭照那句話自動挑：素材、新聞片、報導截圖、AI 生成、立體動畫、動態圖形</td></tr></tbody></table></div>
+<div class="tbl"><table><thead><tr><th>選項</th><th>說明</th></tr></thead><tbody><tr><td><strong>只用飛字</strong></td><td>馬上好、不花錢。畫面用文字動畫和圖卡</td></tr><tr><td><strong>本機生成</strong></td><td>用這台 Mac 生成圖片和影片。免費，但比較慢</td></tr><tr><td><strong>雲端生成</strong></td><td>用 Higgsfield 或 Theater 生成。要花錢，<strong>每一段都先報價</strong></td></tr><tr><td><strong>混合</strong></td><td>每個鏡頭照那句話自動挑：素材、新聞片、報導截圖、AI 生成、立體動畫、動態圖形</td></tr></tbody></table></div>
 <p>不能用的選項會變灰，並寫原因（例如「這台 Mac 還沒裝」「帳號沒有 credits」）。</p>
 <p>接著設定：</p>
 <ul><li><strong>畫面比例</strong>：16:9 橫的（YouTube）、9:16 直的（Reels / Shorts）、1:1 方的。</li><li><strong>旁白</strong>：AI 語音，或不要旁白。</li><li><strong>說話節奏</strong>：緊、一般、慢。</li><li>勾選：「<strong>字幕</strong>」「<strong>研究新聞和資料</strong>」「<strong>網路圖片和素材影片</strong>」「<strong>每個鏡頭都疊飛字</strong>」。</li><li><strong>同時幾個 Agent</strong>：越多越快（見第 4 章）。</li><li><strong>每章標題卡</strong>：每章開頭放標題和背景，可以選每章的情緒（緊張、好奇、感動、平靜、反思）。</li><li>常用的設定可以「<strong>存成預設</strong>」。</li></ul>
@@ -344,7 +344,7 @@ tr:last-child td{border-bottom:0}
 <p>想換掉或刪掉：到「本機生成」的參考圖庫。下一支同主題的影片會沿用。</p>
 <h3>5-6 本機時間上限</h3>
 <p>選「本機生成」或「混合」時，會多一個「<strong>本機最多</strong>」：10、30、60 或 120 分鐘。</p>
-<p>本機生成很慢（一段影片可能半小時）。時間用完時，剩下還沒做的鏡頭會<strong>自動改成動畫圖卡</strong>，不會一直等。本機正在忙別的工作時，也會直接用動畫圖卡。</p>
+<p>本機生成比較慢，要多久看你的電腦。時間用完時，剩下還沒做的鏡頭會<strong>自動改成動畫圖卡</strong>，不會一直等。本機正在忙別的工作時，也會直接用動畫圖卡。</p>
 <h3>5-7 要花錢的，先問你</h3>
 <p>畫面最下面寫著：「本機要等多久、雲端要花多少 credits，開始做之前都會先問你。」</p>
 <ul><li><strong>Higgsfield</strong>：先報 credits，例如「雲端生成 N 段，報價共 X credits，要花這些 credits 嗎？」按「不要」，這幾段會改成飛字。</li><li><strong>Theater</strong>：先估價，例如「估價共 US$…，要做嗎？」</li><li><strong>Cursor / ChatGPT</strong>：不報價，用你方案的用量，也是先問你「要做嗎？」。</li></ul>
@@ -415,9 +415,9 @@ tr:last-child td{border-bottom:0}
 <p>最快的找法：輸出完按「<strong>在 Finder 顯示</strong>」。或到「設定 → <strong>影片與輸出</strong>」→「打開資料夾」。</p>
 <p>想每次自己決定：在輸出視窗勾「<strong>每次輸出都問我存在哪裡、叫什麼名字</strong>」。 選的資料夾不在了（例如外接硬碟拔掉），會自動存回預設位置。</p>
 <h3>AI Onset 沒有回應？</h3>
-<ol><li><strong>先關掉 Onset 再打開一次。</strong> 大部分的問題這樣就好了。</li><li>到「設定 → <strong>AI 與工具</strong>」看：<ul><li><strong>AI-helper</strong> 要寫「執行中」。如果 AI 說「AI-helper 沒有在執行」，重新打開 Onset。</li><li>最上面選的 AI（Claude Code、ChatGPT · Codex、Cursor 或 Hermes）要寫「可以用了」。還沒登入就按「<strong>登入</strong>」，照終端機的指示在瀏覽器登入（見第 1 章）。</li><li>用 Hermes 的本機模型時，模型要先在 splash 載入；本機模型很慢，一段腳本可能要好幾分鐘。</li></ul></li><li>按「<strong>重新檢查</strong>」。AI-helper 回來後會自動接上，不用重新整理。</li><li>正在做大工作時（例如「不拍，直接做」），AI 可能在背景忙。看看對話框或狀態列是不是寫著「正在做…」。</li></ol>
+<ol><li><strong>先關掉 Onset 再打開一次。</strong> 大部分的問題這樣就好了。</li><li>到「設定 → <strong>AI 與工具</strong>」看：<ul><li><strong>AI-helper</strong> 要寫「執行中」。如果 AI 說「AI-helper 沒有在執行」，重新打開 Onset。</li><li>最上面選的 AI（Claude Code、ChatGPT · Codex、Cursor 或 Hermes）要寫「可以用了」。還沒登入就按「<strong>登入</strong>」，照終端機的指示在瀏覽器登入（見第 1 章）。</li><li>用 Hermes 的本機模型時，模型要先在 splash 載入；本機模型比較慢，要多久看你的電腦。</li></ul></li><li>按「<strong>重新檢查</strong>」。AI-helper 回來後會自動接上，不用重新整理。</li><li>正在做大工作時（例如「不拍，直接做」），AI 可能在背景忙。看看對話框或狀態列是不是寫著「正在做…」。</li></ol>
 <h3>本機生成很慢？</h3>
-<p>本機生成本來就慢：一張圖幾分鐘，5 秒有聲音的影片約半小時。而且<strong>一台 Mac 一次只做一段</strong>，其他排隊。</p>
+<p>本機生成本來就比較慢，要多久看你的電腦（本機生成頁會照你的 Mac 先估給你看）。而且<strong>一台 Mac 一次只做一段</strong>，其他排隊。</p>
 <p>可以這樣做：</p>
 <ul><li>先做「草稿」看看（本機生成頁有草稿選項，快很多）。</li><li>在「不拍，直接做」把一些鏡頭換成<strong>網路圖、素材影片、動畫圖卡</strong>。</li><li>設「<strong>本機最多</strong>」的時間上限，時間到就自動改成動畫圖卡。</li><li>裝「H3 Turbo 加速」「H3 快速解碼」（在「設定 → 生成工具」）。</li><li>趕時間就用<strong>雲端生成</strong>（第 6 章，要花錢）。</li></ul>
 <h3>旁白卡住、念錯、沒有出來？</h3>

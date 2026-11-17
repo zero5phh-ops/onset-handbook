@@ -61,7 +61,7 @@ The first time you sign in on a new Mac, the "**Setup assistant**" comes first. 
 | **Claude Code** | A Claude account (Pro or Max plan, or an API account) |
 | **ChatGPT · Codex** | A ChatGPT account (Plus, Pro, Business or similar plan). Answers appear all at once instead of word by word |
 | **Cursor** | A Cursor account (Pro plan or above). Web searches and pictures are handed to Claude Code (if it's installed and signed in), and the screen says so |
-| **Hermes** | No extra account: it uses the model you set in Hermes (local or cloud). A local model is free but very slow |
+| **Hermes** | No extra account: it uses the model you set in Hermes (local or cloud). A local model is free but slower; how slow depends on your computer |
 
 An AI that's installed and signed in says "Ready": click it to choose it. The others are listed under "Other AIs": click "**Install**", then "**Sign in**". Terminal opens and takes you to the browser to sign in, and the page updates by itself when you're done.
 

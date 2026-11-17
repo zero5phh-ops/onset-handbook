@@ -156,8 +156,9 @@ Make AI pictures and videos on this Mac: **no cloud, no cost, but slower, and th
 
 - The page first checks this computer (chip, memory, free disk space) and tells you **what it can make and roughly how long it takes**.
 - Models:
-  - **Qwen Image 2.1 Turbo**: pictures. About a 33 GB download; one picture takes a few minutes.
-  - **MiniMax H3** (8-bit or 4-bit): videos with sound. A 115 GB download, needing up to 185 GB free while installing; 5 seconds of video takes about 35 minutes.
+  - **Qwen Image 2.1 Turbo**: pictures. About a 33 GB download.
+  - **MiniMax H3** (8-bit or 4-bit): videos with sound. A 115 GB download, needing up to 185 GB free while installing.
+- How long a picture or a clip takes is different on every computer; the page estimates it for your Mac.
 - Each model only downloads after you **agree to its licence** and click "Install". Read the licence carefully (Qwen's is a research licence, for example: check it before using it for work).
 - If the home button says **"Pictures only"**, this Mac doesn't have the memory or disk space for the video model and can only make pictures. **"Not enough disk space"** means even the picture model doesn't fit yet.
 - One Mac makes one thing at a time; the rest wait in a queue. You can stop a job. Finished pictures can be added to the reference library ("Add to reference library"), turned into a video ("Make a video from this"), or put in a video ("Put in a video…").

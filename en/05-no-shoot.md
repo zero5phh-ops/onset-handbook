@@ -21,7 +21,7 @@ Pick one of the four big buttons at the top:
 | Option | What it means |
 |---|---|
 | **Flying text only** | Ready right away, free. The picture is text animation and cards |
-| **Local generation** | Pictures and videos made on this Mac. Free, but each shot takes minutes |
+| **Local generation** | Pictures and videos made on this Mac. Free, but slower |
 | **Cloud generation** | Made with Higgsfield or Theater. Costs money, **with a quote first** |
 | **Mixed** | Each shot picked from its line: stock, news footage, report screenshots, AI pictures, 3D and motion graphics |
 
@@ -89,7 +89,7 @@ To swap or delete one, go to the reference library in Local AI Studio. The next 
 
 With "Local generation" or "Mixed", there's an extra **"Local limit"**: 10, 30, 60 or 120 minutes.
 
-Local generation is slow (one video shot can take half an hour). When the time runs out, any shots not made yet **automatically become animated cards** instead of waiting. If this Mac is busy with another local job, it uses animated cards straight away too.
+Local generation is slower, and how slow depends on your computer. When the time runs out, any shots not made yet **automatically become animated cards** instead of waiting. If this Mac is busy with another local job, it uses animated cards straight away too.
 
 ## 5-7 Anything paid asks first
 

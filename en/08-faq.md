@@ -19,13 +19,13 @@ If the folder you picked is gone (for example the external drive is unplugged), 
 2. Go to Settings → **AI & tools** and check:
    - **AI-helper** should say "Running". If the AI says AI-helper isn't running, reopen Onset.
    - The AI chosen at the top (Claude Code, ChatGPT · Codex, Cursor or Hermes) should say "Ready". If it isn't signed in, click **"Sign in"** and follow Terminal to sign in in the browser (see chapter 1).
-   - With a local Hermes model, the model has to be loaded first, and it's slow: one script can take several minutes.
+   - With a local Hermes model, the model has to be loaded first, and it's slower; how slow depends on your computer.
 3. Click **"Check again"**. Once AI-helper is back, Onset reconnects by itself; no need to reload.
 4. During a big job (like "No shoot, just make it") the AI may be busy in the background. Check whether the chat or the status bar says it's working on something.
 
 ## Local AI is slow?
 
-Local generation is slow by nature: a few minutes per picture, about half an hour for 5 seconds of video with sound. And **one Mac makes one thing at a time**; the rest wait.
+Local generation is slower by nature, and how slow depends on your computer (the Local AI Studio page estimates it for your Mac). And **one Mac makes one thing at a time**; the rest wait.
 
 Things that help:
 
