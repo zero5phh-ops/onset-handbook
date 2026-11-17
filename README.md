@@ -2,6 +2,8 @@
 
 **網頁版：** https://zero5phh-ops.github.io/onset-handbook/
 
+**繁體中文** · [English](en/README.md)
+
 給第一次用 Onset 的創作者。不用懂程式，照著做就好。
 
 Onset 是一個從「寫腳本」到「拍」「剪」「做封面和貼文」都在同一個地方完成的 app。

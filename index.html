@@ -43,6 +43,12 @@ main{min-width:0;padding-block:40px 120px}
 .flow li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:15px}
 .flow li.arrow{border:0;background:none;padding:0 2px;color:var(--muted)}
 .mobiletoc{display:none}
+.switch{margin:-12px 0 20px 2px}
+.mswitch{display:none}
+a.lang{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--ink);text-decoration:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 12px}
+a.lang::before{content:"文A";font-size:11px;color:var(--accent);font-weight:700}
+nav.rail a.lang{display:inline-flex;padding:3px 12px;color:var(--ink);font-size:14px}
+a.lang:hover,a.lang:focus-visible{border-color:var(--accent);outline:none}
 .chapter{padding-top:48px;margin-top:48px;border-top:1px solid var(--line);scroll-margin-top:16px}
 .chhead{margin-bottom:12px}
 .chnum{font-family:var(--font-display);font-weight:700;color:var(--accent);font-size:14px;letter-spacing:.06em}
@@ -75,6 +81,7 @@ tr:last-child td{border-bottom:0}
 @media (max-width:900px){
   .wrap{grid-template-columns:minmax(0,1fr);gap:0}
   nav.rail{display:none}
+  .mswitch{display:block;margin:10px 0 0}
   .mobiletoc{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px;margin:24px 0}
   .mobiletoc ol{margin:6px 0;padding-left:1.4em}
   body{font-size:16px}
@@ -85,11 +92,12 @@ tr:last-child td{border-bottom:0}
 <div class="wrap" id="top">
   <nav class="rail" aria-label="章節">
     <div class="brand"><span class="logo" aria-hidden="true"></span>Onset 新手手冊</div>
+    <div class="switch"><a class="lang" href="en/" hreflang="en">English</a></div>
     <ol><li><a href="#ch01"><span>1</span>安裝和第一次打開</a></li><li><a href="#ch02"><span>2</span>首頁六個入口</a></li><li><a href="#ch03"><span>3</span>Editing 剪輯</a></li><li><a href="#ch04"><span>4</span>AI Onset：叫 AI 幫你做事</a></li><li><a href="#ch05"><span>5</span>不拍，直接做</a></li><li><a href="#ch06"><span>6</span>雲端生成：Higgsfield 和 Theater</a></li><li><a href="#ch07"><span>7</span>iPhone app 和同步</a></li><li><a href="#ch08"><span>8</span>常見問題</a></li></ol>
   </nav>
   <main>
     <section class="hero">
-      <div class="eyebrow">Onset V3 · 使用手冊</div>
+      <div class="eyebrow">Onset V3 · 使用手冊</div><div class="mswitch"><a class="lang" href="en/" hreflang="en">English</a></div>
       <h1>第一次用 Onset，從這裡開始</h1>
       <p>給第一次用 Onset 的創作者。不用懂程式，照著做就好。</p>
 <p>Onset 是一個從「寫腳本」到「拍」「剪」「做封面和貼文」都在同一個地方完成的 app。 它有一個 AI 助手叫 <strong>AI Onset</strong>，你用說的或打字叫它做事，它做的每一步你都看得到，也能隨時暫停。</p>
