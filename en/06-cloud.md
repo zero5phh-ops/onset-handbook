@@ -6,6 +6,11 @@ Onset works with four services: **Higgsfield** and **Theater**, plus **Cursor** 
 
 ## 6-1 Add a cloud service
 
+No account yet? Sign up on their websites first:
+
+- **Theater**: [https://theater.thedaydreamer.ai](https://theater.thedaydreamer.ai)
+- **Higgsfield**: [https://higgsfield.ai](https://higgsfield.ai)
+
 1. Avatar at the top right → **"Settings"** → **"Generation tools"**, then scroll down to **"Cloud generation"**. (The "Generation tools" button at the bottom left of "No shoot, just make it" brings you here too.)
 2. Click **"＋ Add a cloud service"** and pick Theater, Higgsfield, Cursor or ChatGPT. (Cursor and ChatGPT have to be added here by hand.)
 3. Click **"Sign in to Theater"** or **"Sign in to Higgsfield"**:

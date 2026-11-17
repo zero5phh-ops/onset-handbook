@@ -6,6 +6,11 @@ Onset 可以接四家：**Higgsfield**、**Theater**，以及只做圖片的 **C
 
 ## 6-1 加入雲端服務
 
+還沒有帳號的話，先到官網註冊：
+
+- **Theater**：[https://theater.thedaydreamer.ai](https://theater.thedaydreamer.ai)
+- **Higgsfield**：[https://higgsfield.ai](https://higgsfield.ai)
+
 1. 右上角頭像 →「**設定**」→「**生成工具**」，往下捲到「**雲端生成**」。（「不拍，直接做」視窗左下的「**生成工具**」也會帶你到這裡。）
 2. 按「**＋ 加入雲端服務**」→「選一個…」→ 選 Theater、Higgsfield、Cursor 或 ChatGPT。（Cursor 和 ChatGPT 要自己手動加進來。）
 3. 按「**登入 Theater**」或「**登入 Higgsfield**」：
