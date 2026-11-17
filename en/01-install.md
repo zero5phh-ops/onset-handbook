@@ -107,7 +107,7 @@ Use the switches on the right to choose, then click **"Agree and download"**. No
 
 ![Download AI models](images/08-model-download.jpg)
 
-> The models that make pictures and videos on this Mac (Qwen Image, MiniMax H3) are large (30–185 GB). They aren't downloaded here: decide later on the "Local AI Studio" page.
+> The models that make pictures and videos on this Mac (Qwen Image 2.1, MiniMax H3) are large (30–185 GB). They aren't downloaded here: decide later on the "Local AI Studio" page.
 
 ## 1-7 Switch AI, or sign in again
 

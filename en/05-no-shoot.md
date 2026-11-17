@@ -21,7 +21,7 @@ Pick one of the four big buttons at the top:
 | Option | What it means |
 |---|---|
 | **Flying text only** | Ready right away, free. The picture is text animation and cards |
-| **Local generation** | Made on this Mac, free: pictures use Qwen, videos use MiniMax H3, and the speed depends on your computer |
+| **Local generation** | Made on this Mac, free: pictures use Qwen Image 2.1, videos use MiniMax H3, and the speed depends on your computer |
 | **Cloud generation** | Made with Higgsfield or Theater. Costs money, **with a quote first** |
 | **Mixed** | Each shot picked from its line: stock, news footage, report screenshots, AI pictures, 3D and motion graphics |
 
@@ -59,7 +59,7 @@ The button at the left of each line changes what the shot is made with:
 | **Stock clip** | Free stock video from the web |
 | **Web picture** | A picture from the web whose licence allows it |
 | **News footage / Report screenshot** | News video, or a screenshot of a news page (tick "Research news and facts" first) |
-| **Local AI video / picture** | Made on this Mac with MiniMax H3 / Qwen Image |
+| **Local AI video / picture** | Made on this Mac with MiniMax H3 / Qwen Image 2.1 |
 | **Higgsfield cloud clip / picture** | Made with your Higgsfield account (uses credits) |
 | **Theater cloud clip / picture** | Made with your Theater account (quoted first) |
 | **Cursor picture / ChatGPT picture** | A picture made on your Cursor or ChatGPT plan (no price per picture, asks first; add them to the cloud list first, see chapter 6) |
@@ -89,7 +89,7 @@ To swap or delete one, go to the reference library in Local AI Studio. The next 
 
 With "Local generation" or "Mixed", there's an extra **"Local limit"**: 10, 30, 60 or 120 minutes.
 
-With local generation, pictures use Qwen, videos use MiniMax H3, and the speed depends on your computer. When the time runs out, any shots not made yet **automatically become animated cards** instead of waiting. If this Mac is busy with another local job, it uses animated cards straight away too.
+With local generation, pictures use Qwen Image 2.1, videos use MiniMax H3, and the speed depends on your computer. When the time runs out, any shots not made yet **automatically become animated cards** instead of waiting. If this Mac is busy with another local job, it uses animated cards straight away too.
 
 ## 5-7 Anything paid asks first
 

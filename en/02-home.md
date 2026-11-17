@@ -15,7 +15,7 @@ No time to film? Use "**No shoot, just make it**" (chapter 5) to turn a script s
 | **Recording** | Film with the Mac or an iPhone, with a teleprompter |
 | **Editing** | Cutting, captions, music, colour, export |
 | **Post Design** | Image posts for Instagram, Facebook, Xiaohongshu (RED) and more |
-| **Local AI Studio** | Make AI pictures and videos on this Mac (free; pictures use Qwen, videos use MiniMax H3, and the speed depends on your computer) |
+| **Local AI Studio** | Make AI pictures and videos on this Mac (free; pictures use Qwen Image 2.1, videos use MiniMax H3, and the speed depends on your computer) |
 
 The Onset logo at the top left always takes you back home.
 
@@ -158,7 +158,7 @@ Make AI pictures and videos on this Mac: **no cloud, no cost, but slower, and th
 - Models:
   - **Qwen Image 2.1 Turbo**: pictures. About a 33 GB download.
   - **MiniMax H3** (8-bit or 4-bit): videos with sound. A 115 GB download, needing up to 185 GB free while installing.
-- Local generation: pictures use Qwen, videos use MiniMax H3, and the speed depends on your computer.
+- Local generation: pictures use Qwen Image 2.1, videos use MiniMax H3, and the speed depends on your computer.
 - Each model only downloads after you **agree to its licence** and click "Install". Read the licence carefully (Qwen's is a research licence, for example: check it before using it for work).
 - If the home button says **"Pictures only"**, this Mac doesn't have the memory or disk space for the video model and can only make pictures. **"Not enough disk space"** means even the picture model doesn't fit yet.
 - One Mac makes one thing at a time; the rest wait in a queue. You can stop a job. Finished pictures can be added to the reference library ("Add to reference library"), turned into a video ("Make a video from this"), or put in a video ("Put in a video…").

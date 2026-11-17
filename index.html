@@ -150,7 +150,7 @@ tr:last-child td{border-bottom:0}
 <ul><li><strong>語音辨識</strong>（Whisper，1.6 GB）：自動字幕、自動剪掉停頓和講錯的地方。<strong>建議下載。</strong></li><li><strong>AI 配音</strong>（IndexTTS，2 GB）：照你錄的一段聲音念稿。</li><li><strong>人聲分離</strong>（Demucs，800 MB）：把背景音樂、吵雜聲拿掉。</li></ul>
 <p>用右邊的開關選要哪幾個，按「<strong>同意並下載</strong>」。不確定就按「<strong>稍後再說</strong>」，之後在「設定 → AI 與工具」也能裝或移除。</p>
 <figure><img src="images/08-model-download.jpg" alt="下載 AI 模型"><figcaption>下載 AI 模型</figcaption></figure>
-<aside class="note"><p>本機生成圖片和影片的模型（Qwen Image、MiniMax H3）很大（30～185 GB），不在這裡下載，之後到首頁的「本機生成」再決定。</p></aside>
+<aside class="note"><p>本機生成圖片和影片的模型（Qwen Image 2.1、MiniMax H3）很大（30～185 GB），不在這裡下載，之後到首頁的「本機生成」再決定。</p></aside>
 <h3>1-7 換 AI、重新登入</h3>
 <p>想換 AI Onset 的大腦，或 AI 說還沒登入：</p>
 <ol><li>右上角頭像 →「<strong>設定</strong>」→「<strong>AI 與工具</strong>」。</li><li>最上面就是安裝助手：點另一個寫「可以用了」的 AI 就換過去。</li><li>還沒登入的按「<strong>登入</strong>」，終端機會打開，照著在瀏覽器登入。</li><li>回到 Onset，按「<strong>重新檢查</strong>」。</li></ol>
@@ -168,7 +168,7 @@ tr:last-child td{border-bottom:0}
 <p><strong>寫腳本 → 拍攝 → 剪輯 → 做封面和貼文 → 輸出</strong></p>
 <p>沒空拍？用「<strong>不拍，直接做</strong>」（第 5 章），從腳本直接做成影片。</p>
 <figure><img src="images/10-home.jpg" alt="首頁"><figcaption>首頁</figcaption></figure>
-<div class="tbl"><table><thead><tr><th>按鈕</th><th>做什麼</th></tr></thead><tbody><tr><td><strong>Create Script</strong> 寫腳本</td><td>寫新腳本，或叫 AI 幫你寫</td></tr><tr><td><strong>Content</strong> 影片與封面</td><td>你所有的影片、它們做到哪一步、封面和貼文文字</td></tr><tr><td><strong>Recording</strong> 拍攝</td><td>用 Mac 或 iPhone 拍，有提詞機</td></tr><tr><td><strong>Editing</strong> 剪輯</td><td>剪片、字幕、音樂、調色、輸出</td></tr><tr><td><strong>Post Design</strong> 圖片貼文</td><td>做 IG、FB、小紅書等平台的圖片貼文</td></tr><tr><td><strong>本機生成</strong></td><td>用這台 Mac 生成 AI 圖片和影片（免費；圖片用 Qwen，影片用 MiniMax H3，速度視你的電腦配置而定）</td></tr></tbody></table></div>
+<div class="tbl"><table><thead><tr><th>按鈕</th><th>做什麼</th></tr></thead><tbody><tr><td><strong>Create Script</strong> 寫腳本</td><td>寫新腳本，或叫 AI 幫你寫</td></tr><tr><td><strong>Content</strong> 影片與封面</td><td>你所有的影片、它們做到哪一步、封面和貼文文字</td></tr><tr><td><strong>Recording</strong> 拍攝</td><td>用 Mac 或 iPhone 拍，有提詞機</td></tr><tr><td><strong>Editing</strong> 剪輯</td><td>剪片、字幕、音樂、調色、輸出</td></tr><tr><td><strong>Post Design</strong> 圖片貼文</td><td>做 IG、FB、小紅書等平台的圖片貼文</td></tr><tr><td><strong>本機生成</strong></td><td>用這台 Mac 生成 AI 圖片和影片（免費；圖片用 Qwen Image 2.1，影片用 MiniMax H3，速度視你的電腦配置而定）</td></tr></tbody></table></div>
 <p>左上角的 Onset 圖示可以隨時回到首頁。</p>
 <hr>
 <h3>2-1 Create Script（寫腳本）</h3>
@@ -223,7 +223,7 @@ tr:last-child td{border-bottom:0}
 <figure><img src="images/85-studio.jpg" alt="本機生成"><figcaption>本機生成</figcaption></figure>
 <ul><li>頁面上方會先檢查這台電腦：晶片、記憶體、硬碟剩多少，並告訴你<strong>能做什麼、大約要多久</strong>。</li><li>模型：</li></ul>
 <p>- <strong>Qwen Image 2.1 Turbo</strong>：生成圖片。下載約 33 GB。 - <strong>MiniMax H3</strong>（8-bit 或 4-bit）：生成有聲音的影片。下載 115 GB，安裝時最多要 185 GB 空間。</p>
-<ul><li>本機生成：圖片用 Qwen，影片用 MiniMax H3，速度視你的電腦配置而定。</li><li>每個模型都要先<strong>勾同意授權</strong>、按「安裝」才會下載。請看清楚授權（例如 Qwen 是研究授權，商業用途要先看條款）。</li><li>首頁按鈕下面如果寫「<strong>只能生成圖片</strong>」，表示這台 Mac 的記憶體或硬碟放不下影片模型，只能用圖片模型。</li><li>一台 Mac 一次只做一段，其他的會排隊。可以停止，做好的圖可以「加到參考圖庫」「用這張做影片」「放進影片…」。</li><li>只支援 Apple Silicon（M 系列晶片）的 Mac。</li></ul></section>
+<ul><li>本機生成：圖片用 Qwen Image 2.1，影片用 MiniMax H3，速度視你的電腦配置而定。</li><li>每個模型都要先<strong>勾同意授權</strong>、按「安裝」才會下載。請看清楚授權（例如 Qwen 是研究授權，商業用途要先看條款）。</li><li>首頁按鈕下面如果寫「<strong>只能生成圖片</strong>」，表示這台 Mac 的記憶體或硬碟放不下影片模型，只能用圖片模型。</li><li>一台 Mac 一次只做一段，其他的會排隊。可以停止，做好的圖可以「加到參考圖庫」「用這張做影片」「放進影片…」。</li><li>只支援 Apple Silicon（M 系列晶片）的 Mac。</li></ul></section>
 <section class="chapter" id="ch03"><header class="chhead"><span class="chnum">第 3 章</span><h2>Editing 剪輯</h2></header><h3>3-1 剪輯畫面長什麼樣</h3>
 <figure><img src="images/50-editor.jpg" alt="剪輯畫面"><figcaption>剪輯畫面</figcaption></figure>
 <ul><li><strong>左邊：素材和工具。</strong> 一排分頁：Media（素材）、Audio（聲音）、Text（文字）、Effects（效果）、Transitions（轉場）、字幕、圖形、AI 留言。</li><li><strong>中間：預覽畫面。</strong> 按 ▶ 播放。</li><li><strong>右邊：屬性。</strong> 點了一個片段，這裡就出現它的設定。</li><li><strong>下面：時間軸（timeline）。</strong> 影片從左到右排好。</li><li><strong>最上面一排：</strong> 影片名稱、「版本」、畫面比例（橫、直、方）、版面配置、「<strong>套用風格</strong>」、「<strong>輸出</strong>」。</li></ul>
@@ -323,7 +323,7 @@ tr:last-child td{border-bottom:0}
 <h3>5-2 選怎麼做</h3>
 <figure><img src="images/70-noshoot.jpg" alt="不拍，直接做"><figcaption>不拍，直接做</figcaption></figure>
 <p>上面四個大按鈕選一個：</p>
-<div class="tbl"><table><thead><tr><th>選項</th><th>說明</th></tr></thead><tbody><tr><td><strong>只用飛字</strong></td><td>馬上好、不花錢。畫面用文字動畫和圖卡</td></tr><tr><td><strong>本機生成</strong></td><td>用這台 Mac 生成，免費：圖片用 Qwen，影片用 MiniMax H3，速度視你的電腦配置而定</td></tr><tr><td><strong>雲端生成</strong></td><td>用 Higgsfield 或 Theater 生成。要花錢，<strong>每一段都先報價</strong></td></tr><tr><td><strong>混合</strong></td><td>每個鏡頭照那句話自動挑：素材、新聞片、報導截圖、AI 生成、立體動畫、動態圖形</td></tr></tbody></table></div>
+<div class="tbl"><table><thead><tr><th>選項</th><th>說明</th></tr></thead><tbody><tr><td><strong>只用飛字</strong></td><td>馬上好、不花錢。畫面用文字動畫和圖卡</td></tr><tr><td><strong>本機生成</strong></td><td>用這台 Mac 生成，免費：圖片用 Qwen Image 2.1，影片用 MiniMax H3，速度視你的電腦配置而定</td></tr><tr><td><strong>雲端生成</strong></td><td>用 Higgsfield 或 Theater 生成。要花錢，<strong>每一段都先報價</strong></td></tr><tr><td><strong>混合</strong></td><td>每個鏡頭照那句話自動挑：素材、新聞片、報導截圖、AI 生成、立體動畫、動態圖形</td></tr></tbody></table></div>
 <p>不能用的選項會變灰，並寫原因（例如「這台 Mac 還沒裝」「帳號沒有 credits」）。</p>
 <p>接著設定：</p>
 <ul><li><strong>畫面比例</strong>：16:9 橫的（YouTube）、9:16 直的（Reels / Shorts）、1:1 方的。</li><li><strong>旁白</strong>：AI 語音，或不要旁白。</li><li><strong>說話節奏</strong>：緊、一般、慢。</li><li>勾選：「<strong>字幕</strong>」「<strong>研究新聞和資料</strong>」「<strong>網路圖片和素材影片</strong>」「<strong>每個鏡頭都疊飛字</strong>」。</li><li><strong>同時幾個 Agent</strong>：越多越快（見第 4 章）。</li><li><strong>每章標題卡</strong>：每章開頭放標題和背景，可以選每章的情緒（緊張、好奇、感動、平靜、反思）。</li><li>常用的設定可以「<strong>存成預設</strong>」。</li></ul>
@@ -335,7 +335,7 @@ tr:last-child td{border-bottom:0}
 <h3>5-4 每個鏡頭的來源</h3>
 <p>每一行最左邊的按鈕可以換這個鏡頭用什麼做：</p>
 <figure><img src="images/73-noshoot-source.jpg" alt="鏡頭來源選單"><figcaption>鏡頭來源選單</figcaption></figure>
-<div class="tbl"><table><thead><tr><th>來源</th><th>是什麼</th></tr></thead><tbody><tr><td><strong>素材影片</strong></td><td>網路上免費的素材影片</td></tr><tr><td><strong>網路圖</strong></td><td>網路上找到、授權可以用的圖片</td></tr><tr><td><strong>新聞片 / 報導截圖</strong></td><td>新聞影片、新聞網頁截圖（要先勾「研究新聞和資料」）</td></tr><tr><td><strong>本機生成影片 / 圖片</strong></td><td>這台 Mac 用 MiniMax H3 / Qwen Image 生成</td></tr><tr><td><strong>Higgsfield 雲端影片 / 圖片</strong></td><td>用你的 Higgsfield 帳號生成（花 credits）</td></tr><tr><td><strong>Theater 雲端影片 / 圖片</strong></td><td>用你的 Theater 帳號生成（先報價）</td></tr><tr><td><strong>Cursor 圖片 / ChatGPT 圖片</strong></td><td>用你的 Cursor 或 ChatGPT 方案做圖片（不另外標價，先問你；要先加進雲端清單，見第 6 章）</td></tr><tr><td><strong>立體動畫</strong></td><td>3D 動畫</td></tr><tr><td><strong>動畫圖卡</strong></td><td>會動的資訊圖卡</td></tr><tr><td><strong>動態圖形</strong></td><td>EffectCraft 做的動態圖形</td></tr><tr><td><strong>動態字鏡頭</strong></td><td>一拍一個大字、背景換色、鏡頭推拉甩</td></tr><tr><td><strong>圖卡</strong></td><td>靜態圖卡</td></tr></tbody></table></div>
+<div class="tbl"><table><thead><tr><th>來源</th><th>是什麼</th></tr></thead><tbody><tr><td><strong>素材影片</strong></td><td>網路上免費的素材影片</td></tr><tr><td><strong>網路圖</strong></td><td>網路上找到、授權可以用的圖片</td></tr><tr><td><strong>新聞片 / 報導截圖</strong></td><td>新聞影片、新聞網頁截圖（要先勾「研究新聞和資料」）</td></tr><tr><td><strong>本機生成影片 / 圖片</strong></td><td>這台 Mac 用 MiniMax H3 / Qwen Image 2.1 生成</td></tr><tr><td><strong>Higgsfield 雲端影片 / 圖片</strong></td><td>用你的 Higgsfield 帳號生成（花 credits）</td></tr><tr><td><strong>Theater 雲端影片 / 圖片</strong></td><td>用你的 Theater 帳號生成（先報價）</td></tr><tr><td><strong>Cursor 圖片 / ChatGPT 圖片</strong></td><td>用你的 Cursor 或 ChatGPT 方案做圖片（不另外標價，先問你；要先加進雲端清單，見第 6 章）</td></tr><tr><td><strong>立體動畫</strong></td><td>3D 動畫</td></tr><tr><td><strong>動畫圖卡</strong></td><td>會動的資訊圖卡</td></tr><tr><td><strong>動態圖形</strong></td><td>EffectCraft 做的動態圖形</td></tr><tr><td><strong>動態字鏡頭</strong></td><td>一拍一個大字、背景換色、鏡頭推拉甩</td></tr><tr><td><strong>圖卡</strong></td><td>靜態圖卡</td></tr></tbody></table></div>
 <p>每一行還有：</p>
 <ul><li>「<strong>飛字</strong>」開關：要不要在畫面上疊文字。</li><li>「<strong>優先 / 之後再做</strong>」：重要的先做。</li><li>「<strong>找不到時：</strong>」網路找不到素材怎麼辦（AI 決定、免費素材片、立體動畫、AI 生成圖片、動畫圖卡）。</li></ul>
 <h3>5-5 主角參考圖</h3>
@@ -344,7 +344,7 @@ tr:last-child td{border-bottom:0}
 <p>想換掉或刪掉：到「本機生成」的參考圖庫。下一支同主題的影片會沿用。</p>
 <h3>5-6 本機時間上限</h3>
 <p>選「本機生成」或「混合」時，會多一個「<strong>本機最多</strong>」：10、30、60 或 120 分鐘。</p>
-<p>本機生成圖片用 Qwen，影片用 MiniMax H3，速度視你的電腦配置而定。時間用完時，剩下還沒做的鏡頭會<strong>自動改成動畫圖卡</strong>，不會一直等。本機正在忙別的工作時，也會直接用動畫圖卡。</p>
+<p>本機生成圖片用 Qwen Image 2.1，影片用 MiniMax H3，速度視你的電腦配置而定。時間用完時，剩下還沒做的鏡頭會<strong>自動改成動畫圖卡</strong>，不會一直等。本機正在忙別的工作時，也會直接用動畫圖卡。</p>
 <h3>5-7 要花錢的，先問你</h3>
 <p>畫面最下面寫著：「本機要等多久、雲端要花多少 credits，開始做之前都會先問你。」</p>
 <ul><li><strong>Higgsfield</strong>：先報 credits，例如「雲端生成 N 段，報價共 X credits，要花這些 credits 嗎？」按「不要」，這幾段會改成飛字。</li><li><strong>Theater</strong>：先估價，例如「估價共 US$…，要做嗎？」</li><li><strong>Cursor / ChatGPT</strong>：不報價，用你方案的用量，也是先問你「要做嗎？」。</li></ul>
@@ -417,7 +417,7 @@ tr:last-child td{border-bottom:0}
 <h3>AI Onset 沒有回應？</h3>
 <ol><li><strong>先關掉 Onset 再打開一次。</strong> 大部分的問題這樣就好了。</li><li>到「設定 → <strong>AI 與工具</strong>」看：<ul><li><strong>AI-helper</strong> 要寫「執行中」。如果 AI 說「AI-helper 沒有在執行」，重新打開 Onset。</li><li>最上面選的 AI（Claude Code、ChatGPT · Codex、Cursor 或 Hermes）要寫「可以用了」。還沒登入就按「<strong>登入</strong>」，照終端機的指示在瀏覽器登入（見第 1 章）。</li><li>用 Hermes 的本機模型時，模型要先在 splash 載入；本機模型比較慢，要多久看你的電腦。</li></ul></li><li>按「<strong>重新檢查</strong>」。AI-helper 回來後會自動接上，不用重新整理。</li><li>正在做大工作時（例如「不拍，直接做」），AI 可能在背景忙。看看對話框或狀態列是不是寫著「正在做…」。</li></ol>
 <h3>本機生成很慢？</h3>
-<p>本機生成圖片用 Qwen，影片用 MiniMax H3，速度視你的電腦配置而定。而且<strong>一台 Mac 一次只做一段</strong>，其他排隊。</p>
+<p>本機生成圖片用 Qwen Image 2.1，影片用 MiniMax H3，速度視你的電腦配置而定。而且<strong>一台 Mac 一次只做一段</strong>，其他排隊。</p>
 <p>可以這樣做：</p>
 <ul><li>先做「草稿」看看（本機生成頁有草稿選項，快很多）。</li><li>在「不拍，直接做」把一些鏡頭換成<strong>網路圖、素材影片、動畫圖卡</strong>。</li><li>設「<strong>本機最多</strong>」的時間上限，時間到就自動改成動畫圖卡。</li><li>裝「H3 Turbo 加速」「H3 快速解碼」（在「設定 → 生成工具」）。</li><li>趕時間就用<strong>雲端生成</strong>（第 6 章，要花錢）。</li></ul>
 <h3>旁白卡住、念錯、沒有出來？</h3>
