@@ -18,9 +18,21 @@ You only do this once. After that, Onset opens with a normal double-click.
 > If macOS says Onset "is damaged": ask a tech-savvy friend to run
 > `xattr -dr com.apple.quarantine /Applications/Onset.app` in Terminal, then open it again.
 
-## 1-2 Pick a language and create your account (Profile)
+## 1-2 Terms of Use and Privacy Notice
 
-This is the first screen you'll see.
+The first time you open Onset, you'll see the "**Terms of Use and Privacy Notice**" (in English or Chinese, following your Mac's language).
+
+1. Read it through: your videos and scripts stay on your own device; only when you use an AI or cloud service does Onset send that service what the job needs.
+2. Tick "**I have read and agree**".
+3. Click "**Agree and continue**".
+
+If you click "Don't agree", you can't use Onset. To read the terms again later: avatar at the top right → "Settings" → "**About**" → "Terms of Use and Privacy Notice". When the terms change, Onset asks you to agree again.
+
+![Terms of Use and Privacy Notice](images/00-terms.jpg)
+
+## 1-3 Pick a language and create your account (Profile)
+
+After agreeing, you'll see this screen.
 
 ![First launch](images/01-first-open.jpg)
 
@@ -36,7 +48,32 @@ This is the first screen you'll see.
 >
 > ![Choose a Profile](images/06-profile-picker.jpg)
 
-## 1-3 Channel style questions (about 1 minute)
+## 1-4 The setup assistant: pick an AI, install the tools
+
+The first time you sign in on a new Mac, the "**Setup assistant**" comes first. It checks what this Mac already has; anything missing installs with one click into your own folders, with no admin password. **Nothing installs until you press its button**, and nothing downloads in the background.
+
+![The setup assistant](images/05-setup.jpg)
+
+**First: which AI?** AI Onset's "brain" can be one of these:
+
+| AI | What it needs |
+|---|---|
+| **Claude Code** | A Claude account (Pro or Max plan, or an API account) |
+| **ChatGPT · Codex** | A ChatGPT account (Plus, Pro, Business or similar plan). Answers appear all at once instead of word by word |
+| **Cursor** | A Cursor account (Pro plan or above). Web searches and pictures are handed to Claude Code (if it's installed and signed in), and the screen says so |
+| **Hermes** | No extra account: it uses the model you set in Hermes (local or cloud). A local model is free but very slow |
+
+An AI that's installed and signed in says "Ready": click it to choose it. The others are listed under "Other AIs": click "**Install**", then "**Sign in**". Terminal opens and takes you to the browser to sign in, and the page updates by itself when you're done.
+
+**Then: tools and models.** Further down are FFmpeg (for exporting and transcription), uv (installs the models below), speech recognition, AI voice-over and voice separation, each with its size, roughly how long it takes, and its licence. "Local generation (optional)" has its own install page.
+
+When you're ready, click "**All set — start**".
+
+> If the AI-helper isn't running, the setup assistant can't check this Mac and asks you to reopen Onset. You can click "**Skip for now**" and open this page again later in Settings → AI & tools.
+>
+> ![Skip for now](images/06-setup-nohelper.jpg)
+
+## 1-5 Channel style questions (about 1 minute)
 
 Next, AI Onset asks you 7 questions to set up your channel's style. Click the closest answer for each, or type your own answer in the box below.
 
@@ -58,7 +95,7 @@ When you're done, AI Onset creates **four styles**: a script style, an interview
 
 ![Your style is set](images/07-style-done.jpg)
 
-## 1-4 Download the AI models?
+## 1-6 Download the AI models?
 
 The last step asks which AI models should run on this Mac:
 
@@ -72,29 +109,32 @@ Use the switches on the right to choose, then click **"Agree and download"**. No
 
 > The models that make pictures and videos on this Mac (Qwen Image, MiniMax H3) are large (30–185 GB). They aren't downloaded here: decide later on the "Local AI Studio" page.
 
-## 1-5 Connect the AI (Claude Code)
+## 1-7 Switch AI, or sign in again
 
-AI Onset uses **Claude Code** on your own Mac. Sign in once:
+To change AI Onset's brain, or if the AI says it isn't signed in:
 
-1. Avatar at the top right → **"Settings"** → **"AI & tools"**.
-2. Look at the "Claude Code" line:
-   - "Signed in" means you're all set.
-   - If it says you're not signed in, click **"Sign in in Terminal"**. Terminal opens, then your browser opens: sign in with your Claude account.
-3. Back in Onset, click **"Check again"**.
-
-The same page also shows:
-
-- **AI-helper**: a small program Onset runs in the background. It should say "Running".
-- **FFmpeg**: needed for exporting video and for transcription.
-- **Speech model**: needed for transcription (automatic captions).
+1. Avatar at the top right → "**Settings**" → "**AI & tools**".
+2. The setup assistant is at the top: click another AI that says "Ready" to switch to it.
+3. If one isn't signed in, click "**Sign in**": Terminal opens, then sign in in the browser.
+4. Back in Onset, click "**Check again**".
 
 ![Settings → AI & tools](images/15-settings-ai.jpg)
 
-> This screenshot is from the test setup, so the Claude Code line says "test engine". On your Mac it will say whether you're signed in.
+> These screenshots come from a test setup. Which AIs say "Ready" depends on what's installed and signed in on your Mac.
 
-> **A setup assistant is coming.** On a new Mac, a step-by-step setup assistant will install the AI and tools for you (with FFmpeg built in), so you won't need Terminal. It isn't in this version yet: FFmpeg and the speech model need to be installed first. If you're not sure how, ask a tech-savvy friend, or ask AI Onset.
+## 1-8 Sign in automatically when the app opens
 
-## 1-6 The account menu
+Tired of picking your avatar and typing your password every time?
+
+1. Avatar at the top right → "Settings" → click your name at the top to open "**Account**".
+2. Under "**Sign-in**", turn on "**Sign in automatically when the app opens**".
+3. Turning it on asks for your password once.
+
+This works **on this device only**. After you sign out, it stays out until the next time you open the app.
+
+![Sign in automatically when the app opens](images/12-autosignin.jpg)
+
+## 1-9 The account menu
 
 Your avatar at the top right opens: Account, Settings, Language, Sign out.
 

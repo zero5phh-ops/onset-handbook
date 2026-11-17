@@ -18,7 +18,8 @@ If the folder you picked is gone (for example the external drive is unplugged), 
 1. **Quit Onset and open it again.** That fixes most problems.
 2. Go to Settings → **AI & tools** and check:
    - **AI-helper** should say "Running". If the AI says AI-helper isn't running, reopen Onset.
-   - **Claude Code** should say "Signed in". If it isn't, click **"Sign in in Terminal"** (see chapter 1).
+   - The AI chosen at the top (Claude Code, ChatGPT · Codex, Cursor or Hermes) should say "Ready". If it isn't signed in, click **"Sign in"** and follow Terminal to sign in in the browser (see chapter 1).
+   - With a local Hermes model, the model has to be loaded first, and it's slow: one script can take several minutes.
 3. Click **"Check again"**. Once AI-helper is back, Onset reconnects by itself; no need to reload.
 4. During a big job (like "No shoot, just make it") the AI may be busy in the background. Check whether the chat or the status bar says it's working on something.
 
@@ -51,6 +52,10 @@ Onset's video files are big, and the Local AI models are bigger (tens to over a 
   - See how much space each video and post uses, and delete what you don't need.
 - If you don't use Local AI, don't install the video model (MiniMax H3 needs 170–185 GB while installing).
 - When the disk is very full (around 95% or more), previews and imports may fail. Free up space first.
+
+## Picking an avatar and typing a password every time?
+
+Turn on "**Sign in automatically when the app opens**" in Settings → Account → Sign-in (see chapter 1, 1-8).
 
 ## "Apple could not verify the developer" when opening?
 

@@ -34,7 +34,12 @@ Each row has 🔒 on the left (lock it so nothing changes it) and 👁 / 🔊 (h
 - **Add media:** under Media → "Recorded takes", **drag a card onto the timeline**. Drop it between two main-track clips to insert it. You can also drag files straight in from Finder.
 - **Pick a part first:** click a card to open a preview, press **I** to mark the start and **O** to mark the end.
 - **Select:** click a clip. The tabs **Video / Audio / Speed / Animation / Adjust** appear on the right.
-- **Cut:** move the red playhead to the spot and click **"Split"** (the scissors) on the toolbar.
+- **Cut (blade):** press **S** (or the scissors "Split" button) to switch to the blade; a red dashed line follows the mouse. **Click a clip or layer to cut it right there.** It snaps to the playhead and clip edges; hold **⌥** to stop snapping.
+- **Back to selecting:** press **A**, **Esc**, or click the arrow left of the blade. The select tool picks and drags clips.
+- **Cut at the playhead:** press **⌘B**. (On the iPhone, the "Split" button still cuts at the playhead.)
+
+![The blade: the dashed line under the mouse is where it will cut](images/50b-blade.jpg)
+
 - **Shorten:** drag the left or right edge of a clip.
 - **Reorder:** drag a clip to a new place.
 - **Delete:** select it and click the bin.
@@ -115,6 +120,18 @@ What it makes goes on the rows under the note card. The note card itself never a
 "Automatic" never picks a paid tool on its own, and a paid tool always shows a quote and asks before it does anything.
 
 ![An AI note card](images/59-ainote.jpg)
+
+### Give an AI note card reference pictures
+
+Want the AI to follow the feel of a picture? Give the note reference pictures, **up to 4**:
+
+- Drag pictures onto "**Drag reference pictures here (or click to pick)**" under the note's words, click there to pick files, or paste.
+- Or drop a picture straight onto the AI note on the timeline (it becomes the note's reference, not a new layer).
+- The ✕ on each picture removes it.
+
+**Theater** makes from the reference pictures. **Higgsfield doesn't take reference pictures**: only the AI writing the prompt sees them. To make from a picture, choose Theater.
+
+![Reference pictures on an AI note card](images/65-ainote-refs.jpg)
 
 ## 3-9 Transitions
 

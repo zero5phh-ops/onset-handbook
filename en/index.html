@@ -116,35 +116,52 @@ tr:last-child td{border-bottom:0}
 <ul><li><strong>Option 1:</strong> Right-click Onset → "Open" → click "Open" again.</li><li><strong>Option 2:</strong> Open System Settings → Privacy &amp; Security → scroll down to the line about Onset → click <strong>"Open Anyway"</strong> → enter your Mac password.</li></ul>
 <p>You only do this once. After that, Onset opens with a normal double-click.</p>
 <aside class="note"><p>If macOS says Onset "is damaged": ask a tech-savvy friend to run <code>xattr -dr com.apple.quarantine /Applications/Onset.app</code> in Terminal, then open it again.</p></aside>
-<h3>1-2 Pick a language and create your account (Profile)</h3>
-<p>This is the first screen you'll see.</p>
+<h3>1-2 Terms of Use and Privacy Notice</h3>
+<p>The first time you open Onset, you'll see the "<strong>Terms of Use and Privacy Notice</strong>" (in English or Chinese, following your Mac's language).</p>
+<ol><li>Read it through: your videos and scripts stay on your own device; only when you use an AI or cloud service does Onset send that service what the job needs.</li><li>Tick "<strong>I have read and agree</strong>".</li><li>Click "<strong>Agree and continue</strong>".</li></ol>
+<p>If you click "Don't agree", you can't use Onset. To read the terms again later: avatar at the top right → "Settings" → "<strong>About</strong>" → "Terms of Use and Privacy Notice". When the terms change, Onset asks you to agree again.</p>
+<figure><img src="images/00-terms.jpg" alt="Terms of Use and Privacy Notice"><figcaption>Terms of Use and Privacy Notice</figcaption></figure>
+<h3>1-3 Pick a language and create your account (Profile)</h3>
+<p>After agreeing, you'll see this screen.</p>
 <figure><img src="images/01-first-open.jpg" alt="First launch"><figcaption>First launch</figcaption></figure>
 <ol><li>Pick the app language at the top right: 繁體中文, 简体中文, English, Bahasa Melayu, 日本語, 한국어.</li><li>Click <strong>＋ "Create account"</strong> in the middle.</li><li>Fill in three things: <strong>Email, Username (the name shown), Password</strong> (at least 6 characters).</li><li>To go straight in by clicking your avatar, without typing a password each time, tick <strong>"No password needed to sign in"</strong>. You can change this later in Settings.</li><li>Click <strong>"Continue"</strong>.</li></ol>
 <figure><img src="images/02-create-account.jpg" alt="Create your account"><figcaption>Create your account</figcaption></figure>
 <aside class="note"><p>Accounts live on this computer. One Mac can have several Profiles (for example one for you and one for your assistant), and Onset asks you to pick an avatar when it opens.</p>
 <figure><img src="images/06-profile-picker.jpg" alt="Choose a Profile"><figcaption>Choose a Profile</figcaption></figure></aside>
-<h3>1-3 Channel style questions (about 1 minute)</h3>
+<h3>1-4 The setup assistant: pick an AI, install the tools</h3>
+<p>The first time you sign in on a new Mac, the "<strong>Setup assistant</strong>" comes first. It checks what this Mac already has; anything missing installs with one click into your own folders, with no admin password. <strong>Nothing installs until you press its button</strong>, and nothing downloads in the background.</p>
+<figure><img src="images/05-setup.jpg" alt="The setup assistant"><figcaption>The setup assistant</figcaption></figure>
+<p><strong>First: which AI?</strong> AI Onset's "brain" can be one of these:</p>
+<div class="tbl"><table><thead><tr><th>AI</th><th>What it needs</th></tr></thead><tbody><tr><td><strong>Claude Code</strong></td><td>A Claude account (Pro or Max plan, or an API account)</td></tr><tr><td><strong>ChatGPT · Codex</strong></td><td>A ChatGPT account (Plus, Pro, Business or similar plan). Answers appear all at once instead of word by word</td></tr><tr><td><strong>Cursor</strong></td><td>A Cursor account (Pro plan or above). Web searches and pictures are handed to Claude Code (if it's installed and signed in), and the screen says so</td></tr><tr><td><strong>Hermes</strong></td><td>No extra account: it uses the model you set in Hermes (local or cloud). A local model is free but very slow</td></tr></tbody></table></div>
+<p>An AI that's installed and signed in says "Ready": click it to choose it. The others are listed under "Other AIs": click "<strong>Install</strong>", then "<strong>Sign in</strong>". Terminal opens and takes you to the browser to sign in, and the page updates by itself when you're done.</p>
+<p><strong>Then: tools and models.</strong> Further down are FFmpeg (for exporting and transcription), uv (installs the models below), speech recognition, AI voice-over and voice separation, each with its size, roughly how long it takes, and its licence. "Local generation (optional)" has its own install page.</p>
+<p>When you're ready, click "<strong>All set — start</strong>".</p>
+<aside class="note"><p>If the AI-helper isn't running, the setup assistant can't check this Mac and asks you to reopen Onset. You can click "<strong>Skip for now</strong>" and open this page again later in Settings → AI &amp; tools.</p>
+<figure><img src="images/06-setup-nohelper.jpg" alt="Skip for now"><figcaption>Skip for now</figcaption></figure></aside>
+<h3>1-5 Channel style questions (about 1 minute)</h3>
 <p>Next, AI Onset asks you 7 questions to set up your channel's style. Click the closest answer for each, or type your own answer in the box below.</p>
 <div class="tbl"><table><thead><tr><th>Step</th><th>Question</th><th>Examples</th></tr></thead><tbody><tr><td>1 Style</td><td>The overall feel of your channel</td><td>Warm handmade, Sharp and professional, Playful and fun, Calm and refined</td></tr><tr><td>2 What you film</td><td>What you mostly make</td><td>Vlog, Tutorial, Product review, Interview</td></tr><tr><td>3 References / links</td><td>Videos or accounts you like</td><td>Add screenshots, paste links, or "No reference"</td></tr><tr><td>4 Editing style</td><td>The pace of your edits</td><td>Fast-paced, Clean and simple, Cinematic, Documentary</td></tr><tr><td>5 Colour grading style</td><td>The colour of your picture</td><td>Natural, Warm, Cool, Film look</td></tr><tr><td>6 Mascot</td><td>Do you have a mascot?</td><td>Add a picture, or "No" / "Later"</td></tr><tr><td>7 Logo</td><td>Do you have a logo?</td><td>Add a picture, or "No" / "Later"</td></tr></tbody></table></div>
 <figure><img src="images/03-after-create.jpg" alt="The style questions"><figcaption>The style questions</figcaption></figure>
 <p>Don't want to answer now? Click <strong>"Skip, set up later"</strong> at the bottom left.</p>
 <p>When you're done, AI Onset creates <strong>four styles</strong>: a script style, an interview style, a design style and an edit style. It follows them whenever it writes scripts, edits or designs covers. To change them, go to your avatar at the top right → "Settings" → "Styles".</p>
 <figure><img src="images/07-style-done.jpg" alt="Your style is set"><figcaption>Your style is set</figcaption></figure>
-<h3>1-4 Download the AI models?</h3>
+<h3>1-6 Download the AI models?</h3>
 <p>The last step asks which AI models should run on this Mac:</p>
 <ul><li><strong>Speech recognition</strong> (Whisper, 1.6 GB): automatic captions, cutting pauses and retakes. <strong>Recommended.</strong></li><li><strong>AI voice-over</strong> (IndexTTS, 2 GB): reads your script in the voice of a sample you record.</li><li><strong>Voice separation</strong> (Demucs, 800 MB): takes out background music and noise.</li></ul>
 <p>Use the switches on the right to choose, then click <strong>"Agree and download"</strong>. Not sure? Click <strong>"Maybe later"</strong>. You can add or remove them later in Settings → AI &amp; tools.</p>
 <figure><img src="images/08-model-download.jpg" alt="Download AI models"><figcaption>Download AI models</figcaption></figure>
 <aside class="note"><p>The models that make pictures and videos on this Mac (Qwen Image, MiniMax H3) are large (30–185 GB). They aren't downloaded here: decide later on the "Local AI Studio" page.</p></aside>
-<h3>1-5 Connect the AI (Claude Code)</h3>
-<p>AI Onset uses <strong>Claude Code</strong> on your own Mac. Sign in once:</p>
-<ol><li>Avatar at the top right → <strong>"Settings"</strong> → <strong>"AI &amp; tools"</strong>.</li><li>Look at the "Claude Code" line:<ul><li>"Signed in" means you're all set.</li><li>If it says you're not signed in, click <strong>"Sign in in Terminal"</strong>. Terminal opens, then your browser opens: sign in with your Claude account.</li></ul></li><li>Back in Onset, click <strong>"Check again"</strong>.</li></ol>
-<p>The same page also shows:</p>
-<ul><li><strong>AI-helper</strong>: a small program Onset runs in the background. It should say "Running".</li><li><strong>FFmpeg</strong>: needed for exporting video and for transcription.</li><li><strong>Speech model</strong>: needed for transcription (automatic captions).</li></ul>
+<h3>1-7 Switch AI, or sign in again</h3>
+<p>To change AI Onset's brain, or if the AI says it isn't signed in:</p>
+<ol><li>Avatar at the top right → "<strong>Settings</strong>" → "<strong>AI &amp; tools</strong>".</li><li>The setup assistant is at the top: click another AI that says "Ready" to switch to it.</li><li>If one isn't signed in, click "<strong>Sign in</strong>": Terminal opens, then sign in in the browser.</li><li>Back in Onset, click "<strong>Check again</strong>".</li></ol>
 <figure><img src="images/15-settings-ai.jpg" alt="Settings → AI &amp; tools"><figcaption>Settings → AI &amp; tools</figcaption></figure>
-<aside class="note"><p>This screenshot is from the test setup, so the Claude Code line says "test engine". On your Mac it will say whether you're signed in.</p></aside>
-<aside class="note"><p><strong>A setup assistant is coming.</strong> On a new Mac, a step-by-step setup assistant will install the AI and tools for you (with FFmpeg built in), so you won't need Terminal. It isn't in this version yet: FFmpeg and the speech model need to be installed first. If you're not sure how, ask a tech-savvy friend, or ask AI Onset.</p></aside>
-<h3>1-6 The account menu</h3>
+<aside class="note"><p>These screenshots come from a test setup. Which AIs say "Ready" depends on what's installed and signed in on your Mac.</p></aside>
+<h3>1-8 Sign in automatically when the app opens</h3>
+<p>Tired of picking your avatar and typing your password every time?</p>
+<ol><li>Avatar at the top right → "Settings" → click your name at the top to open "<strong>Account</strong>".</li><li>Under "<strong>Sign-in</strong>", turn on "<strong>Sign in automatically when the app opens</strong>".</li><li>Turning it on asks for your password once.</li></ol>
+<p>This works <strong>on this device only</strong>. After you sign out, it stays out until the next time you open the app.</p>
+<figure><img src="images/12-autosignin.jpg" alt="Sign in automatically when the app opens"><figcaption>Sign in automatically when the app opens</figcaption></figure>
+<h3>1-9 The account menu</h3>
 <p>Your avatar at the top right opens: Account, Settings, Language, Sign out.</p>
 <figure><img src="images/11-account-menu.jpg" alt="The account menu"><figcaption>The account menu</figcaption></figure></section>
 <section class="chapter" id="ch02"><header class="chhead"><span class="chnum">Chapter 2</span><h2>The six buttons on the home screen</h2></header><p>After you sign in, the home screen has six big buttons. A video usually goes like this:</p>
@@ -218,7 +235,9 @@ tr:last-child td{border-bottom:0}
 <p>Each row has 🔒 on the left (lock it so nothing changes it) and 👁 / 🔊 (hide or mute it).</p>
 <h3>3-3 Basic cutting</h3>
 <figure><img src="images/51-clip-selected.jpg" alt="A clip selected"><figcaption>A clip selected</figcaption></figure>
-<ul><li><strong>Add media:</strong> under Media → "Recorded takes", <strong>drag a card onto the timeline</strong>. Drop it between two main-track clips to insert it. You can also drag files straight in from Finder.</li><li><strong>Pick a part first:</strong> click a card to open a preview, press <strong>I</strong> to mark the start and <strong>O</strong> to mark the end.</li><li><strong>Select:</strong> click a clip. The tabs <strong>Video / Audio / Speed / Animation / Adjust</strong> appear on the right.</li><li><strong>Cut:</strong> move the red playhead to the spot and click <strong>"Split"</strong> (the scissors) on the toolbar.</li><li><strong>Shorten:</strong> drag the left or right edge of a clip.</li><li><strong>Reorder:</strong> drag a clip to a new place.</li><li><strong>Delete:</strong> select it and click the bin.</li><li><strong>Undo:</strong> ↶ ↷ on the toolbar.</li><li>The magnet on the toolbar is the main-track magnet: when it's on, clips close up with no gaps.</li><li>The slider at the bottom right zooms the timeline (or pinch with two fingers on a Mac trackpad).</li></ul>
+<ul><li><strong>Add media:</strong> under Media → "Recorded takes", <strong>drag a card onto the timeline</strong>. Drop it between two main-track clips to insert it. You can also drag files straight in from Finder.</li><li><strong>Pick a part first:</strong> click a card to open a preview, press <strong>I</strong> to mark the start and <strong>O</strong> to mark the end.</li><li><strong>Select:</strong> click a clip. The tabs <strong>Video / Audio / Speed / Animation / Adjust</strong> appear on the right.</li><li><strong>Cut (blade):</strong> press <strong>S</strong> (or the scissors "Split" button) to switch to the blade; a red dashed line follows the mouse. <strong>Click a clip or layer to cut it right there.</strong> It snaps to the playhead and clip edges; hold <strong>⌥</strong> to stop snapping.</li><li><strong>Back to selecting:</strong> press <strong>A</strong>, <strong>Esc</strong>, or click the arrow left of the blade. The select tool picks and drags clips.</li><li><strong>Cut at the playhead:</strong> press <strong>⌘B</strong>. (On the iPhone, the "Split" button still cuts at the playhead.)</li></ul>
+<figure><img src="images/50b-blade.jpg" alt="The blade: the dashed line under the mouse is where it will cut"><figcaption>The blade: the dashed line under the mouse is where it will cut</figcaption></figure>
+<ul><li><strong>Shorten:</strong> drag the left or right edge of a clip.</li><li><strong>Reorder:</strong> drag a clip to a new place.</li><li><strong>Delete:</strong> select it and click the bin.</li><li><strong>Undo:</strong> ↶ ↷ on the toolbar.</li><li>The magnet on the toolbar is the main-track magnet: when it's on, clips close up with no gaps.</li><li>The slider at the bottom right zooms the timeline (or pinch with two fingers on a Mac trackpad).</li></ul>
 <h4>Let the AI cut for you</h4>
 <ul><li><strong>Auto-cut</strong>: cuts out the pauses automatically. The version before it is kept as "Before Auto-cut".</li><li><strong>AI Edit</strong>: cuts the way you describe, for example "cut out the mistakes and the retakes". Long videos are done chapter by chapter.</li></ul>
 <h4>Versions</h4>
@@ -242,6 +261,11 @@ tr:last-child td{border-bottom:0}
 <ol><li>Click <strong>"AI notes"</strong> on the left → <strong>"AI note card"</strong>. A card appears on the AI row at the top of the timeline.</li><li>Drag it into place and stretch it over the seconds it should cover.</li><li>On the right, write what this part needs, for example "Big text card: water at 92 °C, with a thermometer drawn next to it".</li><li>Pick a <strong>"Tool"</strong>: "Automatic (decided from the text)", Onset card, EffectCraft, Three.js, "Remove background (text behind the person)"…; the paid <strong>"Higgsfield (paid)"</strong> and <strong>"Theater (paid)"</strong> need a cloud service set up first (chapter 6).</li><li>Click <strong>"Generate"</strong>, or <strong>"Generate all"</strong> to make every note card at once.</li></ol>
 <p>What it makes goes on the rows under the note card. The note card itself never appears in the video. "Automatic" never picks a paid tool on its own, and a paid tool always shows a quote and asks before it does anything.</p>
 <figure><img src="images/59-ainote.jpg" alt="An AI note card"><figcaption>An AI note card</figcaption></figure>
+<h4>Give an AI note card reference pictures</h4>
+<p>Want the AI to follow the feel of a picture? Give the note reference pictures, <strong>up to 4</strong>:</p>
+<ul><li>Drag pictures onto "<strong>Drag reference pictures here (or click to pick)</strong>" under the note's words, click there to pick files, or paste.</li><li>Or drop a picture straight onto the AI note on the timeline (it becomes the note's reference, not a new layer).</li><li>The ✕ on each picture removes it.</li></ul>
+<p><strong>Theater</strong> makes from the reference pictures. <strong>Higgsfield doesn't take reference pictures</strong>: only the AI writing the prompt sees them. To make from a picture, choose Theater.</p>
+<figure><img src="images/65-ainote-refs.jpg" alt="Reference pictures on an AI note card"><figcaption>Reference pictures on an AI note card</figcaption></figure>
 <h3>3-9 Transitions</h3>
 <ol><li>Click <strong>"Transitions"</strong> on the left.</li><li><strong>Drag a transition onto the cut between two clips.</strong> A small box appears on the cut.</li><li>Drag the box's edge to change the length; select it and press ⌫ to remove it.</li><li>To do every cut at once: <strong>"Add “Cross fade” to every cut"</strong> at the bottom. <strong>"Remove all"</strong> takes them all off.</li></ol>
 <p>There are 39 in five groups: Fade, Push, Wipe, Shape and Motion (for example Whip pan, Glitch, Flip).</p>
@@ -259,28 +283,44 @@ tr:last-child td{border-bottom:0}
 <p>The second tab of the export window, <strong>"Project file (for other editing apps)"</strong>, saves for FilmCraft, a CapCut draft, Premiere / DaVinci (XML) or Final Cut Pro (FCPXML). Tick the option to copy the original files next to the project, and the whole folder can be moved or sent to someone else.</p>
 <p>The third tab, <strong>"Compress files"</strong>, makes smaller files.</p></section>
 <section class="chapter" id="ch04"><header class="chhead"><span class="chnum">Chapter 4</span><h2>AI Onset: let the AI do the work</h2></header><h3>4-1 How to call it</h3>
-<ul><li>Click the <strong>round AI Onset button</strong> in the corner (top left on the script and post pages, bottom right in Editing).</li><li>Or press <strong>⌘J</strong> on any screen.</li><li>Type, or press <strong>🎙</strong> to speak: "Hold to talk" sends when you let go, or click once and it sends after 2 seconds of silence.</li></ul>
+<ul><li>Every time Onset opens, <strong>the round AI Onset button is in the bottom-right corner</strong>. Click it to open the chat.</li><li>Or press <strong>⌘J</strong> on any screen.</li><li>Type, or press <strong>🎙</strong> to speak: "Hold to talk" sends when you let go, or click once and it sends after 2 seconds of silence.</li></ul>
 <figure><img src="images/60-ai-onset.jpg" alt="The AI Onset chat"><figcaption>The AI Onset chat</figcaption></figure>
 <p>Things you can ask it, for example:</p>
 <ul><li>"Write a Reel script about today's tech news"</li><li>"Match the colours, zoom in on the key lines, and use Flash white for the cuts"</li><li>"Split this long video into a few shorts"</li><li>"What's this?" (press 👆 first, then click something on the screen)</li></ul>
-<h3>4-2 The small icons at the top</h3>
+<h3>4-2 Before making something new, it asks you</h3>
+<p>When you ask for new content (a new video, a script, No shoot, flying or kinetic text, a cover, a post, shorts from a long video), AI Onset <strong>first asks a few questions, one at a time, each with buttons</strong>:</p>
+<ol><li><strong>Style</strong>: your channel style, no style (go free), or something else (tell it which).</li><li><strong>Whether to generate pictures with AI</strong>: local AI (free but slower), cloud (uses credits), either (local first), or no generation (stock, animated cards, flying text).</li><li><strong>Length or shape</strong> if you haven't said (tall 9:16, wide 16:9, square 1:1).</li><li>For No shoot: whether to add <strong>AI voice-over and music</strong>.</li></ol>
+<p>Click a button to answer, or type. It won't ask about anything you've already said. Don't want to answer them all? Click the "<strong>…your call on the rest</strong>" button and it decides the rest itself.</p>
+<figure><img src="images/64-ai-questions.jpg" alt="AI Onset asks first"><figcaption>AI Onset asks first</figcaption></figure>
+<p>To skip your channel style, you can also just say "<strong>don't use my style this time</strong>". It keeps to that until you say "use my channel style" again.</p>
+<h3>4-3 Show it reference pictures</h3>
+<p>Want the AI to follow the feel of a picture?</p>
+<ul><li><strong>Drag pictures onto the AI Onset chat</strong>, or onto the round button in the corner.</li><li>Or copy a picture and press <strong>⌘V</strong> in the chat.</li></ul>
+<p>The pictures appear above the box (the ✕ removes one) and <strong>go to the AI with your next message</strong> as references.</p>
+<figure><img src="images/66-ai-ref.jpg" alt="Dragging a reference picture into AI Onset"><figcaption>Dragging a reference picture into AI Onset</figcaption></figure>
+<p>To give one AI note card its own reference pictures, see <a href="#ch03">chapter 3, 3-8</a>.</p>
+<h3>4-4 The small icons at the top</h3>
 <div class="tbl"><table><thead><tr><th>Icon</th><th>Meaning</th></tr></thead><tbody><tr><td>🌐</td><td>Whether it can search the web. Click to switch: search automatically when needed → can search every time (🌐!) → off</td></tr><tr><td>🔇 / 🔊</td><td>Whether answers are read aloud</td></tr><tr><td>👆</td><td>"Point": click anything on the screen to ask about it (or ⌥⇧-click)</td></tr><tr><td>↘</td><td>"Back to corner": tuck the chat back into the corner (only when it sits next to the editor)</td></tr></tbody></table></div>
-<h3>4-3 You can see every step</h3>
+<h3>4-5 You can see every step</h3>
 <p>When you ask it to do something, the chat lists <strong>every step</strong> it will take. Each finished step gets a green dot and a note of what it did.</p>
 <figure><img src="images/62-ai-steps.jpg" alt="The AI at work, with Pause and Stop"><figcaption>The AI at work, with Pause and Stop</figcaption></figure>
 <ul><li>While it works, <strong>"Pause"</strong> and <strong>"Stop"</strong> sit at the bottom; use them any time. After pausing, press "Resume".</li><li>When the chat is folded away, a small status bar shows "Onset is doing: …", also with pause and stop.</li><li>The timeline and the picture change as it goes, so you can watch it edit.</li><li>When it's done, <strong>"↶ Undo this AI change"</strong> appears. Not happy? One click takes it all back.</li></ul>
 <figure><img src="images/63-ai-done.jpg" alt="The AI is done"><figcaption>The AI is done</figcaption></figure>
-<h3>4-4 Agents at once</h3>
+<h3>4-6 Agents at once</h3>
 <p>Under the chat there's <strong>"Agents at once − 3 +"</strong>.</p>
 <ul><li>Agents are AI helpers working at the same time. More agents finish big jobs faster (such as "No shoot, just make it" for a whole video), but keep the computer busier.</li><li>You can set 1 to 10. Onset checks what this computer can handle and tells you if it can only take fewer at once.</li><li>When several agents are working:</li></ul>
 <p>- <strong>Coloured bands</strong> above the timeline show which part each agent is working on ("name · step"). - <strong>Each agent has its own coloured cursor</strong> that flies to whatever it's changing: a clip, the Captions row, the Music or Voice-over row, the AI row, or the preview when it's grading colour. - "Pause all", "Resume all" and "Stop all" control them together, and each one can be stopped on its own.</p>
 <aside class="note"><p>The test setup has no real AI, so this section has no screenshot of several agents with coloured cursors.</p></aside>
-<h3>4-5 Let an outside AI use Onset (advanced)</h3>
+<h3>4-7 Change AI Onset's brain</h3>
+<p>AI Onset can use any of these four as its brain: <strong>Claude Code, ChatGPT · Codex, Cursor, Hermes</strong>. Choose it at the top of Settings → AI &amp; tools (the setup assistant). Which ones need an account, and how to sign in: see <a href="#ch01">chapter 1, 1-4</a>.</p>
+<ul><li>Only AIs that are installed and ready can be chosen.</li><li>If the chosen AI can't do something (Cursor can't search the web or look at pictures, for example), Claude Code answers instead and the screen says so; if Claude Code isn't available either, it tells you it can't be done.</li></ul>
+<aside class="note"><p><strong>Coming soon:</strong> making pictures with Cursor or ChatGPT. It's still being tested and isn't in this version yet.</p></aside>
+<h3>4-8 Let an outside AI use Onset (advanced)</h3>
 <p>Settings → MCP can "Let outside AI work inside Onset", for example so Claude Desktop or Claude Code can drive Onset directly. Every step an outside AI takes also shows in AI Onset, marked "🔌 outside AI", and can be stopped the same way. An outside AI can't film, delete or publish.</p></section>
 <section class="chapter" id="ch05"><header class="chhead"><span class="chnum">Chapter 5</span><h2>No shoot, just make it</h2></header><p>No time to film, or a subject you simply can't film (like a rover on Mars)? If you have a script, Onset can make the whole video: <strong>voice-over, flying text, text cards, web footage, generated pictures and videos, plus captions</strong>, all laid out on the timeline in one go.</p>
 <p>You can watch it work, stop any time, and undo it all at once when it's done.</p>
 <h3>5-1 Where to start</h3>
-<ul><li><strong>"No shoot, just make it"</strong> at the top right of Create Script.</li><li>In <strong>Content</strong>, pick a video and use "No shoot, just make it" under "Next step".</li><li>Or just tell AI Onset: "Don't film this one, make it into a video".</li></ul>
+<ul><li><strong>"No shoot, just make it"</strong> at the top right of Create Script.</li><li>In <strong>Content</strong>, pick a video and use "No shoot, just make it" under "Next step".</li><li>Or just tell AI Onset: "Don't film this one, make it into a video". It first asks, with buttons, about style, AI generation, length and shape, and voice-over and music (see chapter 4, 4-2).</li></ul>
 <aside class="note"><p>The button is greyed out once the video already has filmed takes.</p></aside>
 <h3>5-2 Choose how to make it</h3>
 <figure><img src="images/70-noshoot.jpg" alt="No shoot, just make it"><figcaption>No shoot, just make it</figcaption></figure>
@@ -333,6 +373,8 @@ tr:last-child td{border-bottom:0}
 <p><strong>Neither one spends money until you agree.</strong></p>
 <h3>6-5 Where cloud generation is used</h3>
 <ul><li><strong>No shoot, just make it</strong>: choose "Cloud generation" or "Mixed", or switch a shot in the shot list to "Higgsfield cloud clip", "Theater cloud picture" and so on (chapter 5).</li><li><strong>AI note cards</strong>: pick "Higgsfield (paid)" or "Theater (paid)" as the "Tool". Generating shows a quote first, then asks whether to go ahead (chapter 3).</li><li>When the tool is chosen "Automatically", <strong>it never picks a paid one</strong>.</li></ul>
+<h4>Reference pictures</h4>
+<p>For reference pictures given to an AI note card or to AI Onset (chapters 3 and 4): <strong>Theater makes from them</strong>; <strong>Higgsfield doesn't take them</strong>, and only the AI writing the prompt sees them. To make from a picture, choose Theater.</p>
 <aside class="note"><p>No real money was spent while testing, so this chapter has no screenshot of an actual quote.</p></aside></section>
 <section class="chapter" id="ch07"><header class="chhead"><span class="chnum">Chapter 7</span><h2>The iPhone app and sync</h2></header><p>Onset also comes for iPhone and iPad. Once the phone is paired with your Mac, videos, scripts, timelines and posts sync both ways.</p>
 <aside class="note"><p>The phone screenshots in this chapter were taken earlier in the iPhone Simulator, with the app in Chinese. The layout is the same in English.</p></aside>
@@ -369,7 +411,7 @@ tr:last-child td{border-bottom:0}
 <p>The quickest way: click <strong>"Show in Finder"</strong> after exporting. Or go to Settings → <strong>Video &amp; output</strong> → "Open folder".</p>
 <p>Want to decide every time? Tick <strong>"Ask me where to save it and what to call it every time"</strong> in the export window. If the folder you picked is gone (for example the external drive is unplugged), Onset saves to the default place instead.</p>
 <h3>AI Onset isn't answering?</h3>
-<ol><li><strong>Quit Onset and open it again.</strong> That fixes most problems.</li><li>Go to Settings → <strong>AI &amp; tools</strong> and check:<ul><li><strong>AI-helper</strong> should say "Running". If the AI says AI-helper isn't running, reopen Onset.</li><li><strong>Claude Code</strong> should say "Signed in". If it isn't, click <strong>"Sign in in Terminal"</strong> (see chapter 1).</li></ul></li><li>Click <strong>"Check again"</strong>. Once AI-helper is back, Onset reconnects by itself; no need to reload.</li><li>During a big job (like "No shoot, just make it") the AI may be busy in the background. Check whether the chat or the status bar says it's working on something.</li></ol>
+<ol><li><strong>Quit Onset and open it again.</strong> That fixes most problems.</li><li>Go to Settings → <strong>AI &amp; tools</strong> and check:<ul><li><strong>AI-helper</strong> should say "Running". If the AI says AI-helper isn't running, reopen Onset.</li><li>The AI chosen at the top (Claude Code, ChatGPT · Codex, Cursor or Hermes) should say "Ready". If it isn't signed in, click <strong>"Sign in"</strong> and follow Terminal to sign in in the browser (see chapter 1).</li><li>With a local Hermes model, the model has to be loaded first, and it's slow: one script can take several minutes.</li></ul></li><li>Click <strong>"Check again"</strong>. Once AI-helper is back, Onset reconnects by itself; no need to reload.</li><li>During a big job (like "No shoot, just make it") the AI may be busy in the background. Check whether the chat or the status bar says it's working on something.</li></ol>
 <h3>Local AI is slow?</h3>
 <p>Local generation is slow by nature: a few minutes per picture, about half an hour for 5 seconds of video with sound. And <strong>one Mac makes one thing at a time</strong>; the rest wait.</p>
 <p>Things that help:</p>
@@ -381,6 +423,8 @@ tr:last-child td{border-bottom:0}
 <ul><li>Before an export, Onset stops you if there isn't enough room and tells you roughly how many GB it needs and how many are left.</li><li>Settings → <strong>Storage</strong>:</li></ul>
 <p>- <strong>Media folder</strong>: move your video media to an <strong>external drive</strong>. - <strong>Compress files</strong>: make smaller copies (for WhatsApp, e-mail, small file, half size); the originals stay as they are. - See how much space each video and post uses, and delete what you don't need.</p>
 <ul><li>If you don't use Local AI, don't install the video model (MiniMax H3 needs 170–185 GB while installing).</li><li>When the disk is very full (around 95% or more), previews and imports may fail. Free up space first.</li></ul>
+<h3>Picking an avatar and typing a password every time?</h3>
+<p>Turn on "<strong>Sign in automatically when the app opens</strong>" in Settings → Account → Sign-in (see chapter 1, 1-8).</p>
 <h3>"Apple could not verify the developer" when opening?</h3>
 <p>See chapter 1: right-click → "Open", or click <strong>"Open Anyway"</strong> in System Settings → Privacy &amp; Security.</p>
 <h3>The AI messed something up?</h3>

@@ -52,6 +52,10 @@ Once you're signed in, each service shows:
 - **AI note cards**: pick "Higgsfield (paid)" or "Theater (paid)" as the "Tool". Generating shows a quote first, then asks whether to go ahead (chapter 3).
 - When the tool is chosen "Automatically", **it never picks a paid one**.
 
+### Reference pictures
+
+For reference pictures given to an AI note card or to AI Onset (chapters 3 and 4): **Theater makes from them**; **Higgsfield doesn't take them**, and only the AI writing the prompt sees them. To make from a picture, choose Theater.
+
 > No real money was spent while testing, so this chapter has no screenshot of an actual quote.
 
 ---

@@ -116,35 +116,52 @@ tr:last-child td{border-bottom:0}
 <ul><li><strong>方法一：</strong> 在 Onset 上按右鍵 → 「打開」→ 再按一次「打開」。</li><li><strong>方法二：</strong> 打開「系統設定」→「隱私權與安全性」→ 往下捲，看到 Onset 那一行 → 按「<strong>仍要打開</strong>」→ 輸入 Mac 的密碼。</li></ul>
 <p>只要做一次，之後就可以正常點兩下打開。</p>
 <aside class="note"><p>如果 macOS 說 Onset「已損毀」：請懂電腦的朋友在「終端機」執行 <code>xattr -dr com.apple.quarantine /Applications/Onset.app</code>，再打開一次。</p></aside>
-<h3>1-2 選語言、建立帳號（Profile）</h3>
-<p>第一次打開會看到這個畫面。</p>
+<h3>1-2 使用條款與隱私聲明</h3>
+<p>第一次打開，會先看到「<strong>使用條款與隱私聲明</strong>」（照 Mac 的語言顯示中文或英文）。</p>
+<ol><li>往下讀一遍：你的影片和腳本都留在你自己的裝置上；只有你用 AI 或雲端服務時，才會把那件工作需要的內容送給那個服務。</li><li>勾「<strong>我已閱讀並同意</strong>」。</li><li>按「<strong>同意並繼續</strong>」。</li></ol>
+<p>按「不同意」就不能用 Onset。之後想再看一次：右上角頭像 →「設定」→「<strong>關於</strong>」→「使用條款與隱私聲明」。條款更新時，Onset 會請你再同意一次。</p>
+<figure><img src="images/00-terms.jpg" alt="使用條款與隱私聲明"><figcaption>使用條款與隱私聲明</figcaption></figure>
+<h3>1-3 選語言、建立帳號（Profile）</h3>
+<p>同意條款後會看到這個畫面。</p>
 <figure><img src="images/01-first-open.jpg" alt="第一次打開"><figcaption>第一次打開</figcaption></figure>
 <ol><li>右上角可以選介面語言：繁體中文、简体中文、English、Bahasa Melayu、日本語、한국어。</li><li>按中間的 <strong>＋「Create account」</strong>。</li><li>填三樣東西：<strong>Email、Username（顯示的名字）、密碼</strong>（至少 6 個字）。</li><li>想要點頭像就進去、不用每次打密碼，可以勾「<strong>進入時不需要輸入密碼</strong>」。之後在設定也能改。</li><li>按「<strong>繼續</strong>」。</li></ol>
 <figure><img src="images/02-create-account.jpg" alt="建立帳號"><figcaption>建立帳號</figcaption></figure>
 <aside class="note"><p>帳號存在這台電腦裡。一台 Mac 可以有好幾個 Profile（例如你和助理各一個），之後打開會先讓你選頭像。</p>
 <figure><img src="images/06-profile-picker.jpg" alt="選擇 Profile"><figcaption>選擇 Profile</figcaption></figure></aside>
-<h3>1-3 頻道風格問答（約 1 分鐘）</h3>
+<h3>1-4 安裝助手：選 AI、裝好工具</h3>
+<p>在新的 Mac 上第一次登入，會先出現「<strong>安裝助手</strong>」。它會檢查這台 Mac 有什麼，缺的東西按一下就裝，都裝在你自己的資料夾，不用管理員密碼。<strong>只有你按了按鈕才會安裝</strong>，不會在背景偷偷下載。</p>
+<figure><img src="images/05-setup.jpg" alt="安裝助手"><figcaption>安裝助手</figcaption></figure>
+<p><strong>第一步：用哪一個 AI？</strong> AI Onset 的「大腦」可以選這幾個：</p>
+<div class="tbl"><table><thead><tr><th>AI</th><th>需要什麼</th></tr></thead><tbody><tr><td><strong>Claude Code</strong></td><td>Claude 帳號（Pro、Max 訂閱或 API 帳號）</td></tr><tr><td><strong>ChatGPT · Codex</strong></td><td>ChatGPT 帳號（Plus、Pro、Business 等方案）。回答會整段出現，不會一個字一個字打出來</td></tr><tr><td><strong>Cursor</strong></td><td>Cursor 帳號（Pro 或以上方案）。要查網路或看圖片時，會交給 Claude Code 代答（有裝好並登入的話），畫面會說</td></tr><tr><td><strong>Hermes</strong></td><td>不用另外的帳號：用你在 Hermes 裡設定的模型（本機或雲端）。本機模型免費但很慢，中文大約每秒 12 個字</td></tr></tbody></table></div>
+<p>已經裝好並登入的 AI 會寫「可以用了」，點一下就選它。還沒裝的列在「其他 AI」下面：按「<strong>安裝</strong>」，再按「<strong>登入</strong>」，終端機會打開並帶你到瀏覽器登入，登入好這裡會自己更新。</p>
+<p><strong>第二步：工具和模型。</strong> 往下有 FFmpeg（輸出影片、轉文字要用）、uv（用來裝下面的模型）、語音辨識、AI 配音、人聲分離，每一項都寫了大小、大約幾分鐘和授權。「本機生成（選用）」有自己的安裝頁。</p>
+<p>都好了，按「<strong>都好了，開始</strong>」。</p>
+<aside class="note"><p>AI-helper 沒有在執行時，安裝助手看不到這台 Mac 有什麼，會說「請重新打開 Onset」。這時可以按「<strong>先跳過，繼續</strong>」，之後在「設定 → AI 與工具」再打開這頁。</p>
+<figure><img src="images/06-setup-nohelper.jpg" alt="先跳過，繼續"><figcaption>先跳過，繼續</figcaption></figure></aside>
+<h3>1-5 頻道風格問答（約 1 分鐘）</h3>
 <p>接著 AI Onset 會問你 7 個問題，幫你設定頻道的風格。每題點一個最接近的就好，也可以在下面的輸入框用自己的話回答。</p>
 <div class="tbl"><table><thead><tr><th>步驟</th><th>問什麼</th><th>例子</th></tr></thead><tbody><tr><td>1 風格</td><td>整個頻道給人的感覺</td><td>溫暖手作、俐落專業、活潑有趣、安靜質感</td></tr><tr><td>2 拍攝內容</td><td>你主要拍什麼</td><td>Vlog、教學、產品介紹、訪談</td></tr><tr><td>3 參考畫面／連結</td><td>有沒有喜歡的影片或帳號</td><td>放截圖、貼連結，或「沒有參考」</td></tr><tr><td>4 剪輯風格</td><td>剪起來的節奏</td><td>快節奏、乾淨簡約、電影感、紀錄片</td></tr><tr><td>5 調色風格</td><td>畫面顏色</td><td>自然、暖色、冷色、底片感</td></tr><tr><td>6 Mascot</td><td>有沒有吉祥物</td><td>放圖片，或「沒有」「之後再說」</td></tr><tr><td>7 Logo</td><td>有沒有 Logo</td><td>放圖片，或「沒有」「之後再說」</td></tr></tbody></table></div>
 <figure><img src="images/03-after-create.jpg" alt="風格問答"><figcaption>風格問答</figcaption></figure>
 <p>不想現在回答？按左下角「<strong>跳過，之後再設定</strong>」。</p>
 <p>答完之後，AI Onset 會做出<strong>四個風格</strong>：腳本風格、採訪風格、設計風格、剪輯風格。之後寫腳本、剪輯、做封面時都會照著做。想改，到右上角頭像 →「設定」→「風格」。</p>
 <figure><img src="images/07-style-done.jpg" alt="風格設好了"><figcaption>風格設好了</figcaption></figure>
-<h3>1-4 要不要下載 AI 模型？</h3>
+<h3>1-6 要不要下載 AI 模型？</h3>
 <p>最後一步，Onset 會問要不要下載在這台 Mac 上跑的 AI 模型：</p>
 <ul><li><strong>語音辨識</strong>（Whisper，1.6 GB）：自動字幕、自動剪掉停頓和講錯的地方。<strong>建議下載。</strong></li><li><strong>AI 配音</strong>（IndexTTS，2 GB）：照你錄的一段聲音念稿。</li><li><strong>人聲分離</strong>（Demucs，800 MB）：把背景音樂、吵雜聲拿掉。</li></ul>
 <p>用右邊的開關選要哪幾個，按「<strong>同意並下載</strong>」。不確定就按「<strong>稍後再說</strong>」，之後在「設定 → AI 與工具」也能裝或移除。</p>
 <figure><img src="images/08-model-download.jpg" alt="下載 AI 模型"><figcaption>下載 AI 模型</figcaption></figure>
 <aside class="note"><p>本機生成圖片和影片的模型（Qwen Image、MiniMax H3）很大（30～185 GB），不在這裡下載，之後到首頁的「本機生成」再決定。</p></aside>
-<h3>1-5 連接 AI（Claude Code）</h3>
-<p>AI Onset 用的是你自己 Mac 上的 <strong>Claude Code</strong>。第一次要登入一次：</p>
-<ol><li>右上角頭像 →「<strong>設定</strong>」→「<strong>AI 與工具</strong>」。</li><li>看「Claude Code」那一行：<ul><li>寫「已登入」就好了。</li><li>寫「還沒登入」：按「<strong>打開終端機登入</strong>」。終端機會打開，接著會開瀏覽器，用你的 Claude 帳號登入就好。</li></ul></li><li>回到 Onset，按「<strong>重新檢查</strong>」。</li></ol>
-<p>同一頁也看得到：</p>
-<ul><li><strong>AI-helper</strong>：Onset 在背景幫忙的小程式。要顯示「執行中」。</li><li><strong>FFmpeg</strong>：輸出影片和轉文字要用。</li><li><strong>語音模型</strong>：轉文字（自動字幕）要用。</li></ul>
+<h3>1-7 換 AI、重新登入</h3>
+<p>想換 AI Onset 的大腦，或 AI 說還沒登入：</p>
+<ol><li>右上角頭像 →「<strong>設定</strong>」→「<strong>AI 與工具</strong>」。</li><li>最上面就是安裝助手：點另一個寫「可以用了」的 AI 就換過去。</li><li>還沒登入的按「<strong>登入</strong>」，終端機會打開，照著在瀏覽器登入。</li><li>回到 Onset，按「<strong>重新檢查</strong>」。</li></ol>
 <figure><img src="images/15-settings-ai.jpg" alt="設定 → AI 與工具"><figcaption>設定 → AI 與工具</figcaption></figure>
-<aside class="note"><p>截圖是測試環境，所以 Claude Code 那行寫的是 test engine。你的 Mac 上會寫「已登入」或「還沒登入」。</p></aside>
-<aside class="note"><p><strong>之後會有安裝助手。</strong> 新的 Mac 第一次打開時，會有一步一步的安裝助手幫你裝好 AI 和工具（FFmpeg 也會內建），不用自己開終端機。現在這一版還沒有，FFmpeg 和語音模型要先裝好；不會裝的話，請懂電腦的朋友幫忙，或問 AI Onset。</p></aside>
-<h3>1-6 帳號選單</h3>
+<aside class="note"><p>截圖是在測試環境拍的，哪些 AI「可以用了」要看你的 Mac 裝了什麼、登入了什麼。</p></aside>
+<h3>1-8 打開 app 自動登入</h3>
+<p>不想每次打開都選頭像、打密碼：</p>
+<ol><li>右上角頭像 →「設定」→ 點最上面你的名字，進到「<strong>帳號</strong>」。</li><li>在「<strong>登入</strong>」那一區，打開「<strong>打開 app 自動登入這個帳號</strong>」。</li><li>第一次打開這個選項要輸入一次密碼。</li></ol>
+<p>這個設定<strong>只在這台裝置</strong>有效。登出之後，這次不會自動再進去，下次打開 app 才會。</p>
+<figure><img src="images/12-autosignin.jpg" alt="打開 app 自動登入這個帳號"><figcaption>打開 app 自動登入這個帳號</figcaption></figure>
+<h3>1-9 帳號選單</h3>
 <p>右上角的頭像可以打開：帳號、設定、語言、登出。</p>
 <figure><img src="images/11-account-menu.jpg" alt="帳號選單"><figcaption>帳號選單</figcaption></figure></section>
 <section class="chapter" id="ch02"><header class="chhead"><span class="chnum">第 2 章</span><h2>首頁六個入口</h2></header><p>登入後的首頁有六個大按鈕。一支影片通常是這樣走的：</p>
@@ -216,7 +233,9 @@ tr:last-child td{border-bottom:0}
 <p>每一列左邊有 🔒（鎖住，不會被改到）和 👁 / 🔊（隱藏或靜音）。</p>
 <h3>3-3 基本剪接</h3>
 <figure><img src="images/51-clip-selected.jpg" alt="選了一個片段"><figcaption>選了一個片段</figcaption></figure>
-<ul><li><strong>放素材：</strong> 左邊 Media 的「拍好的素材」，<strong>直接拖到時間軸</strong>。拖到主軌兩段之間會插進去。也可以從 Finder 直接拖進來。</li><li><strong>先挑一段再放：</strong> 點素材卡片打開預覽，按 <strong>I</strong> 標開頭、<strong>O</strong> 標結尾。</li><li><strong>選取：</strong> 點一下片段。右邊會出現 <strong>Video / Audio / Speed / Animation / Adjust</strong> 這幾個分頁。</li><li><strong>剪開：</strong> 把紅色播放頭移到要剪的地方，按工具列的「<strong>分割</strong>」（剪刀圖示）。</li><li><strong>剪短：</strong> 拖片段的左右邊緣。</li><li><strong>換順序：</strong> 把片段拖到別的位置。</li><li><strong>刪除：</strong> 選取後按垃圾桶。</li><li><strong>復原：</strong> 工具列的 ↶ ↷。</li><li>工具列右邊的磁鐵是「<strong>主軌磁吸</strong>」：開著時，片段之間不會留空隙。</li><li>右下的滑桿可以放大縮小時間軸（Mac 觸控板也可以兩指縮放）。</li></ul>
+<ul><li><strong>放素材：</strong> 左邊 Media 的「拍好的素材」，<strong>直接拖到時間軸</strong>。拖到主軌兩段之間會插進去。也可以從 Finder 直接拖進來。</li><li><strong>先挑一段再放：</strong> 點素材卡片打開預覽，按 <strong>I</strong> 標開頭、<strong>O</strong> 標結尾。</li><li><strong>選取：</strong> 點一下片段。右邊會出現 <strong>Video / Audio / Speed / Animation / Adjust</strong> 這幾個分頁。</li><li><strong>剪開（刀片）：</strong> 按 <strong>S</strong>（或工具列的剪刀「分割」）換成刀片，滑鼠下面會出現一條紅色虛線。<strong>在片段或圖層上點一下，就從點的地方切開</strong>；會自動貼齊播放頭和片段邊緣，按住 <strong>⌥</strong> 就不貼齊。</li><li><strong>回到點選：</strong> 按 <strong>A</strong>、<strong>Esc</strong>，或刀片左邊的箭頭。點選工具可以選取、拖動片段。</li><li><strong>在播放頭剪開：</strong> 按 <strong>⌘B</strong>。（iPhone 上還是用「分割」按鈕在播放頭剪。）</li></ul>
+<figure><img src="images/50b-blade.jpg" alt="刀片工具：滑鼠下面的虛線就是會切開的地方"><figcaption>刀片工具：滑鼠下面的虛線就是會切開的地方</figcaption></figure>
+<ul><li><strong>剪短：</strong> 拖片段的左右邊緣。</li><li><strong>換順序：</strong> 把片段拖到別的位置。</li><li><strong>刪除：</strong> 選取後按垃圾桶。</li><li><strong>復原：</strong> 工具列的 ↶ ↷。</li><li>工具列右邊的磁鐵是「<strong>主軌磁吸</strong>」：開著時，片段之間不會留空隙。</li><li>右下的滑桿可以放大縮小時間軸（Mac 觸控板也可以兩指縮放）。</li></ul>
 <h4>讓 AI 幫你剪</h4>
 <ul><li><strong>Auto-cut</strong>：自動剪掉停頓。剪之前的樣子會存成版本「Auto-cut 前」。</li><li><strong>AI Edit</strong>：照你說的剪，例如「把講錯和重講的地方剪掉」。長片會一章一章做。</li></ul>
 <h4>版本</h4>
@@ -240,6 +259,11 @@ tr:last-child td{border-bottom:0}
 <ol><li>左邊點「<strong>AI 留言</strong>」→「<strong>AI 留言條</strong>」。時間軸最上面的 AI 列會多一條。</li><li>拖它的位置和長短，對準要出現的那幾秒。</li><li>右邊寫這段要什麼，例如「大字卡：水溫 92 度，旁邊畫一個溫度計」。</li><li>選「<strong>工具</strong>」：「自動（看文字判斷）」、Onset 圖卡、EffectCraft、Three.js、去背（字在人後面）…；付費的「<strong>Higgsfield（付費生成）</strong>」「<strong>Theater（付費生成）</strong>」要先在設定加入雲端（第 6 章）。</li><li>按「<strong>生成</strong>」，或「<strong>全部生成</strong>」一次做完所有留言條。</li></ol>
 <p>做出來的圖層會放在留言條下面。留言條本身不會出現在影片裡。 「自動」永遠不會自己選付費工具；選了付費工具，也會先報價、問你才做。</p>
 <figure><img src="images/59-ainote.jpg" alt="AI 留言條"><figcaption>AI 留言條</figcaption></figure>
+<h4>給 AI 留言條參考圖</h4>
+<p>想要 AI 照著某張圖的感覺做？給它參考圖，<strong>最多 4 張</strong>：</p>
+<ul><li>把圖拖到留言條文字下面的「<strong>把參考圖拖進來（或點這裡選）</strong>」，或點那裡選檔案，也可以貼上。</li><li>或直接把圖拖到 timeline 上的那條 AI 留言條上（會變成它的參考圖，不會變成新的圖層）。</li><li>每張圖右上角的 ✕ 可以拿掉。</li></ul>
+<p>用 <strong>Theater</strong> 生成時，會照著參考圖做。<strong>Higgsfield 不收參考圖</strong>，只有寫 prompt 的 AI 看得到；要照著圖做請選 Theater。</p>
+<figure><img src="images/65-ainote-refs.jpg" alt="AI 留言條的參考圖"><figcaption>AI 留言條的參考圖</figcaption></figure>
 <h3>3-9 轉場</h3>
 <ol><li>左邊點「<strong>Transitions</strong>」。</li><li>把喜歡的轉場<strong>拖到時間軸兩段之間</strong>。剪接點上會出現一個小方塊。</li><li>拖小方塊的邊緣可以改長度；選取後按刪除可以拿掉。</li><li>懶得一個個放：按最下面「<strong>每個剪接點都加「交叉淡化」</strong>」；「<strong>全部移除</strong>」可以一次拿掉。</li></ol>
 <p>共 39 種，分五組：淡化、推移、擦除、形狀、動態（例如甩鏡、故障、翻轉）。</p>
@@ -257,28 +281,44 @@ tr:last-child td{border-bottom:0}
 <p>輸出視窗的第二個分頁「<strong>專案檔（給其他剪輯軟體）</strong>」可以存成 FilmCraft、CapCut 草稿、Premiere / DaVinci（XML）、Final Cut Pro（FCPXML）。勾「把用到的原檔複製到專案旁邊」，整個資料夾就能搬走或傳給別人。</p>
 <p>第三個分頁「<strong>壓縮檔案</strong>」可以做出比較小的檔案。</p></section>
 <section class="chapter" id="ch04"><header class="chhead"><span class="chnum">第 4 章</span><h2>AI Onset：叫 AI 幫你做事</h2></header><h3>4-1 怎麼叫它</h3>
-<ul><li>點畫面角落的 <strong>AI Onset 圓形按鈕</strong>（寫腳本、貼文頁在左上，剪輯頁在右下）。</li><li>或在任何畫面按 <strong>⌘J</strong>。</li><li>用打的，或按 <strong>🎙</strong> 用說的：按著說話放開就送出；或點一下開始說，停 2 秒沒說話會自動送出。</li></ul>
+<ul><li>每次打開 Onset，<strong>AI Onset 的圓形按鈕都在右下角</strong>。點它就打開對話框。</li><li>或在任何畫面按 <strong>⌘J</strong>。</li><li>用打的，或按 <strong>🎙</strong> 用說的：按著說話放開就送出；或點一下開始說，停 2 秒沒說話會自動送出。</li></ul>
 <figure><img src="images/60-ai-onset.jpg" alt="AI Onset 對話框"><figcaption>AI Onset 對話框</figcaption></figure>
 <p>可以叫它做的事，例如：</p>
 <ul><li>「幫我寫一支講今天科技新聞的 Reel 腳本」</li><li>「顏色統一一點，重點句放大，轉場換成閃白」</li><li>「把這支長片拆成幾支短影音」</li><li>「這個是什麼？」（先按 👆 再點畫面上的東西）</li></ul>
-<h3>4-2 上方的小圖示</h3>
+<h3>4-2 做新東西之前，它會先問你</h3>
+<p>叫它做新的內容（新影片、腳本、不拍直接做、飛字或動態字、封面、貼文、拆短影音）時，AI Onset 會<strong>先問幾個問題，一次一個，每個都有按鈕</strong>：</p>
+<ol><li><strong>風格</strong>：照頻道的風格、不套用（自由發揮）、或其他（告訴它是什麼風格）。</li><li><strong>要不要 AI 生成畫面</strong>：用本機 AI（免費但比較久）、用雲端（要 credits）、都可以（本機先）、或不要生成（用素材、動畫圖卡、飛字）。</li><li>還沒說的<strong>長度或畫面比例</strong>（直的 9:16、橫的 16:9、方的 1:1）。</li><li>不拍直接做時：要不要 <strong>AI 旁白、配樂</strong>。</li></ol>
+<p>按按鈕回答就好，也可以用打的。你這次已經說過的，它不會再問。 不想一直回答？按「<strong>其他照你建議</strong>」，剩下的它照最好的判斷直接做。</p>
+<figure><img src="images/64-ai-questions.jpg" alt="AI Onset 先問問題"><figcaption>AI Onset 先問問題</figcaption></figure>
+<p>想要這次不照頻道風格，也可以直接說「<strong>這次不要照我的風格</strong>」。它會一直照這個設定，直到你再說「照我的頻道風格」。</p>
+<h3>4-3 給它看參考圖</h3>
+<p>想讓 AI 照某張圖的感覺做？</p>
+<ul><li>把圖片<strong>拖到 AI Onset 的對話框</strong>上，或拖到角落的圓形按鈕上。</li><li>或複製圖片後，在對話框按 <strong>⌘V</strong> 貼上。</li></ul>
+<p>圖會出現在輸入框上面（右上角的 ✕ 可以拿掉），<strong>跟你下一句話一起交給 AI</strong> 當參考。</p>
+<figure><img src="images/66-ai-ref.jpg" alt="拖參考圖給 AI Onset"><figcaption>拖參考圖給 AI Onset</figcaption></figure>
+<p>想給某一條 AI 留言條參考圖，請看 <a href="#ch03">第 3 章 3-8</a>。</p>
+<h3>4-4 上方的小圖示</h3>
 <div class="tbl"><table><thead><tr><th>圖示</th><th>意思</th></tr></thead><tbody><tr><td>🌐</td><td>能不能上網查資料。點一下切換：需要時自動查 → 每次都可以查（🌐!）→ 關</td></tr><tr><td>🔇 / 🔊</td><td>回答要不要念出來</td></tr><tr><td>👆</td><td>「指一下」：再點畫面上任何東西問它（也可以按住 ⌥⇧ 點一下）</td></tr><tr><td>↘</td><td>把對話框收回角落（在剪輯頁旁邊時才有）</td></tr></tbody></table></div>
-<h3>4-3 它做的每一步都看得到</h3>
+<h3>4-5 它做的每一步都看得到</h3>
 <p>叫它做事後，對話框裡會列出它要做的<strong>每一步</strong>，做完一步打一個綠點，旁邊寫做了什麼。</p>
 <figure><img src="images/62-ai-steps.jpg" alt="AI 正在做，可以暫停或停止"><figcaption>AI 正在做，可以暫停或停止</figcaption></figure>
 <ul><li>做的時候下面有「<strong>❚❚ 暫停</strong>」和「<strong>⏹ 停止</strong>」，隨時可以按。暫停後按「▶ 繼續」。</li><li>對話框收起來時，畫面上會有一條小狀態列「Onset 正在做：…」，上面也有暫停和停止。</li><li>時間軸、畫面會跟著動，你可以看著它改。</li><li>做完會出現「<strong>↶ 復原這次 AI 的改動</strong>」。不滿意一鍵退回。</li></ul>
 <figure><img src="images/63-ai-done.jpg" alt="AI 做完"><figcaption>AI 做完</figcaption></figure>
-<h3>4-4 同時幾個 Agent</h3>
+<h3>4-6 同時幾個 Agent</h3>
 <p>對話框下方有「<strong>同時幾個 Agent − 3 +</strong>」。</p>
 <ul><li>Agent 就是同時一起工作的 AI 幫手。數字越大，大工作（例如「不拍，直接做」整支影片）做得越快，但電腦也越忙。</li><li>可以設 1 到 10 個；Onset 會看這台電腦的狀況，太多時會告訴你「這台電腦現在最多同時幾個」。</li><li>好幾個 Agent 一起工作時：</li></ul>
 <p>- 時間軸上方有<strong>彩色帶子</strong>，標出每個 Agent 正在處理哪一段（寫著「名字 · 步驟」）。 - <strong>每個 Agent 有自己顏色的游標</strong>，會飛到它正在改的地方：某個片段、字幕列、音樂或旁白列、AI 列，調色時飛到預覽畫面上。 - 可以「全部暫停」「全部繼續」「全部停止」，也可以只停其中一個。</p>
 <aside class="note"><p>測試環境沒有真的 AI，所以這一節沒有多 Agent 彩色游標的截圖。</p></aside>
-<h3>4-5 讓外部 AI 操作 Onset（進階）</h3>
+<h3>4-7 換 AI Onset 的大腦</h3>
+<p>AI Onset 可以用這四個 AI 當大腦：<strong>Claude Code、ChatGPT · Codex、Cursor、Hermes</strong>。在「設定 → AI 與工具」最上面（也就是安裝助手）選。哪些要帳號、怎麼登入，請看 <a href="#ch01">第 1 章 1-4</a>。</p>
+<ul><li>只有已經裝好、可以用的 AI 才能選。</li><li>選的 AI 做不到的事（例如 Cursor 不能查網路、看圖片），會交給 Claude Code 代答，畫面會說「這次由 Claude Code 代答」；Claude Code 也沒有的話，會直接告訴你做不了。</li></ul>
+<aside class="note"><p><strong>即將推出：</strong> 用 Cursor 或 ChatGPT 生成圖片。還在測試中，這一版還不能用。</p></aside>
+<h3>4-8 讓外部 AI 操作 Onset（進階）</h3>
 <p>「設定 → MCP」可以「允許外部 AI 在 Onset 裡工作」，例如讓 Claude Desktop 或 Claude Code 直接操作 Onset。外部 AI 做的每一步也會出現在 AI Onset 裡，標「🔌 外部 AI」，一樣能停止。外部 AI 不能拍攝、刪除或發佈。</p></section>
 <section class="chapter" id="ch05"><header class="chhead"><span class="chnum">第 5 章</span><h2>不拍，直接做</h2></header><p>沒時間拍、或這個題目根本拍不到（例如火星探測車）？只要有腳本，Onset 可以幫你做出整支影片：<strong>旁白、飛字、字卡、網路素材、生成的圖片和影片，再加字幕</strong>，一次放好在時間軸上。</p>
 <p>過程看得到，隨時可以停，做完可以一次復原。</p>
 <h3>5-1 從哪裡開始</h3>
-<ul><li><strong>Create Script</strong> 右上角的「<strong>不拍，直接做</strong>」。</li><li><strong>Content</strong> 選一支影片，「下一步」裡的「<strong>不拍，直接做</strong>」。</li><li>或直接跟 AI Onset 說：「這支不拍，直接做成影片」。</li></ul>
+<ul><li><strong>Create Script</strong> 右上角的「<strong>不拍，直接做</strong>」。</li><li><strong>Content</strong> 選一支影片，「下一步」裡的「<strong>不拍，直接做</strong>」。</li><li>或直接跟 AI Onset 說：「這支不拍，直接做成影片」。它會先用按鈕問你風格、要不要 AI 生成、長度和比例、要不要旁白配樂（見第 4 章 4-2）。</li></ul>
 <aside class="note"><p>這支影片已經有拍好的素材時，按鈕會變灰色。</p></aside>
 <h3>5-2 選怎麼做</h3>
 <figure><img src="images/70-noshoot.jpg" alt="不拍，直接做"><figcaption>不拍，直接做</figcaption></figure>
@@ -331,6 +371,8 @@ tr:last-child td{border-bottom:0}
 <p><strong>兩家都是你答應才會花錢。</strong></p>
 <h3>6-5 哪裡會用到雲端生成</h3>
 <ul><li><strong>不拍，直接做</strong>：選「雲端生成」或「混合」，或在分鏡清單把某個鏡頭換成「Higgsfield 雲端影片」「Theater 雲端圖片」等（第 5 章）。</li><li><strong>AI 留言條</strong>：「工具」選「Higgsfield（付費生成）」或「Theater（付費生成）」。按生成會先顯示「報價中…」，再問「要做嗎？」（第 3 章）。</li><li>「自動」選工具時，<strong>永遠不會自己選付費的</strong>。</li></ul>
+<h4>參考圖</h4>
+<p>給 AI 留言條或 AI Onset 的參考圖（第 3、4 章）：<strong>Theater 會照著參考圖做</strong>；<strong>Higgsfield 不收參考圖</strong>，只有寫 prompt 的 AI 看得到。要照著圖做，請選 Theater。</p>
 <aside class="note"><p>測試時不花真的錢，所以這一章沒有實際報價視窗的截圖。</p></aside></section>
 <section class="chapter" id="ch07"><header class="chhead"><span class="chnum">第 7 章</span><h2>iPhone app 和同步</h2></header><p>Onset 也有 iPhone / iPad 版。手機和 Mac 配對後，影片、腳本、時間軸和貼文會互相同步。</p>
 <aside class="note"><p>這一章的手機截圖是之前在 iPhone 模擬器測試時拍的。</p></aside>
@@ -367,7 +409,7 @@ tr:last-child td{border-bottom:0}
 <p>最快的找法：輸出完按「<strong>在 Finder 顯示</strong>」。或到「設定 → <strong>影片與輸出</strong>」→「打開資料夾」。</p>
 <p>想每次自己決定：在輸出視窗勾「<strong>每次輸出都問我存在哪裡、叫什麼名字</strong>」。 選的資料夾不在了（例如外接硬碟拔掉），會自動存回預設位置。</p>
 <h3>AI Onset 沒有回應？</h3>
-<ol><li><strong>先關掉 Onset 再打開一次。</strong> 大部分的問題這樣就好了。</li><li>到「設定 → <strong>AI 與工具</strong>」看：<ul><li><strong>AI-helper</strong> 要寫「執行中」。如果 AI 說「AI-helper 沒有在執行」，重新打開 Onset。</li><li><strong>Claude Code</strong> 要寫「已登入」。如果寫「還沒登入」，按「<strong>打開終端機登入</strong>」（見第 1 章）。</li></ul></li><li>按「<strong>重新檢查</strong>」。AI-helper 回來後會自動接上，不用重新整理。</li><li>正在做大工作時（例如「不拍，直接做」），AI 可能在背景忙。看看對話框或狀態列是不是寫著「正在做…」。</li></ol>
+<ol><li><strong>先關掉 Onset 再打開一次。</strong> 大部分的問題這樣就好了。</li><li>到「設定 → <strong>AI 與工具</strong>」看：<ul><li><strong>AI-helper</strong> 要寫「執行中」。如果 AI 說「AI-helper 沒有在執行」，重新打開 Onset。</li><li>最上面選的 AI（Claude Code、ChatGPT · Codex、Cursor 或 Hermes）要寫「可以用了」。還沒登入就按「<strong>登入</strong>」，照終端機的指示在瀏覽器登入（見第 1 章）。</li><li>用 Hermes 的本機模型時，模型要先在 splash 載入；本機模型很慢，一段腳本可能要好幾分鐘。</li></ul></li><li>按「<strong>重新檢查</strong>」。AI-helper 回來後會自動接上，不用重新整理。</li><li>正在做大工作時（例如「不拍，直接做」），AI 可能在背景忙。看看對話框或狀態列是不是寫著「正在做…」。</li></ol>
 <h3>本機生成很慢？</h3>
 <p>本機生成本來就慢：一張圖幾分鐘，5 秒有聲音的影片約半小時。而且<strong>一台 Mac 一次只做一段</strong>，其他排隊。</p>
 <p>可以這樣做：</p>
@@ -379,6 +421,8 @@ tr:last-child td{border-bottom:0}
 <ul><li>輸出前空間不夠會先擋下來，告訴你「這次大約要 X GB，只剩 Y GB」。</li><li>「設定 → <strong>儲存空間</strong>」：</li></ul>
 <p>- <strong>媒體資料夾</strong>：把影片素材搬到<strong>外接硬碟</strong>。 - <strong>壓縮檔案</strong>：做成小檔（WhatsApp、E-mail、一半大小），原檔不動。 - 看每支影片、每則貼文佔多少空間，刪掉不要的。</p>
 <ul><li>不用本機生成的話，不要裝影片模型（MiniMax H3 安裝時要 170～185 GB）。</li><li>硬碟太滿時（超過 95% 左右），預覽和匯入可能會出錯。請先清出空間。</li></ul>
+<h3>每次打開都要選頭像、打密碼？</h3>
+<p>「設定 → 帳號 → 登入」打開「<strong>打開 app 自動登入這個帳號</strong>」（見第 1 章 1-8）。</p>
 <h3>打開時說「無法驗證開發者」？</h3>
 <p>見第 1 章：按右鍵 →「打開」，或到「系統設定 → 隱私權與安全性」按「<strong>仍要打開</strong>」。</p>
 <h3>AI 改壞了怎麼辦？</h3>

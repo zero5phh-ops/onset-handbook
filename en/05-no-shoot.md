@@ -8,7 +8,7 @@ You can watch it work, stop any time, and undo it all at once when it's done.
 
 - **"No shoot, just make it"** at the top right of Create Script.
 - In **Content**, pick a video and use "No shoot, just make it" under "Next step".
-- Or just tell AI Onset: "Don't film this one, make it into a video".
+- Or just tell AI Onset: "Don't film this one, make it into a video". It first asks, with buttons, about style, AI generation, length and shape, and voice-over and music (see chapter 4, 4-2).
 
 > The button is greyed out once the video already has filmed takes.
 

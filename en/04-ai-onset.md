@@ -2,7 +2,7 @@
 
 ## 4-1 How to call it
 
-- Click the **round AI Onset button** in the corner (top left on the script and post pages, bottom right in Editing).
+- Every time Onset opens, **the round AI Onset button is in the bottom-right corner**. Click it to open the chat.
 - Or press **⌘J** on any screen.
 - Type, or press **🎙** to speak: "Hold to talk" sends when you let go, or click once and it sends after 2 seconds of silence.
 
@@ -15,7 +15,36 @@ Things you can ask it, for example:
 - "Split this long video into a few shorts"
 - "What's this?" (press 👆 first, then click something on the screen)
 
-## 4-2 The small icons at the top
+## 4-2 Before making something new, it asks you
+
+When you ask for new content (a new video, a script, No shoot, flying or kinetic text, a cover, a post, shorts from a long video), AI Onset **first asks a few questions, one at a time, each with buttons**:
+
+1. **Style**: your channel style, no style (go free), or something else (tell it which).
+2. **Whether to generate pictures with AI**: local AI (free but slower), cloud (uses credits), either (local first), or no generation (stock, animated cards, flying text).
+3. **Length or shape** if you haven't said (tall 9:16, wide 16:9, square 1:1).
+4. For No shoot: whether to add **AI voice-over and music**.
+
+Click a button to answer, or type. It won't ask about anything you've already said.
+Don't want to answer them all? Click the "**…your call on the rest**" button and it decides the rest itself.
+
+![AI Onset asks first](images/64-ai-questions.jpg)
+
+To skip your channel style, you can also just say "**don't use my style this time**". It keeps to that until you say "use my channel style" again.
+
+## 4-3 Show it reference pictures
+
+Want the AI to follow the feel of a picture?
+
+- **Drag pictures onto the AI Onset chat**, or onto the round button in the corner.
+- Or copy a picture and press **⌘V** in the chat.
+
+The pictures appear above the box (the ✕ removes one) and **go to the AI with your next message** as references.
+
+![Dragging a reference picture into AI Onset](images/66-ai-ref.jpg)
+
+To give one AI note card its own reference pictures, see [chapter 3, 3-8](03-editing.md).
+
+## 4-4 The small icons at the top
 
 | Icon | Meaning |
 |---|---|
@@ -24,7 +53,7 @@ Things you can ask it, for example:
 | 👆 | "Point": click anything on the screen to ask about it (or ⌥⇧-click) |
 | ↘ | "Back to corner": tuck the chat back into the corner (only when it sits next to the editor) |
 
-## 4-3 You can see every step
+## 4-5 You can see every step
 
 When you ask it to do something, the chat lists **every step** it will take. Each finished step gets a green dot and a note of what it did.
 
@@ -37,7 +66,7 @@ When you ask it to do something, the chat lists **every step** it will take. Eac
 
 ![The AI is done](images/63-ai-done.jpg)
 
-## 4-4 Agents at once
+## 4-6 Agents at once
 
 Under the chat there's **"Agents at once − 3 +"**.
 
@@ -50,7 +79,16 @@ Under the chat there's **"Agents at once − 3 +"**.
 
 > The test setup has no real AI, so this section has no screenshot of several agents with coloured cursors.
 
-## 4-5 Let an outside AI use Onset (advanced)
+## 4-7 Change AI Onset's brain
+
+AI Onset can use any of these four as its brain: **Claude Code, ChatGPT · Codex, Cursor, Hermes**. Choose it at the top of Settings → AI & tools (the setup assistant). Which ones need an account, and how to sign in: see [chapter 1, 1-4](01-install.md).
+
+- Only AIs that are installed and ready can be chosen.
+- If the chosen AI can't do something (Cursor can't search the web or look at pictures, for example), Claude Code answers instead and the screen says so; if Claude Code isn't available either, it tells you it can't be done.
+
+> **Coming soon:** making pictures with Cursor or ChatGPT. It's still being tested and isn't in this version yet.
+
+## 4-8 Let an outside AI use Onset (advanced)
 
 Settings → MCP can "Let outside AI work inside Onset", for example so Claude Desktop or Claude Code can drive Onset directly. Every step an outside AI takes also shows in AI Onset, marked "🔌 outside AI", and can be stopped the same way. An outside AI can't film, delete or publish.
 
