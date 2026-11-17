@@ -2,11 +2,13 @@
 
 Onset also comes for iPhone and iPad. Once the phone is paired with your Mac, videos, scripts, timelines and posts sync both ways.
 
-> The phone screenshots in this chapter were taken earlier in the iPhone Simulator, with the app in Chinese. The layout is the same in English.
+> The first picture is the home screen on a real iPhone. The other phone screenshots were taken earlier in the iPhone Simulator and may differ slightly from the current version. All of them show the app in Chinese; the layout is the same in English.
 
 ## 7-1 What the phone can do
 
 <img src="images/iphone-home.jpg" alt="iPhone home screen" width="260">
+
+Like the Mac, the phone's home screen has six buttons: Create Script, Content, Recording, Editing, Post Design, and a sixth one for AI pictures and videos (「生成」, "Generate"). The round AI Onset button sits in the bottom-right corner here too.
 
 **On the phone itself:**
 

@@ -2,11 +2,13 @@
 
 Onset 也有 iPhone / iPad 版。手機和 Mac 配對後，影片、腳本、時間軸和貼文會互相同步。
 
-> 這一章的手機截圖是之前在 iPhone 模擬器測試時拍的。
+> 第一張是真的 iPhone 上的首頁。其他幾張手機截圖是之前在 iPhone 模擬器測試時拍的，可能跟現在的版本有一點不一樣。
 
 ## 7-1 手機上能做什麼
 
 <img src="images/iphone-home.jpg" alt="iPhone 首頁" width="260">
+
+手機的首頁跟 Mac 一樣有六個入口：Create Script、Content、Recording、Editing、Post Design，第六個是「**生成**」（AI 圖片和影片）。右下角一樣是 AI Onset 的圓形按鈕。
 
 **手機自己就能做：**
 
