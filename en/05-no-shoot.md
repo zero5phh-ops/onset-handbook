@@ -9,6 +9,7 @@ You can watch it work, stop any time, and undo it all at once when it's done.
 - **"No shoot, just make it"** at the top right of Create Script.
 - In **Content**, pick a video and use "No shoot, just make it" under "Next step".
 - Or just tell AI Onset: "Don't film this one, make it into a video". It first asks, with buttons, about style, AI generation, length and shape, and voice-over and music (see chapter 4, 4-2).
+- If you only say "make a video" without saying no shoot, AI Onset first asks "**Will you film yourself, or make it without filming?**" It doesn't decide for you.
 
 > The button is greyed out once the video already has filmed takes.
 
@@ -20,7 +21,7 @@ Pick one of the four big buttons at the top:
 
 | Option | What it means |
 |---|---|
-| **Flying text only** | Ready right away, free. The picture is text animation and cards |
+| **Flying text only** | Free. Every voice-over line becomes a kinetic type shot, with music and sound effects (chapter 8) |
 | **Local generation** | Made on this Mac, free: pictures use Qwen Image 2.1, videos use MiniMax H3, and the speed depends on your computer |
 | **Cloud generation** | Made with Higgsfield or Theater. Costs money, **with a quote first** |
 | **Mixed** | Each shot picked from its line: stock, news footage, report screenshots, AI pictures, 3D and motion graphics |
@@ -34,8 +35,9 @@ Then set:
 - **Speaking pace**: tight, normal, slow.
 - Tick boxes: **"Captions"**, **"Research news and facts"**, **"Web pictures and stock clips"**, **"Flying text on every shot"**.
 - **Agents at once**: more is faster (see chapter 4).
-- **Chapter title cards**: each chapter opens with its title over a background, and you can set each chapter's mood (tense, curious, moving, calm, reflective).
-- Settings you use often can be saved with **"Save as preset"**.
+- **Kinetic style**: for Flying text only, pick one (52 of them, or ones you saved yourself). Pick none and it chooses by the mood of each line.
+- **Chapter title cards**: each chapter opens with its title over a background. Each chapter's row shows its number and title, and you can set each chapter's mood (tense, curious, moving, calm, reflective). Flying text only has no title cards.
+- Settings you use often can be saved with **"Save as preset"**. To get rid of a preset, choose it and click the 🗑 next to it (it asks you first).
 
 ![Mixed](images/71-noshoot-mixed.jpg)
 
@@ -105,7 +107,9 @@ The bottom of the window says: "Before anything is made, you'll be asked how lon
 2. You can go and do something else. The AI works in the background, chapter by chapter: as soon as a chapter's voice-over is read, that chapter's animation, flying text, captions and music start.
 3. Everything lands on the editing timeline, just like your own edit, so you can keep changing it.
 4. To start over, tell AI Onset **"redo it"**. The old edit is saved first as a version called "Before redo" with the date.
-5. Closed Onset halfway through? No problem: next time you open Editing it asks **"Go on"** or **"No thanks"**.
+5. Closed Onset halfway through? No problem: next time you open Editing it asks **"Go on"** or **"No thanks"**. Go on only does what's left; voice-over and flying text already in place aren't added again.
+6. If a shot couldn't find media or its picture didn't get made, the top of the report lists each one: why, and what was used instead (stock, an AI picture, an animated card, a plain colour card).
+7. Click "Undo this run" in AI Onset to put Editing back the way it was.
 
 ### One voice-over line came out wrong?
 

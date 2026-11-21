@@ -1,4 +1,4 @@
-# 8. FAQ
+# 10. FAQ
 
 ## Where are my exported videos?
 
@@ -29,7 +29,7 @@ With local generation, pictures use Qwen Image 2.1, videos use MiniMax H3, and t
 
 Things that help:
 
-- Try a "draft" first (Local AI Studio has draft options that are much faster).
+- Try a "draft" first (local AI on the AI generation page has draft options that are much faster).
 - In "No shoot, just make it", switch some shots to **web pictures, stock clips or animated cards**.
 - Set a **"Local limit"**: when time's up, the rest become animated cards.
 - Install "H3 Turbo" and "H3 fast decode" (in Settings → Generation tools).
@@ -40,6 +40,14 @@ Things that help:
 - **One line sounds wrong:** on that line, click **"Speak line #n again"**.
 - **It says no voice-over was added:** usually the voice model isn't downloaded yet, or AI-helper isn't answering. Follow its instructions (Settings → AI & tools → voice models for AI voice-over), then try again.
 - **In the preview, the voice-over drifts from the picture or keeps replaying:** that was a problem in older versions and is fixed in the latest one. Please update Onset. Exported files weren't affected.
+
+## The preview stutters?
+
+For a video with lots of cuts, Onset makes a "continuous preview" file in the background, and once it's ready playback is smooth (chapter 3, 3-1). For a second or two right after a change it's still being made, so wait a moment and play again. The exported video isn't affected.
+
+## Pressing ▶ on "My voice" plays nothing?
+
+The play button had a bug in the older version, fixed in the new version. The recording itself is fine and still works for AI voice-over: type a sentence or two and click "Make draft" to hear it read in your voice.
 
 ## Running out of disk space?
 

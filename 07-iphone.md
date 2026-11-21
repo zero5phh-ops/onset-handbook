@@ -8,7 +8,7 @@ Onset 也有 iPhone / iPad 版。手機和 Mac 配對後，影片、腳本、時
 
 <img src="images/iphone-home.jpg" alt="iPhone 首頁" width="260">
 
-手機的首頁跟 Mac 一樣有六個入口：Create Script、Content、Recording、Editing、Post Design，第六個是「**生成**」（AI 圖片和影片）。右下角一樣是 AI Onset 的圓形按鈕。
+手機的首頁跟 Mac 一樣：Content、Create Script、Recording、Editing，下面是 Design、AI 生成和動畫畫板（Mac 的 AI 連不到時，手機不顯示動畫畫板，因為手機自己的 AI 不會畫）。右下角一樣是 AI Onset 的圓形按鈕；在 Create Script、AI 生成、動畫畫板、封面、Design 這些頁面，它會從下面升起來停在頁面下方。
 
 **手機自己就能做：**
 
@@ -33,6 +33,12 @@ Onset 也有 iPhone / iPad 版。手機和 Mac 配對後，影片、腳本、時
 手機做不了的事，按「**交給 Mac 做**」，要求會留在那支影片上，Mac 連上後就看得到。
 
 完全沒網路時，剪輯和輸出照常可以做。
+
+手機剪輯的小提醒：
+
+- 時間軸比預覽大一點，好剪；手指上下滑可以看下面的列。
+- **兩指縮放時間軸**不會選到或移動片段。
+- 動畫畫板裡要移動圖層：**按住約 0.3 秒**（會震一下）再拖；直接滑是捲動。
 
 ## 7-2 和 Mac 配對
 
@@ -86,4 +92,4 @@ Onset 也有 iPhone / iPad 版。手機和 Mac 配對後，影片、腳本、時
 
 ---
 
-下一章：[常見問題 →](08-faq.md)
+下一章：[動態字、飛字編輯器和包裝風格 →](08-motion.md)

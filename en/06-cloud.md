@@ -69,6 +69,9 @@ Once they're on the list, you can choose them:
 
 ## 6-6 Where cloud generation is used
 
+- **"Cloud AI" on the AI generation page**: make a picture or a video straight into the AI library, without opening a video first. Choose a picture or a video, how many seconds of video, the model and size, see the price first, and nothing starts until you click "**Make it**" (chapter 2, 2-6). You can also tell AI Onset "draw a … in the cloud", and even attach pictures you gave it in the chat.
+- **Restyle and change the scene**: turn a part you filmed into another look (chapter 3, 3-12).
+
 - **No shoot, just make it**: choose "Cloud generation" or "Mixed", or switch a shot in the shot list to "Higgsfield cloud clip", "Theater cloud picture" and so on (chapter 5).
 - **AI note cards**: pick "Higgsfield (paid)" or "Theater (paid)" as the "Tool". Generating shows a quote first, then asks whether to go ahead (chapter 3).
 - When the tool is chosen "Automatically", **it never picks a paid one**.

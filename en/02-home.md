@@ -1,6 +1,6 @@
-# 2. The six buttons on the home screen
+# 2. The home screen
 
-After you sign in, the home screen has six big buttons. A video usually goes like this:
+After you sign in, the home screen has two rows. A video usually goes like this:
 
 **Write the script → Film → Edit → Make the cover and posts → Export**
 
@@ -8,18 +8,30 @@ No time to film? Use "**No shoot, just make it**" (chapter 5) to turn a script s
 
 ![Home screen](images/10-home.jpg)
 
+> The screenshot shows the old home screen. The new one is laid out as in the tables below; the buttons have the same names.
+
+**Top row, "Make a video":**
+
 | Button | What it's for |
 |---|---|
-| **Create Script** | Write a new script, or have the AI write it |
-| **Content** | All your videos, how far along each one is, covers and post captions |
-| **Recording** | Film with the Mac or an iPhone, with a teleprompter |
-| **Editing** | Cutting, captions, music, colour, export |
-| **Post Design** | Image posts for Instagram, Facebook, Xiaohongshu (RED) and more |
-| **Local AI Studio** | Make AI pictures and videos on this Mac (free; pictures use Qwen Image 2.1, videos use MiniMax H3, and the speed depends on your computer) |
+| **Content** | First in the row: all your videos, how far along each one is, covers and post captions, sequels |
+| **1 Create Script** | Write a new script, or have the AI write it |
+| **2 Recording** | Film with the Mac or an iPhone, with a teleprompter |
+| **3 Editing** | Cutting, captions, music, colour, export |
+
+**Bottom row, "Assets and animation":**
+
+| Button | What it's for |
+|---|---|
+| **Design** | Posters, banners, posts, covers (it used to be called Post Design) |
+| **AI generation** | Make pictures and videos on this Mac (local AI, free) or in the cloud (cloud AI, costs money). It used to be called Local AI Studio |
+| **Animation Board** | Animations of your own: drawings, logos, characters that move (chapter 9) |
+
+The home screen also has "**Carry on with “…”**", which takes you straight back to the video you were last working on.
 
 The Onset logo at the top left always takes you back home.
 
-> Under the Local AI Studio button you may see a short status such as "Pictures only" or "Not enough disk space". See 2-6.
+> Under the AI generation button you may see a short status such as "Pictures only" or "Not enough disk space". See 2-6.
 
 ---
 
@@ -28,13 +40,13 @@ The Onset logo at the top left always takes you back home.
 ![Create Script](images/20-script.jpg)
 
 1. In the middle, pick a format: **Short video, Long video, Interview question list, Podcast rundown, Voice-over script, Ad, Tutorial / explainer, Series plan, Free format**.
-2. Pick a "Script style" (the default is "My script style" from your answers) and a "Length".
+2. Pick a "Script style" (the default is "My script style" from your answers), a "Length" and the **shape** (16:9 wide, 9:16 tall, 1:1 square). You only choose the shape once: Recording, No shoot and Editing all follow it, and the AI writes the `[B-roll]` notes for tall or wide to match.
 3. Type on the right yourself, or have the AI write it:
 
 **Have the AI write the script:**
 
-1. Click the round AI Onset button at the top left to open the chat.
-2. Say in one sentence what this episode is about, for example "Write a 60-second short: three tips for better pour-over coffee at home".
+1. When you open Create Script, AI Onset flies over to the side. For a new, empty script it asks you one thing at a time, with buttons: format, topic, length, style.
+2. Or just say what this episode is about, for example "Write a 60-second short: three tips for better pour-over coffee at home".
 3. Send it (or press 🎙 and say it).
 
 ![The AI wrote the script](images/23-script-written.jpg)
@@ -69,7 +81,9 @@ Click a video to see its status, takes and exports on the right, plus the **"Nex
 Buttons below:
 
 - **Script**: read or edit the script.
-- **Cover and caption**: make the cover and write the post caption.
+- **Cover and caption**: make the cover and write the post caption. The video's cover picture also says "**Design the cover**" (no cover yet) or "**Edit the cover**"; click it to make one.
+- **Make a new version**: keeps the current edit exactly as it is and opens a new version to change in Editing. Both share the media, script and cover.
+- **Make a sequel**: every video with a script has this. AI Onset first reads the original (the script, what the ending promised viewers, whether you were on camera, the shape and length), then asks you one at a time about the sequel's direction, whether you'll film yourself, the shape and length, and voice-over and music. Click an option for each, or type your own answer in "**Or write what you want…**" underneath.
 - **Pack to share**: package the whole project to give to someone else.
 - **Delete**.
 
@@ -132,11 +146,13 @@ See [chapter 3](03-editing.md) for the details.
 
 ---
 
-## 2-5 Post Design (image posts)
+## 2-5 Design (posters, banners, posts)
 
-![Post Design](images/80-postdesign-list.jpg)
+![Design](images/80-postdesign-list.jpg)
 
-1. Click **"New post"**, or tell AI Onset on the left where the post will go. It asks a few questions (purpose, where the content comes from, how many slides, design style) and then designs it.
+This used to be called Post Design. Besides social posts it now makes **posters** (A4, A3, 2:3, square), **banners** (website banner, YouTube channel banner, Facebook cover, LinkedIn, event banner) and **Other** (slides, business cards, invitations, flyers, certificates, roll-up stands).
+
+1. Click **"New post"**, or tell AI Onset what you want to make and where it will go (Instagram, Xiaohongshu, Facebook, Threads, X, or a poster or banner size). It asks a few questions (purpose, where the content comes from, how many slides, design style) and then designs it.
 2. In the editor:
    - Left: platform and size, purpose, content source, slides, design style, then **"Design from these"** / **"Redesign from these"**.
    - Middle: edit right on the picture. Click to select, drag to move, pull a corner to resize, and **double-click text to edit it**. The toolbar adds "Text", "Add a picture", "AI picture", "AI library", "Shape".
@@ -148,11 +164,18 @@ See [chapter 3](03-editing.md) for the details.
 
 ---
 
-## 2-6 Local AI Studio (AI pictures and videos)
+## 2-6 AI generation (pictures and videos)
 
-Make AI pictures and videos on this Mac: **no cloud, no cost, but slower, and the models are big.**
+This used to be called Local AI Studio. The page offers two ways:
 
-![Local AI Studio](images/85-studio.jpg)
+- **Local AI**: made on this Mac, **no cloud, no cost, but slower, and the models are big**. Details below.
+- **Cloud AI**: made with a cloud service you've added (Theater, Higgsfield…), much faster but it costs money. Choose a picture or a video, how many seconds of video, which model and size, and **you see the price first: nothing starts, and no credits or money are spent, until you click "Make it"**. Reference pictures come from the same library as local AI. See chapter 6.
+
+Both have "**AI improve**": it rewrites your idea into a good prompt, looking at the reference pictures you picked too; don't like it, click "Undo". Click a finished picture or video to enlarge it, zoom in, and use ‹ › to go to the next one. AI Onset also flies over to the side when you open this page.
+
+### Local AI
+
+![Local AI](images/85-studio.jpg)
 
 - The page first checks this computer (chip, memory, free disk space) and tells you **what it can make and roughly how long it takes**.
 - Models:
@@ -163,6 +186,10 @@ Make AI pictures and videos on this Mac: **no cloud, no cost, but slower, and th
 - If the home button says **"Pictures only"**, this Mac doesn't have the memory or disk space for the video model and can only make pictures. **"Not enough disk space"** means even the picture model doesn't fit yet.
 - One Mac makes one thing at a time; the rest wait in a queue. You can stop a job. Finished pictures can be added to the reference library ("Add to reference library"), turned into a video ("Make a video from this"), or put in a video ("Put in a video…").
 - Only for Macs with Apple Silicon (M-series chips).
+
+## 2-7 Animation Board
+
+Animations of your own: drawings, logos traced out by themselves, characters that walk, run and talk, 3D text. See [chapter 9](09-board.md).
 
 ---
 

@@ -19,12 +19,15 @@ Things you can ask it, for example:
 
 When you ask for new content (a new video, a script, No shoot, flying or kinetic text, a cover, a post, shorts from a long video), AI Onset **first asks a few questions, one at a time, each with buttons**:
 
-1. **Style**: your channel style, no style (go free), or something else (tell it which).
-2. **Whether to generate pictures with AI**: local AI (free but slower), cloud (uses credits), either (local first), or no generation (stock, animated cards, flying text).
-3. **Length or shape** if you haven't said (tall 9:16, wide 16:9, square 1:1).
-4. For No shoot: whether to add **AI voice-over and music**.
+1. **Film yourself, or no shoot**: for a new video (sequels included), unless you've said "no shoot", it always asks this first.
+2. **Style**: your channel style, no style (go free), or something else (tell it which).
+3. **Whether to generate pictures with AI**: local AI (free but slower), cloud (uses credits), either (local first), or no generation (stock, animated cards, flying text).
+4. **Shape** (asked right after the film-yourself question) and the **length** if you haven't said (tall 9:16, wide 16:9, square 1:1).
+5. For No shoot: whether to add **AI voice-over and music**.
 
-Click a button to answer, or type. It won't ask about anything you've already said.
+Click a button to answer. If none of the options is right, every question has "**Or write what you want…**" underneath: type your own answer there. It won't ask about anything you've already said.
+
+On the AI generation, Animation Board, cover, Design and Editing pages, AI Onset also first asks the questions that page needs, then hands the whole job to the AI in one go.
 Don't want to answer them all? Click the "**…your call on the rest**" button and it decides the rest itself.
 
 ![AI Onset asks first](images/64-ai-questions.jpg)
@@ -63,6 +66,12 @@ When you ask it to do something, the chat lists **every step** it will take. Eac
 - When the chat is folded away, a small status bar shows "Onset is doing: …", also with pause and stop.
 - The timeline and the picture change as it goes, so you can watch it edit.
 - When it's done, **"↶ Undo this AI change"** appears. Not happy? One click takes it all back.
+- You can keep typing while it works. What you say next is dealt with once the current step is done.
+- Each page's chat is kept. If the app closes or it gets stopped halfway, say "**go on**" next time and it carries on from where it stopped.
+
+### It flies over to the side
+
+On Create Script, Editing, Design, AI generation, Animation Board and cover design, AI Onset flies over from the corner and settles in its own column beside the page. Click ↘ to tuck it back into the corner.
 
 ![The AI is done](images/63-ai-done.jpg)
 
@@ -72,6 +81,7 @@ Under the chat there's **"Agents at once − 3 +"**.
 
 - Agents are AI helpers working at the same time. More agents finish big jobs faster (such as "No shoot, just make it" for a whole video), but keep the computer busier.
 - You can set 1 to 10. Onset checks what this computer can handle and tells you if it can only take fewer at once.
+- In "No shoot, just make it", each agent writes its own shots and finds its own media, and the chapter cards, animation, flying text and captions are shared out evenly between the agents.
 - When several agents are working:
   - **Coloured bands** above the timeline show which part each agent is working on ("name · step").
   - **Each agent has its own coloured cursor** that flies to whatever it's changing: a clip, the Captions row, the Music or Voice-over row, the AI row, or the preview when it's grading colour.

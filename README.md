@@ -9,18 +9,20 @@
 Onset 是一個從「寫腳本」到「拍」「剪」「做封面和貼文」都在同一個地方完成的 app。
 它有一個 AI 助手叫 **AI Onset**，你用說的或打字叫它做事，它做的每一步你都看得到，也能隨時暫停。
 
-![首頁六個入口](images/10-home.jpg)
+![首頁](images/10-home.jpg)
 
 ## 目錄
 
 1. [安裝和第一次打開](01-install.md)
-2. [首頁六個入口](02-home.md)：寫腳本、影片與封面、拍攝、剪輯、圖片貼文、本機生成
+2. [首頁的入口](02-home.md)：影片與封面、寫腳本、拍攝、剪輯、Design、AI 生成、動畫畫板
 3. [Editing 剪輯](03-editing.md)：時間軸、文字排版、轉場、調色、輸出
 4. [AI Onset：叫 AI 幫你做事](04-ai-onset.md)
 5. [不拍，直接做](05-no-shoot.md)：只有腳本也能做出影片
 6. [雲端生成：Higgsfield 和 Theater](06-cloud.md)
 7. [iPhone app 和同步](07-iphone.md)
-8. [常見問題](08-faq.md)
+8. [動態字、飛字編輯器和包裝風格](08-motion.md)
+9. [動畫畫板](09-board.md)
+10. [常見問題](10-faq.md)
 
 ## 先知道三件事
 

@@ -142,4 +142,4 @@ Your avatar at the top right opens: Account, Settings, Language, Sign out.
 
 ---
 
-Next: [The six buttons on the home screen →](02-home.md)
+Next: [The home screen →](02-home.md)

@@ -8,7 +8,7 @@ Onset also comes for iPhone and iPad. Once the phone is paired with your Mac, vi
 
 <img src="images/iphone-home.jpg" alt="iPhone home screen" width="260">
 
-Like the Mac, the phone's home screen has six buttons: Create Script, Content, Recording, Editing, Post Design, and a sixth one for AI pictures and videos (「生成」, "Generate"). The round AI Onset button sits in the bottom-right corner here too.
+The phone's home screen is like the Mac's: Content, Create Script, Recording, Editing, and below them Design, AI generation and Animation Board (when the Mac's AI can't be reached, the phone hides Animation Board, because the phone's own AI can't draw). The round AI Onset button sits in the bottom-right corner here too; on Create Script, AI generation, Animation Board, cover and Design, it rises from the bottom and settles under the page.
 
 **On the phone itself:**
 
@@ -33,6 +33,12 @@ Like the Mac, the phone's home screen has six buttons: Create Script, Content, R
 For anything the phone can't do, tap **"Hand to Mac"**. The request stays with the video, and the Mac sees it once they connect.
 
 With no network at all, editing and exporting still work.
+
+Tips for editing on the phone:
+
+- The timeline is a bit bigger than the preview, so it's easy to cut; swipe up and down to see the rows below.
+- **Pinching the timeline with two fingers** won't select or move clips.
+- To move a layer on the Animation Board: **hold it for about 0.3 seconds** (it buzzes), then drag; a plain swipe scrolls.
 
 ## 7-2 Pair with your Mac
 
@@ -86,4 +92,4 @@ This needs **the same Wi‑Fi**; it doesn't go through the relay.
 
 ---
 
-Next: [FAQ →](08-faq.md)
+Next: [Kinetic type, the kinetic type editor and packaging styles →](08-motion.md)

@@ -8,7 +8,12 @@
 - **Middle: the preview.** Press ▶ to play.
 - **Right: properties.** Click a clip and its settings appear here.
 - **Bottom: the timeline.** Your video, laid out from left to right.
-- **Top bar:** the video name, "Version", the shape (wide, tall, square), panel layout, **"Apply style"**, **"Export"**.
+- **Top bar:** the video name, "Version", the shape (wide, tall, square), panel layout, **"Apply style"**, **"Add a board…"**, **"Export"**.
+- **Far right (Mac): AI Onset's own column.** When you open a video, AI Onset settles on the right and the editing screen makes room for it, so it never covers the preview. Click ↘ to tuck it back into the corner.
+
+### Smooth preview playback
+
+For a video with lots of cuts (many jump cuts), Onset joins the main track into one **continuous preview** file in the background, so playback doesn't hitch at every cut. For a second or two right after a change it's still being made, and the preview plays the original media as before; once it's ready it switches to the smooth version by itself. Export still uses the original files, so quality isn't affected.
 
 ## 3-2 The rows of the timeline
 
@@ -34,6 +39,7 @@ Each row has 🔒 on the left (lock it so nothing changes it) and 👁 / 🔊 (h
 - **Add media:** under Media → "Recorded takes", **drag a card onto the timeline**. Drop it between two main-track clips to insert it. You can also drag files straight in from Finder.
 - **Pick a part first:** click a card to open a preview, press **I** to mark the start and **O** to mark the end.
 - **Select:** click a clip. The tabs **Video / Audio / Speed / Animation / Adjust** appear on the right.
+- **Select many at once:** **drag a box** on an empty part of the timeline; every clip and layer inside it is selected (hold ⇧ while dragging to add to the selection).
 - **Cut (blade):** press **S** (or the scissors "Split" button) to switch to the blade; a red dashed line follows the mouse. **Click a clip or layer to cut it right there.** It snaps to the playhead and clip edges; hold **⌥** to stop snapping.
 - **Back to selecting:** press **A**, **Esc**, or click the arrow left of the blade. The select tool picks and drags clips.
 - **Cut at the playhead:** press **⌘B**. (On the iPhone, the "Split" button still cuts at the playhead.)
@@ -51,6 +57,7 @@ Each row has 🔒 on the left (lock it so nothing changes it) and 👁 / 🔊 (h
 
 - **Auto-cut**: cuts out the pauses automatically. The version before it is kept as "Before Auto-cut".
 - **AI Edit**: cuts the way you describe, for example "cut out the mistakes and the retakes". Long videos are done chapter by chapter.
+- **The first version in one go**: for a video filmed from a script and not cut yet, AI Onset asks when you open Editing: "Make the first version from the script and style in one go?" Say yes and it cuts out the mistakes and pauses, adds captions, makes what each script section's `[B-roll]` note asks for (an app screen recording, background removal, kinetic type, a board, AI pictures…), and adds chapters, music, sound effects and the cover.
 
 ### Versions
 
@@ -106,6 +113,12 @@ Click **"Audio"** on the left:
 
 Music can duck (get quieter) automatically while someone is talking.
 
+### Use your own voice
+
+1. In "AI voice-over", switch to "**My voice**" and read the sentences on screen for about 10 seconds (tick the agreement first; you can only record your own voice).
+2. You can **give the recorded voice a name**, and record several. They're listed in the voice menu together with the built-in voices.
+3. Click "★ Set as default": from then on AI voice-over, AI Onset's voice-overs and No shoot use this voice whenever no other is chosen. A built-in voice can be the default too.
+
 ## 3-8 AI note cards
 
 Want a graphic card or an animation without making it yourself? Leave the AI a note card:
@@ -140,7 +153,7 @@ Want the AI to follow the feel of a picture? Give the note reference pictures, *
 3. Drag the box's edge to change the length; select it and press ⌫ to remove it.
 4. To do every cut at once: **"Add “Cross fade” to every cut"** at the bottom. **"Remove all"** takes them all off.
 
-There are 39 in five groups: Fade, Push, Wipe, Shape and Motion (for example Whip pan, Glitch, Flip).
+There are 39 in five groups: Fade, Push, Wipe, Shape and Motion (for example Whip pan, Glitch, Flip). There are also 22 **element transitions**, which cover the cut with something drawn, like lightning, fire or confetti, to change scenes.
 
 ![Transitions](images/53-transitions.jpg)
 
@@ -184,6 +197,17 @@ Select a clip → **"Adjust"** on the right:
 The second tab of the export window, **"Project file (for other editing apps)"**, saves for FilmCraft, a CapCut draft, Premiere / DaVinci (XML) or Final Cut Pro (FCPXML). Tick the option to copy the original files next to the project, and the whole folder can be moved or sent to someone else.
 
 The third tab, **"Compress files"**, makes smaller files.
+
+## 3-12 Effects the AI makes
+
+Just ask AI Onset for these (they also turn up in "the first version in one go"):
+
+- **App screen recording**: the AI works in Onset while recording it, zooming in on where it clicks and speeding up the waits, for a product-tutorial screen recording. The first time, allow Onset in System Settings → Privacy & Security → Screen & System Audio Recording, and please don't touch the mouse while it records.
+- **Host background removal**: cuts you out of the background with clean edges and a soft shadow and puts you in a corner of the picture, with a screen recording or flying text behind you.
+- **Flying text that follows your hand**: the words stick to your hand and move with it.
+- **Restyle**: turns a part you filmed into anime, clay, hand-drawn, comic, pixel art…, keeping the people, movements and mouths the same so the sound still lines up. It can also "change the scene": the people stay, the background becomes somewhere else. This uses cloud generation and **gives you a quote first**.
+- **Automatic sound effects**: a "whoosh" when something comes in, a "pop" when text appears.
+- **Download a video from a link**: turn it on yourself first in Settings → Generation tools (Mac only). Only download your own videos or ones you have permission to use; you're responsible for what you download.
 
 ---
 

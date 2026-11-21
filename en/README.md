@@ -9,18 +9,20 @@ For creators using Onset for the first time. No coding needed: just follow along
 Onset is one app for the whole video: writing the script, filming, editing, and making the cover and posts.
 It has an AI assistant called **AI Onset**. Type or speak to tell it what to do. You can watch every step it takes and pause it at any time.
 
-![The six buttons on the home screen](images/10-home.jpg)
+![The home screen](images/10-home.jpg)
 
 ## Contents
 
 1. [Installing and opening Onset for the first time](01-install.md)
-2. [The six buttons on the home screen](02-home.md): script, content, recording, editing, image posts, local AI
+2. [The home screen](02-home.md): content, script, recording, editing, Design, AI generation, Animation Board
 3. [Editing](03-editing.md): timeline, text, transitions, colour, export
 4. [AI Onset: let the AI do the work](04-ai-onset.md)
 5. [No shoot, just make it](05-no-shoot.md): a finished video from just a script
 6. [Cloud generation: Higgsfield and Theater](06-cloud.md)
 7. [The iPhone app and sync](07-iphone.md)
-8. [FAQ](08-faq.md)
+8. [Kinetic type, the kinetic type editor and packaging styles](08-motion.md)
+9. [Animation Board](09-board.md)
+10. [FAQ](10-faq.md)
 
 ## Three things to know first
 
