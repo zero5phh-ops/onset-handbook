@@ -19,7 +19,7 @@ No time to film? Use "**No shoot, just make it**" (chapter 5) to turn a script s
 | **2 Recording** | Film with the Mac or an iPhone, with a teleprompter |
 | **3 Editing** | Cutting, captions, music, colour, export |
 
-**Bottom row, "Assets and animation":**
+**Bottom row, "Design and assets":**
 
 | Button | What it's for |
 |---|---|
