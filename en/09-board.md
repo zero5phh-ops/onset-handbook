@@ -4,11 +4,15 @@ The "**Animation Board**" is for animations of your own, made once and used agai
 
 Get there with "**Animation Board**" in the bottom row of the home screen. When you open a board, AI Onset flies over and settles beside it, so you can ask it for help as you work.
 
+![The board list, with AI Onset beside it on the left](images/95-board-list.jpg)
+
 ## 9-1 A new board
 
 Click "New board" and choose the shape (9:16, 16:9, 1:1) and length (up to 20 seconds). The background can be a colour, or transparent (to lay it over a video).
 
 Under the picture are the **layer tracks**, one per layer. Drag a layer left or right to move it in time, and pull its edge to make it longer or shorter. Layers on the same track that overlap in time each get a row of their own.
+
+![The board designer: tools on the left, the picture in the middle, layer tracks below, settings on the right](images/96-board-designer.jpg)
 
 ## 9-2 Things you can draw
 

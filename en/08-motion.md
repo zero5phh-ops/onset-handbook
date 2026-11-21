@@ -20,6 +20,8 @@ When the words are about water, fire, smoke, ice, electricity, wind, snow, heart
 
 For a kinetic type shot you've already made, **double-click** it on the timeline, or click "**Edit kinetic type**" on the AI note card, to open the "**Kinetic type editor**".
 
+![The kinetic type editor: the picture on top, each beat's timing below, words, fonts and colours on the right](images/57-kinetic-editor.jpg)
+
 - **Words**: the words on each beat, the key word, the size; each line can have its own colour and font (fonts from your font library work too).
 - **Timing of each beat**: in the time bar at the bottom, drag an edge to make it longer or shorter, split it, or delete it.
 - **Motion**: entrance, camera, exit, elements, layout and 3D props can all be changed.
